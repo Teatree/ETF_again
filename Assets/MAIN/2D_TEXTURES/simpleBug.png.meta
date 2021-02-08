@@ -1,0 +1,1180 @@
+fileFormatVersion: 2
+guid: 111d044a17ee01348852c5f3b9b08053
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: simpleBugAni01
+    21300002: simpleBugAni02
+    21300004: simpleBugAni03
+    21300006: simpleBugAni04
+    21300008: simpleBugAni05
+    21300010: simpleBugAni06
+    21300012: simpleBugAni07
+    21300014: simpleBugAni08
+    21300016: simpleBugAni09
+    21300018: simpleBugAni10
+    21300020: simpleBugAni11
+    21300022: simpleBugAni12
+    21300024: simpleBugAni13
+    21300026: simpleBugAni14
+    21300028: simpleBugAni15
+    21300030: simpleBugAni16
+    21300032: simpleBugAni17
+    21300034: simpleBugAni18
+    21300036: simpleBugAni19
+    21300038: simpleBugAni20
+    21300040: simpleBugAni21
+    21300042: simpleBugAni22
+    21300044: simpleBugAni23
+    21300046: simpleBugAni24
+    21300048: simpleBugAni25
+    21300050: simpleBugAni26
+    21300052: simpleBugAni27
+    21300054: simpleBugAni28
+    21300056: simpleBugAni29
+    21300058: simpleBugAni30
+    21300060: simpleBugAni31
+    21300062: simpleBugAni32
+    21300064: simpleBugAni33
+    21300066: simpleBugAni34
+    21300068: simpleBugAni35
+    21300070: simpleBugAni36
+    21300072: simpleBugAni37
+    21300074: simpleBugAni38
+    21300076: simpleBugAni39
+    21300078: simpleBugAni40
+    21300080: simpleBugAni41
+    21300082: simpleBugAni42
+    21300084: simpleBugAni43
+    21300086: simpleBugAni44
+    21300088: simpleBugAni45
+    21300090: simpleBugAni46
+    21300092: simpleBugAni47
+    21300094: simpleBugAni48
+    21300096: simpleBugAni49
+    21300098: simpleBugAni50
+    21300100: simpleBugAni51
+    21300102: simpleBugAni52
+  externalObjects: {}
+  serializedVersion: 9
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: simpleBugAni01
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1909
+        width: 205
+        height: 138
+      alignment: 9
+      pivot: {x: 0.51463413, y: 0.41304347}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d675d23bd0694544e83f4c746bf8054c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: simpleBugAni02
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 1912
+        width: 207
+        height: 135
+      alignment: 9
+      pivot: {x: 0.46618357, y: 0.5777778}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3915cca2021f78b43944aebf48b41fca
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: simpleBugAni03
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 1911
+        width: 222
+        height: 136
+      alignment: 9
+      pivot: {x: 0.49324325, y: 0.40441176}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b0c6a96f567e9d40b9d5fa71fde2875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: simpleBugAni04
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 1914
+        width: 201
+        height: 133
+      alignment: 9
+      pivot: {x: 0.45024875, y: 0.5714286}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb36799421e66d440a972603a30a4e31
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: simpleBugAni05
+      rect:
+        serializedVersion: 2
+        x: 844
+        y: 1911
+        width: 207
+        height: 136
+      alignment: 9
+      pivot: {x: 0.51932365, y: 0.40441176}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7e08381c0d59c34f938d9f88e10f7cd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: simpleBugAni06
+      rect:
+        serializedVersion: 2
+        x: 1053
+        y: 1918
+        width: 204
+        height: 129
+      alignment: 9
+      pivot: {x: 0.44362745, y: 0.55813956}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c8bdec1cd5a6e14d94fb50da688872c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: simpleBugAni07
+      rect:
+        serializedVersion: 2
+        x: 1259
+        y: 1912
+        width: 224
+        height: 135
+      alignment: 9
+      pivot: {x: 0.484375, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d849e8d6eaaae84ca83cc2b0c075fd9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: simpleBugAni08
+      rect:
+        serializedVersion: 2
+        x: 1485
+        y: 1887
+        width: 234
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5277778, y: 0.54375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3edd7ff732b6890488776b3f684f7c9c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: simpleBugAni09
+      rect:
+        serializedVersion: 2
+        x: 1721
+        y: 1913
+        width: 206
+        height: 134
+      alignment: 9
+      pivot: {x: 0.5169903, y: 0.3955224}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1967537e660a7a54ea3a09a4de495f81
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: simpleBugAni10
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1757
+        width: 207
+        height: 128
+      alignment: 9
+      pivot: {x: 0.45169082, y: 0.5546875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 628c9e377a90df64292cb92d3a25d6a3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: simpleBugAni11
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 1749
+        width: 208
+        height: 136
+      alignment: 9
+      pivot: {x: 0.44471154, y: 0.3970588}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7af9ec09cd57f0b41942e57d2efed044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: simpleBugAni12
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 1757
+        width: 206
+        height: 128
+      alignment: 9
+      pivot: {x: 0.44902912, y: 0.546875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b74ca1399d99c404e860d75eb3d68e88
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: simpleBugAni13
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 1751
+        width: 206
+        height: 134
+      alignment: 9
+      pivot: {x: 0.5169903, y: 0.3955224}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b9a85a8d6cb0f942868ca50d88d2bbc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: simpleBugAni14
+      rect:
+        serializedVersion: 2
+        x: 836
+        y: 1757
+        width: 210
+        height: 128
+      alignment: 9
+      pivot: {x: 0.4595238, y: 0.5546875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ec86bf7010df56419b32751dc5f84f5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: simpleBugAni15
+      rect:
+        serializedVersion: 2
+        x: 1048
+        y: 1739
+        width: 225
+        height: 146
+      alignment: 9
+      pivot: {x: 0.48666668, y: 0.369863}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1580cd3a8bbdf444dab74adccb328f56
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: simpleBugAni16
+      rect:
+        serializedVersion: 2
+        x: 1275
+        y: 1757
+        width: 206
+        height: 128
+      alignment: 9
+      pivot: {x: 0.44902912, y: 0.546875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de7b6c259bb2d7248a3ba9a36bf000e8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: simpleBugAni17
+      rect:
+        serializedVersion: 2
+        x: 1483
+        y: 1742
+        width: 200
+        height: 143
+      alignment: 9
+      pivot: {x: 0.4925, y: 0.3846154}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7d7da93134371e4a94c5a9c7c58d6fe
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: simpleBugAni18
+      rect:
+        serializedVersion: 2
+        x: 1685
+        y: 1757
+        width: 207
+        height: 128
+      alignment: 9
+      pivot: {x: 0.45169082, y: 0.546875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd78ad5dd8e0e8947b7465ecd0c3861d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: simpleBugAni19
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1590
+        width: 237
+        height: 147
+      alignment: 9
+      pivot: {x: 0.4620253, y: 0.37414965}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d11f335700d625347a43b9722c110a7e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: simpleBugAni20
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 1609
+        width: 205
+        height: 128
+      alignment: 9
+      pivot: {x: 0.44634145, y: 0.546875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 891d88dc30f137d44b370ebf15a865bf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: simpleBugAni21
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 1625
+        width: 199
+        height: 112
+      alignment: 9
+      pivot: {x: 0.47487438, y: 0.49107143}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81a80d3fd8ca1734e90095cef056eed4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: simpleBugAni22
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 1617
+        width: 193
+        height: 120
+      alignment: 9
+      pivot: {x: 0.49481866, y: 0.43333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc32f34bfaa35ee419a26957ffb387f6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: simpleBugAni23
+      rect:
+        serializedVersion: 2
+        x: 843
+        y: 1632
+        width: 197
+        height: 105
+      alignment: 9
+      pivot: {x: 0.48477158, y: 0.46666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91f8ab478a727fb479749756150558e5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: simpleBugAni24
+      rect:
+        serializedVersion: 2
+        x: 1042
+        y: 1627
+        width: 200
+        height: 110
+      alignment: 9
+      pivot: {x: 0.4975, y: 0.38181818}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5301797b6b8affc47962ef3a193828a1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: simpleBugAni25
+      rect:
+        serializedVersion: 2
+        x: 1244
+        y: 1644
+        width: 174
+        height: 93
+      alignment: 9
+      pivot: {x: 0.49137932, y: 0.40860215}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47f6fc2b266f55c43b9a39a875d82aed
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: simpleBugAni26
+      rect:
+        serializedVersion: 2
+        x: 1420
+        y: 1647
+        width: 177
+        height: 90
+      alignment: 9
+      pivot: {x: 0.51129943, y: 0.44444445}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ace2d6fddd913644580b5e74c9e4e012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: simpleBugAni27
+      rect:
+        serializedVersion: 2
+        x: 1599
+        y: 1641
+        width: 195
+        height: 96
+      alignment: 9
+      pivot: {x: 0.46410257, y: 0.42708334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 530c478c5bb76fe49bef5421d7b2efa3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: simpleBugAni28
+      rect:
+        serializedVersion: 2
+        x: 1796
+        y: 1648
+        width: 182
+        height: 89
+      alignment: 9
+      pivot: {x: 0.51373625, y: 0.43820226}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58113513f8ebf4043a7244b03c7a2871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: simpleBugAni29
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1495
+        width: 167
+        height: 93
+      alignment: 9
+      pivot: {x: 0.5838323, y: 0.4516129}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0056530842ca3b543a6128408cb4a8d1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: simpleBugAni30
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 1456
+        width: 253
+        height: 132
+      alignment: 9
+      pivot: {x: 0.55533594, y: 0.41666666}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9004678c6737aef49b976055a1149716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: simpleBugAni31
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 1417
+        width: 345
+        height: 171
+      alignment: 9
+      pivot: {x: 0.49130434, y: 0.36842105}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5880067c286769b4d8db62a9db39cd19
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: simpleBugAni32
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 1368
+        width: 392
+        height: 220
+      alignment: 9
+      pivot: {x: 0.5216837, y: 0.3909091}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4604813ff8085b44bf994ffcecc4291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: simpleBugAni33
+      rect:
+        serializedVersion: 2
+        x: 1166
+        y: 1320
+        width: 508
+        height: 268
+      alignment: 9
+      pivot: {x: 0.5187008, y: 0.41417912}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02933271bace9f7458d2aea54f5d58cb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: simpleBugAni34
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1039
+        width: 515
+        height: 279
+      alignment: 9
+      pivot: {x: 0.5116505, y: 0.4014337}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16654fa831dabe246a4adbd2ad5c08e5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: simpleBugAni35
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 1010
+        width: 547
+        height: 308
+      alignment: 9
+      pivot: {x: 0.50548446, y: 0.41558442}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc1e8e813c47b654caa0ca005f7769f7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: simpleBugAni36
+      rect:
+        serializedVersion: 2
+        x: 1067
+        y: 999
+        width: 569
+        height: 319
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4200627}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a23621a3779868341bf828922aa18f86
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: simpleBugAni37
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 1205
+        width: 199
+        height: 113
+      alignment: 9
+      pivot: {x: 0.4798995, y: 0.48672566}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c44a6eeb21e40154593be80e7914875d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: simpleBugAni38
+      rect:
+        serializedVersion: 2
+        x: 1839
+        y: 1173
+        width: 201
+        height: 145
+      alignment: 9
+      pivot: {x: 0.4552239, y: 0.46206897}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b09859016d3085429fcbe8bac2289eb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: simpleBugAni39
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 806
+        width: 192
+        height: 191
+      alignment: 9
+      pivot: {x: 0.5078125, y: 0.4712042}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 994a63c88386d2442b1d2bb1524b40b0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: simpleBugAni40
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 798
+        width: 209
+        height: 199
+      alignment: 9
+      pivot: {x: 0.49043062, y: 0.41708544}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70e19708f814d2343874ae54c90e9e71
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: simpleBugAni41
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 786
+        width: 210
+        height: 211
+      alignment: 9
+      pivot: {x: 0.50714284, y: 0.3744076}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80397853d833ea340bf5f64e19c0d04f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: simpleBugAni42
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 731
+        width: 193
+        height: 266
+      alignment: 9
+      pivot: {x: 0.5569948, y: 0.36466166}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5e979d4859be95448260d0724e45ecd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: simpleBugAni43
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 758
+        width: 187
+        height: 239
+      alignment: 9
+      pivot: {x: 0.5802139, y: 0.33891213}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce1ec73eea1b8584993ce5c17fa46b55
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: simpleBugAni44
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 739
+        width: 210
+        height: 258
+      alignment: 9
+      pivot: {x: 0.5404762, y: 0.34108528}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b84d4e7f42e36444aa0654798ba780e7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: simpleBugAni45
+      rect:
+        serializedVersion: 2
+        x: 1214
+        y: 748
+        width: 215
+        height: 249
+      alignment: 9
+      pivot: {x: 0.54186046, y: 0.36144578}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9769bcbbdaa804f4bb9d12072b258947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: simpleBugAni46
+      rect:
+        serializedVersion: 2
+        x: 1431
+        y: 757
+        width: 208
+        height: 240
+      alignment: 9
+      pivot: {x: 0.56009614, y: 0.39583334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87427c8c21efd5c4eb4c832f7d0222b7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: simpleBugAni47
+      rect:
+        serializedVersion: 2
+        x: 1641
+        y: 775
+        width: 226
+        height: 222
+      alignment: 9
+      pivot: {x: 0.49336284, y: 0.36036035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91ec263a3929b2e4f918a57612f358b4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: simpleBugAni48
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 522
+        width: 234
+        height: 207
+      alignment: 9
+      pivot: {x: 0.4636752, y: 0.42028984}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79313da9101740444b1fbb2f4912c82a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: simpleBugAni49
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 544
+        width: 219
+        height: 185
+      alignment: 9
+      pivot: {x: 0.47716895, y: 0.44864866}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b91788a1e0754a646b4a775e286db7d2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: simpleBugAni50
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 566
+        width: 192
+        height: 163
+      alignment: 9
+      pivot: {x: 0.4921875, y: 0.46625766}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e28a6a1b0e48f9498f51525aba15527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: simpleBugAni51
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 595
+        width: 208
+        height: 134
+      alignment: 9
+      pivot: {x: 0.46394232, y: 0.47014925}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f7f189fc77fa9f47b7611d4570fd988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: simpleBugAni52
+      rect:
+        serializedVersion: 2
+        x: 862
+        y: 613
+        width: 195
+        height: 116
+      alignment: 9
+      pivot: {x: 0.4846154, y: 0.47413793}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9156e071349b84b40b7c15e3f2401275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

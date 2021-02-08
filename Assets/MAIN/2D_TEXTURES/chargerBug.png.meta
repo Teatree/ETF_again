@@ -1,0 +1,2167 @@
+fileFormatVersion: 2
+guid: 0d63028ee1081ca479acfcd03a5dc850
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: chargerBugAni01
+    21300002: chargerBugAni02
+    21300004: chargerBugAni03
+    21300006: chargerBugAni04
+    21300008: chargerBugAni05
+    21300010: chargerBugAni06
+    21300012: chargerBugAni07
+    21300014: chargerBugAni08
+    21300016: chargerBugAni09
+    21300018: chargerBugAni10
+    21300020: chargerBugAni11
+    21300022: chargerBugAni12
+    21300024: chargerBugAni13
+    21300026: chargerBugAni14
+    21300028: chargerBugAni15
+    21300030: chargerBugAni16
+    21300032: chargerBugAni17
+    21300034: chargerBugAni18
+    21300036: chargerBugAni19
+    21300038: chargerBugAni20
+    21300040: chargerBugAni21
+    21300042: chargerBugAni22
+    21300044: chargerBugAni23
+    21300046: chargerBugAni24
+    21300048: chargerBugAni25
+    21300050: chargerBugAni26
+    21300052: chargerBugAni27
+    21300054: chargerBugAni28
+    21300056: chargerBugAni29
+    21300058: chargerBugAni30
+    21300060: chargerBugAni31
+    21300062: chargerBugAni32
+    21300064: chargerBugAni33
+    21300066: chargerBugAni34
+    21300068: chargerBugAni35
+    21300070: chargerBugAni36
+    21300072: chargerBugAni37
+    21300074: chargerBugAni38
+    21300076: chargerBugAni39
+    21300078: chargerBugAni40
+    21300080: chargerBugAni41
+    21300082: chargerBugAni42
+    21300084: chargerBugAni43
+    21300086: chargerBugAni44
+    21300088: chargerBugAni45
+    21300090: chargerBugAni46
+    21300092: chargerBugAni47
+    21300094: chargerBugAni48
+    21300096: chargerBugAni49
+    21300098: chargerBugAni50
+    21300100: chargerBugAni51
+    21300102: chargerBugAni52
+    21300104: chargerBugAni53
+    21300106: chargerBugAni54
+    21300108: chargerBugAni55
+    21300110: chargerBugAni56
+    21300112: chargerBugAni57
+    21300114: chargerBugAni58
+    21300116: chargerBugAni59
+    21300118: chargerBugAni60
+    21300120: chargerBugAni61
+    21300122: chargerBugAni62
+    21300124: chargerBugAni63
+    21300126: chargerBugAni64
+    21300128: chargerBugAni65
+    21300130: chargerBugAni66
+    21300132: chargerBugAni67
+    21300134: chargerBugAni68
+    21300136: chargerBugAni69
+    21300138: chargerBugAni70
+    21300140: chargerBugAni71
+    21300142: chargerBugAni72
+    21300144: chargerBugAni73
+    21300146: chargerBugAni74
+    21300148: chargerBugAni75
+    21300150: chargerBugAni76
+    21300152: chargerBugAni77
+    21300154: chargerBugAni78
+    21300156: chargerBugAni79
+    21300158: chargerBugAni80
+    21300160: chargerBugAni81
+    21300162: chargerBugAni82
+    21300164: chargerBugAni83
+    21300166: chargerBugAni84
+    21300168: chargerBugAni85
+    21300170: chargerBugAni86
+    21300172: chargerBugAni87
+    21300174: chargerBugAni88
+    21300176: chargerBugAni89
+    21300178: chargerBugAni90
+    21300180: chargerBugAni91
+    21300182: chargerBugAni92
+    21300184: chargerBugAni93
+    21300186: chargerBugAni94
+    21300188: chargerBugAni95
+    21300190: chargerBugAni96
+    21300192: chargerBugAni97
+    21300194: chargerBugAni98
+    21300196: chargerBugAni99
+  externalObjects: {}
+  serializedVersion: 9
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: chargerBugAni01
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1912
+        width: 174
+        height: 135
+      alignment: 9
+      pivot: {x: 0.46264368, y: 0.4962963}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd8cc1c20f709d74bb229978c4cd2661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni02
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 1921
+        width: 194
+        height: 126
+      alignment: 9
+      pivot: {x: 0.51804125, y: 0.53968257}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9960bfcc6bed80e47a9ea49ae62aa9cd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni03
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 1919
+        width: 210
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5214286, y: 0.546875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54517b7744319bf4c9776a601852a039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni04
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 1911
+        width: 210
+        height: 136
+      alignment: 9
+      pivot: {x: 0.5547619, y: 0.5588235}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96a35e6c22dccbb48babb3f3e0faebea
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni05
+      rect:
+        serializedVersion: 2
+        x: 797
+        y: 1923
+        width: 212
+        height: 124
+      alignment: 9
+      pivot: {x: 0.5683962, y: 0.5483871}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c5f2f6eacabb6641bb4f7929b738e82
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni06
+      rect:
+        serializedVersion: 2
+        x: 1011
+        y: 1922
+        width: 213
+        height: 125
+      alignment: 9
+      pivot: {x: 0.57042253, y: 0.544}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb3e6769ee6a8354cb44ea5898729c4a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni07
+      rect:
+        serializedVersion: 2
+        x: 1226
+        y: 1928
+        width: 202
+        height: 119
+      alignment: 9
+      pivot: {x: 0.5321782, y: 0.56302524}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bac332885398d24489961a397fcc98e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni08
+      rect:
+        serializedVersion: 2
+        x: 1430
+        y: 1928
+        width: 202
+        height: 119
+      alignment: 9
+      pivot: {x: 0.5668317, y: 0.5546219}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 211fa08e457b8004aa8078dd439c3aaa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni09
+      rect:
+        serializedVersion: 2
+        x: 1634
+        y: 1908
+        width: 203
+        height: 139
+      alignment: 9
+      pivot: {x: 0.53940886, y: 0.5755396}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f6340c67f621f146bc4b5c6f7297aed
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni10
+      rect:
+        serializedVersion: 2
+        x: 1839
+        y: 1908
+        width: 193
+        height: 139
+      alignment: 9
+      pivot: {x: 0.5103627, y: 0.5683453}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a49f038f99e47454085b528c435834ea
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni11
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1760
+        width: 172
+        height: 146
+      alignment: 9
+      pivot: {x: 0.4622093, y: 0.53424656}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae3a2e4b896d97245ac52f1bdb5d090e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni12
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 1784
+        width: 190
+        height: 122
+      alignment: 9
+      pivot: {x: 0.50789475, y: 0.52459013}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6661b72c6968d9c4cafea95588593cbe
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni13
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 1777
+        width: 203
+        height: 129
+      alignment: 9
+      pivot: {x: 0.54433495, y: 0.49612403}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77725394c9a90fa428735318e7f7703b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni14
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 1784
+        width: 211
+        height: 122
+      alignment: 9
+      pivot: {x: 0.5521327, y: 0.5163934}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09f325a023fa86643b454e3e25b247f4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni15
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 1776
+        width: 211
+        height: 130
+      alignment: 9
+      pivot: {x: 0.54265404, y: 0.5307692}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf210dae346be6a44b184e2c35c249dd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni16
+      rect:
+        serializedVersion: 2
+        x: 998
+        y: 1781
+        width: 205
+        height: 125
+      alignment: 9
+      pivot: {x: 0.53414637, y: 0.52}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 359fd27c550afa64797f86674cc88076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni17
+      rect:
+        serializedVersion: 2
+        x: 1205
+        y: 1777
+        width: 205
+        height: 129
+      alignment: 9
+      pivot: {x: 0.54390246, y: 0.49612403}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80f263bcb04acfe4a85bf7171af9dfdd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni18
+      rect:
+        serializedVersion: 2
+        x: 1412
+        y: 1783
+        width: 225
+        height: 123
+      alignment: 9
+      pivot: {x: 0.54444444, y: 0.5365854}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32ca75c896e215b4c8605bbe697a1d60
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni19
+      rect:
+        serializedVersion: 2
+        x: 1639
+        y: 1774
+        width: 202
+        height: 132
+      alignment: 9
+      pivot: {x: 0.5569307, y: 0.49242425}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 840f6ead87d91d64b828f300040a7ad3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni20
+      rect:
+        serializedVersion: 2
+        x: 1843
+        y: 1772
+        width: 201
+        height: 134
+      alignment: 9
+      pivot: {x: 0.5298507, y: 0.53731346}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bef88b86b27259b4ab1a5481c89661ee
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni21
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1624
+        width: 202
+        height: 134
+      alignment: 9
+      pivot: {x: 0.49257424, y: 0.53731346}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e16dd1b8afb0c5f449e1f3c68a4923ce
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni22
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 1623
+        width: 174
+        height: 135
+      alignment: 9
+      pivot: {x: 0.46264368, y: 0.4962963}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f236d0b1af1fc1a42ba0bbd99741f3ab
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni23
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 1632
+        width: 194
+        height: 126
+      alignment: 9
+      pivot: {x: 0.51804125, y: 0.53968257}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5438e9a9d95ee2d408fab1e83b3e39fe
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni24
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 1630
+        width: 210
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5214286, y: 0.546875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b69d7bc1d5ce09b46b7afb6ad36326b4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni25
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 1622
+        width: 210
+        height: 136
+      alignment: 9
+      pivot: {x: 0.5547619, y: 0.5588235}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f350325a08493144db458bba51a8878c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni26
+      rect:
+        serializedVersion: 2
+        x: 1001
+        y: 1634
+        width: 212
+        height: 124
+      alignment: 9
+      pivot: {x: 0.5683962, y: 0.5483871}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b46090056271994980c060a2388c933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni27
+      rect:
+        serializedVersion: 2
+        x: 1215
+        y: 1633
+        width: 213
+        height: 125
+      alignment: 9
+      pivot: {x: 0.57042253, y: 0.544}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fbcebd2efb68f34584284162a1f8601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni28
+      rect:
+        serializedVersion: 2
+        x: 1430
+        y: 1639
+        width: 202
+        height: 119
+      alignment: 9
+      pivot: {x: 0.5321782, y: 0.56302524}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9aab121fac304304b8bfe8f73b500e35
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni29
+      rect:
+        serializedVersion: 2
+        x: 1634
+        y: 1639
+        width: 202
+        height: 119
+      alignment: 9
+      pivot: {x: 0.5668317, y: 0.5546219}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 329030b9b3f86cb468f027c3e45ba0e7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni30
+      rect:
+        serializedVersion: 2
+        x: 1838
+        y: 1619
+        width: 203
+        height: 139
+      alignment: 9
+      pivot: {x: 0.53940886, y: 0.5755396}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea38d4505f87a5b4eb1a9bdbd3329474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni31
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1478
+        width: 193
+        height: 139
+      alignment: 9
+      pivot: {x: 0.5103627, y: 0.5683453}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d83d250551a0b542b7a6bea16f598f5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni32
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 1471
+        width: 172
+        height: 146
+      alignment: 9
+      pivot: {x: 0.4622093, y: 0.53424656}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be7e28ade665db140a965ffe4a4ed4c0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni33
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 1495
+        width: 190
+        height: 122
+      alignment: 9
+      pivot: {x: 0.50789475, y: 0.52459013}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d4b888458c79be469bb3818cf6e9019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni34
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 1488
+        width: 203
+        height: 129
+      alignment: 9
+      pivot: {x: 0.54433495, y: 0.49612403}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e2e4511dbf615b45a1673ba3a526f86
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni35
+      rect:
+        serializedVersion: 2
+        x: 767
+        y: 1495
+        width: 211
+        height: 122
+      alignment: 9
+      pivot: {x: 0.5521327, y: 0.5163934}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 291249ba773e6fc4bbb3d9b07aec4e2d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni36
+      rect:
+        serializedVersion: 2
+        x: 980
+        y: 1487
+        width: 211
+        height: 130
+      alignment: 9
+      pivot: {x: 0.54265404, y: 0.5307692}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1826034010f21744b8c5be98651b75c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni37
+      rect:
+        serializedVersion: 2
+        x: 1193
+        y: 1492
+        width: 205
+        height: 125
+      alignment: 9
+      pivot: {x: 0.53414637, y: 0.52}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae856a960a27cf74f9c3b79d6a8e2879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni38
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 1488
+        width: 205
+        height: 129
+      alignment: 9
+      pivot: {x: 0.54390246, y: 0.49612403}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6dabaf9b8dbeb6649abfed16045887aa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni39
+      rect:
+        serializedVersion: 2
+        x: 1607
+        y: 1494
+        width: 225
+        height: 123
+      alignment: 9
+      pivot: {x: 0.54444444, y: 0.5365854}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3bffc0aa7acacf438480a6539473a8f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni40
+      rect:
+        serializedVersion: 2
+        x: 1834
+        y: 1485
+        width: 202
+        height: 132
+      alignment: 9
+      pivot: {x: 0.5569307, y: 0.49242425}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4477ced6ed6271a48b862ec85c696c7e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni41
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1335
+        width: 201
+        height: 134
+      alignment: 9
+      pivot: {x: 0.5298507, y: 0.53731346}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9da28bd21c5a324085e4f3fbcda0f0c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni42
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 1335
+        width: 202
+        height: 134
+      alignment: 9
+      pivot: {x: 0.49257424, y: 0.53731346}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c617cb47972c02a44ab7108b809f8707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni43
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 1338
+        width: 179
+        height: 131
+      alignment: 9
+      pivot: {x: 0.5, y: 0.519084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 976d34c75bb60874ea58bf7939bccdcc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni44
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 1343
+        width: 174
+        height: 126
+      alignment: 9
+      pivot: {x: 0.48563218, y: 0.53968257}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff69d05214886794aa50bf035002ad52
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni45
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 1347
+        width: 172
+        height: 122
+      alignment: 9
+      pivot: {x: 0.49709302, y: 0.52459013}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d005f96c114df5c43af0ae9659653455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni46
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 1353
+        width: 167
+        height: 116
+      alignment: 9
+      pivot: {x: 0.48802397, y: 0.5689655}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d25f767e8a9443543af1f2a8a42a9609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni47
+      rect:
+        serializedVersion: 2
+        x: 1108
+        y: 1349
+        width: 165
+        height: 120
+      alignment: 9
+      pivot: {x: 0.4939394, y: 0.5416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19f62621a3c904443aea4e3da1199576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni48
+      rect:
+        serializedVersion: 2
+        x: 1275
+        y: 1349
+        width: 146
+        height: 120
+      alignment: 9
+      pivot: {x: 0.5376712, y: 0.49166667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30617503f040dcf4eb7518ec4bb97a33
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni49
+      rect:
+        serializedVersion: 2
+        x: 1423
+        y: 1347
+        width: 142
+        height: 122
+      alignment: 9
+      pivot: {x: 0.5809859, y: 0.4918033}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8397c157ec2d220478088a033d68e823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni50
+      rect:
+        serializedVersion: 2
+        x: 1567
+        y: 1351
+        width: 132
+        height: 118
+      alignment: 9
+      pivot: {x: 0.5719697, y: 0.44915253}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b922d9c8de795d1448fae8d8356459e6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni51
+      rect:
+        serializedVersion: 2
+        x: 1701
+        y: 1338
+        width: 193
+        height: 131
+      alignment: 9
+      pivot: {x: 0.52072537, y: 0.54198474}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b34b7ccf10a0c2347845b9e6f6a6436e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni52
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1158
+        width: 244
+        height: 175
+      alignment: 9
+      pivot: {x: 0.52663934, y: 0.5257143}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7eb9a64f70b8d74c8f742ea20d2c2b5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni53
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 1128
+        width: 302
+        height: 205
+      alignment: 9
+      pivot: {x: 0.49503312, y: 0.46829268}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e36eeadb95755a6428bb20745fa1821c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni54
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 1097
+        width: 367
+        height: 236
+      alignment: 9
+      pivot: {x: 0.5108992, y: 0.5042373}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa12a35b634b3a64882dd577e92921e1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni55
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 1057
+        width: 400
+        height: 276
+      alignment: 9
+      pivot: {x: 0.49125, y: 0.44927537}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fd67a39820dd204cb534e9079b30ccf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni56
+      rect:
+        serializedVersion: 2
+        x: 1322
+        y: 1022
+        width: 459
+        height: 311
+      alignment: 9
+      pivot: {x: 0.4912854, y: 0.488746}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdeeda43295b53b4e9b6384da4a1d22d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni57
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 691
+        width: 480
+        height: 329
+      alignment: 9
+      pivot: {x: 0.47604167, y: 0.47416413}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42b90707ca09f434790707d14f2cc559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni58
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 707
+        width: 512
+        height: 313
+      alignment: 9
+      pivot: {x: 0.4580078, y: 0.5079872}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 766b906e83b1ac745b4cd08807e1d496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni59
+      rect:
+        serializedVersion: 2
+        x: 997
+        y: 891
+        width: 148
+        height: 129
+      alignment: 9
+      pivot: {x: 0.5168919, y: 0.58914727}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66f8a92b57a8b5646b5fec97efab3544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni60
+      rect:
+        serializedVersion: 2
+        x: 1147
+        y: 887
+        width: 166
+        height: 133
+      alignment: 9
+      pivot: {x: 0.54518074, y: 0.56390977}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 146283dd59f8bd04c850a401cabdf35c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni61
+      rect:
+        serializedVersion: 2
+        x: 1315
+        y: 890
+        width: 157
+        height: 130
+      alignment: 9
+      pivot: {x: 0.58280253, y: 0.5769231}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f540e718ea6738646a48129db47728b9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni62
+      rect:
+        serializedVersion: 2
+        x: 1474
+        y: 883
+        width: 163
+        height: 137
+      alignment: 9
+      pivot: {x: 0.5429448, y: 0.540146}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ef035682f2428a4e9f15cd74039d3af
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni63
+      rect:
+        serializedVersion: 2
+        x: 1639
+        y: 889
+        width: 157
+        height: 131
+      alignment: 9
+      pivot: {x: 0.5764331, y: 0.55725193}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5039eeadef8fb8c42800d9c7a4b073b5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni64
+      rect:
+        serializedVersion: 2
+        x: 1798
+        y: 892
+        width: 163
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5306749, y: 0.5703125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36703d87db4d1b54989c9481329b2188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni65
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 550
+        width: 152
+        height: 139
+      alignment: 9
+      pivot: {x: 0.49671054, y: 0.5683453}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72d8213c0fdcfd4459b34aae9fb14f1f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni66
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 542
+        width: 155
+        height: 147
+      alignment: 9
+      pivot: {x: 0.4935484, y: 0.50340134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d76c7a971e044645b7e2c6045b08d45
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni67
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 539
+        width: 158
+        height: 150
+      alignment: 9
+      pivot: {x: 0.4841772, y: 0.47333333}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f7631c49e178194e8a1a067300703e1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni68
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 542
+        width: 158
+        height: 147
+      alignment: 9
+      pivot: {x: 0.49050632, y: 0.47619048}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c61d6fd299c68494e9821677b89d3edf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni69
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 535
+        width: 155
+        height: 154
+      alignment: 9
+      pivot: {x: 0.48064515, y: 0.53246754}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3f21dd26bd20114b9f2561ed4456cbd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni70
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 545
+        width: 155
+        height: 144
+      alignment: 9
+      pivot: {x: 0.48064515, y: 0.5763889}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4bb05de1dc9e7943ab01374fadbad74
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni71
+      rect:
+        serializedVersion: 2
+        x: 946
+        y: 558
+        width: 167
+        height: 131
+      alignment: 9
+      pivot: {x: 0.44610777, y: 0.55725193}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd41d8c5d76bb094089ca0bcbd03bfe0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni72
+      rect:
+        serializedVersion: 2
+        x: 1115
+        y: 563
+        width: 173
+        height: 126
+      alignment: 9
+      pivot: {x: 0.4479769, y: 0.5873016}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f47b9e8b20437934d998dddc03d796a0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni73
+      rect:
+        serializedVersion: 2
+        x: 1290
+        y: 564
+        width: 180
+        height: 125
+      alignment: 9
+      pivot: {x: 0.46388888, y: 0.592}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c7ac70ac98e80b4294b72ac3698abb0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni74
+      rect:
+        serializedVersion: 2
+        x: 1472
+        y: 561
+        width: 169
+        height: 128
+      alignment: 9
+      pivot: {x: 0.43491125, y: 0.578125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d47bf8002d8d214ea70917f1f7c6682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni75
+      rect:
+        serializedVersion: 2
+        x: 1643
+        y: 557
+        width: 159
+        height: 132
+      alignment: 9
+      pivot: {x: 0.4371069, y: 0.56060606}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf6e57953a877304abc6e2f36a8ec6ff
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni76
+      rect:
+        serializedVersion: 2
+        x: 1804
+        y: 553
+        width: 158
+        height: 136
+      alignment: 9
+      pivot: {x: 0.44620255, y: 0.5588235}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6deee998e9ae70e4f8c56986ad4a3622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni77
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 383
+        width: 156
+        height: 150
+      alignment: 9
+      pivot: {x: 0.45833334, y: 0.50666666}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 730ffa9f4247055449aa1f0310cc39d5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni78
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 377
+        width: 146
+        height: 156
+      alignment: 9
+      pivot: {x: 0.49657536, y: 0.4871795}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ab2d577f405de749b1d0f0619af4bd1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni79
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 398
+        width: 142
+        height: 135
+      alignment: 9
+      pivot: {x: 0.4964789, y: 0.56296295}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 358f1ce2d97815f42984ba975a555989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni80
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 404
+        width: 181
+        height: 129
+      alignment: 9
+      pivot: {x: 0.41712707, y: 0.4728682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45cdf10c1a9102b40b022a93c56f1e6f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni81
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 415
+        width: 218
+        height: 118
+      alignment: 9
+      pivot: {x: 0.51605505, y: 0.5084746}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19f5ca8a5a9edd84a817699cbae0e05f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni82
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 423
+        width: 222
+        height: 110
+      alignment: 9
+      pivot: {x: 0.48423424, y: 0.5181818}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f286b4958d7e85646a295e26c6034097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni83
+      rect:
+        serializedVersion: 2
+        x: 1078
+        y: 418
+        width: 217
+        height: 115
+      alignment: 9
+      pivot: {x: 0.5046083, y: 0.49565217}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3afefcd25450f00419cfcc5de4a76471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni84
+      rect:
+        serializedVersion: 2
+        x: 1297
+        y: 406
+        width: 196
+        height: 127
+      alignment: 9
+      pivot: {x: 0.44132653, y: 0.4488189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 616b8dce3c1b029438a99d97303ccd1a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni85
+      rect:
+        serializedVersion: 2
+        x: 1495
+        y: 415
+        width: 222
+        height: 118
+      alignment: 9
+      pivot: {x: 0.5112613, y: 0.48305085}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 709b92bda7e6f574b951fc9f636371cc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni86
+      rect:
+        serializedVersion: 2
+        x: 1719
+        y: 416
+        width: 214
+        height: 117
+      alignment: 9
+      pivot: {x: 0.49299064, y: 0.4871795}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2637d1359e836d4aa25ebd7527ae101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni87
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 260
+        width: 217
+        height: 115
+      alignment: 9
+      pivot: {x: 0.5046083, y: 0.49565217}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e833fd68b2721b418f4f92ab8b42dcd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni88
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 246
+        width: 189
+        height: 129
+      alignment: 9
+      pivot: {x: 0.43650794, y: 0.45736435}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbf7f026323a9ce418907318595039ba
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni89
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 257
+        width: 218
+        height: 118
+      alignment: 9
+      pivot: {x: 0.51605505, y: 0.5084746}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e86fffbe4e89e974182d5e694db8190e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni90
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 262
+        width: 213
+        height: 113
+      alignment: 9
+      pivot: {x: 0.471831, y: 0.5132743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8a6fa0300eada1429f5ce7edfda2432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni91
+      rect:
+        serializedVersion: 2
+        x: 846
+        y: 257
+        width: 218
+        height: 118
+      alignment: 9
+      pivot: {x: 0.51605505, y: 0.5084746}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f51935d839a3b0546b005a1f7a5d1f13
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni92
+      rect:
+        serializedVersion: 2
+        x: 1066
+        y: 246
+        width: 189
+        height: 129
+      alignment: 9
+      pivot: {x: 0.43650794, y: 0.45736435}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e9e8139d13000d4ba260f2175a0a29a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni93
+      rect:
+        serializedVersion: 2
+        x: 1257
+        y: 260
+        width: 217
+        height: 115
+      alignment: 9
+      pivot: {x: 0.5046083, y: 0.49565217}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f268fcf9fd5bf94297f65895742f225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni94
+      rect:
+        serializedVersion: 2
+        x: 1476
+        y: 258
+        width: 214
+        height: 117
+      alignment: 9
+      pivot: {x: 0.49299064, y: 0.4871795}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 135688eb25efe8b478a088252a9a361a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni95
+      rect:
+        serializedVersion: 2
+        x: 1692
+        y: 257
+        width: 222
+        height: 118
+      alignment: 9
+      pivot: {x: 0.5112613, y: 0.48305085}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f0263b6810719f4f96837319337896e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni96
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 117
+        width: 196
+        height: 127
+      alignment: 9
+      pivot: {x: 0.44132653, y: 0.4488189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02e59abe298a88e4a8d02de4ad6b2248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni97
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 129
+        width: 217
+        height: 115
+      alignment: 9
+      pivot: {x: 0.5046083, y: 0.49565217}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9237049839d5b564784457c981692b15
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni98
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 134
+        width: 222
+        height: 110
+      alignment: 9
+      pivot: {x: 0.48423424, y: 0.5181818}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21ffbe8ece676234f9d1e2e9cfb8ec23
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargerBugAni99
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 126
+        width: 218
+        height: 118
+      alignment: 9
+      pivot: {x: 0.51605505, y: 0.5084746}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d632ea9fb577c04296e1070c08bba51
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,844 @@
+fileFormatVersion: 2
+guid: 94739508dd2b89c4ea70000f2a52ee2e
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: beeAni01
+    21300002: beeAni02
+    21300004: beeAni03
+    21300006: beeAni04
+    21300008: beeAni05
+    21300010: beeAni06
+    21300012: beeAni07
+    21300014: beeAni08
+    21300016: beeAni09
+    21300018: beeAni10
+    21300020: beeAni11
+    21300022: beeAni12
+    21300024: beeAni13
+    21300026: beeAni14
+    21300028: beeAni15
+    21300030: beeAni16
+    21300032: beeAni17
+    21300034: beeAni18
+    21300036: beeAni19
+    21300038: beeAni20
+    21300040: beeAni21
+    21300042: beeAni22
+    21300044: beeAni23
+    21300046: beeAni24
+    21300048: beeAni25
+    21300050: beeAni26
+    21300052: beeAni27
+    21300054: beeAni28
+    21300056: beeAni29
+    21300058: beeAni30
+    21300060: beeAni31
+    21300062: beeAni32
+    21300064: beeAni33
+    21300066: beeAni34
+    21300068: beeAni35
+    21300070: beeAni36
+  externalObjects: {}
+  serializedVersion: 9
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: beeAni01
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1869
+        width: 145
+        height: 178
+      alignment: 9
+      pivot: {x: 0.38965517, y: 0.48876405}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 919066f1ec6bd2d40a372b5fab75ecae
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beeAni02
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 1926
+        width: 173
+        height: 121
+      alignment: 9
+      pivot: {x: 0.49421966, y: 0.677686}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ce0712c48309e942a0c51bb51893f4c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beeAni03
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 1944
+        width: 176
+        height: 103
+      alignment: 9
+      pivot: {x: 0.46875, y: 0.7184466}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 073f5fda6f71eda48bbe6e5dd457c88b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beeAni04
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 1941
+        width: 141
+        height: 106
+      alignment: 9
+      pivot: {x: 0.4219858, y: 0.745283}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10b06c1236b8d3f40a05e9f7904c977c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beeAni05
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 1935
+        width: 181
+        height: 112
+      alignment: 9
+      pivot: {x: 0.5055249, y: 0.6875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc53430c2b79a01499478b56f7a2f220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beeAni06
+      rect:
+        serializedVersion: 2
+        x: 827
+        y: 1872
+        width: 141
+        height: 175
+      alignment: 9
+      pivot: {x: 0.4219858, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5168a7f78c0cc564a951a89ffb46757b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beeAni07
+      rect:
+        serializedVersion: 2
+        x: 970
+        y: 1930
+        width: 177
+        height: 117
+      alignment: 9
+      pivot: {x: 0.45480227, y: 0.6581197}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04f1da780eb55234d8f2d42c121a9782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beeAni08
+      rect:
+        serializedVersion: 2
+        x: 1149
+        y: 1924
+        width: 179
+        height: 123
+      alignment: 9
+      pivot: {x: 0.45530728, y: 0.699187}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 833881eaeb5126140a2a17f9b17bb362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beeAni09
+      rect:
+        serializedVersion: 2
+        x: 1330
+        y: 1931
+        width: 151
+        height: 116
+      alignment: 9
+      pivot: {x: 0.4139073, y: 0.6637931}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 083f5b989c5aeec44b37a0313bf0687a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beeAni10
+      rect:
+        serializedVersion: 2
+        x: 1483
+        y: 1930
+        width: 180
+        height: 117
+      alignment: 9
+      pivot: {x: 0.51944447, y: 0.7008547}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb149703cf092464fbc6b8c3735c234a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beeAni11
+      rect:
+        serializedVersion: 2
+        x: 1665
+        y: 1895
+        width: 139
+        height: 152
+      alignment: 9
+      pivot: {x: 0.47841728, y: 0.4868421}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa9c10d3c319ad346b61ec8c91dd606e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beeAni12
+      rect:
+        serializedVersion: 2
+        x: 1806
+        y: 1902
+        width: 145
+        height: 145
+      alignment: 9
+      pivot: {x: 0.47931033, y: 0.4827586}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd0e350259f5e9b46ac01276003d90d8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beeAni13
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1735
+        width: 158
+        height: 132
+      alignment: 9
+      pivot: {x: 0.5031645, y: 0.530303}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3fae37aa76a33945a0f4eca248acbc4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beeAni14
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 1748
+        width: 154
+        height: 119
+      alignment: 9
+      pivot: {x: 0.51623374, y: 0.5294118}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9c113f511f94be4e9c7f22407d75346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beeAni15
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 1737
+        width: 164
+        height: 130
+      alignment: 9
+      pivot: {x: 0.5640244, y: 0.6}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e474213db03509f4baedeaa238d49098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beeAni16
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 1747
+        width: 163
+        height: 120
+      alignment: 9
+      pivot: {x: 0.5368098, y: 0.5416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b95189c3b0ff164faaaccdca6c94c25
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beeAni17
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 1741
+        width: 173
+        height: 126
+      alignment: 9
+      pivot: {x: 0.58092487, y: 0.5793651}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16e95837aa8171e45928ae49997c3cc1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beeAni18
+      rect:
+        serializedVersion: 2
+        x: 823
+        y: 1725
+        width: 157
+        height: 142
+      alignment: 9
+      pivot: {x: 0.5318471, y: 0.5492958}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e72592c9d2429f44bff729bcaf7511d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beeAni19
+      rect:
+        serializedVersion: 2
+        x: 982
+        y: 1724
+        width: 156
+        height: 143
+      alignment: 9
+      pivot: {x: 0.55448717, y: 0.5874126}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08823338ea439fc42b00f26b060a3b36
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beeAni20
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 1686
+        width: 262
+        height: 181
+      alignment: 9
+      pivot: {x: 0.5553435, y: 0.5635359}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f38e90feac9fa84281e536c076b97bd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beeAni21
+      rect:
+        serializedVersion: 2
+        x: 1404
+        y: 1596
+        width: 363
+        height: 271
+      alignment: 9
+      pivot: {x: 0.49449036, y: 0.47601476}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59cdc4c8f0154284789d2ce8c5db97d1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beeAni22
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1293
+        width: 419
+        height: 301
+      alignment: 9
+      pivot: {x: 0.5071599, y: 0.46179402}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8735a09d89538c14eb3f230f82e7a41c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beeAni23
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 1263
+        width: 452
+        height: 331
+      alignment: 9
+      pivot: {x: 0.5143805, y: 0.45015106}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba30a2a4af7955443aa512ec1412b0e9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beeAni24
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 1238
+        width: 503
+        height: 356
+      alignment: 9
+      pivot: {x: 0.5059642, y: 0.49438202}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43faefbb5f042cc4ca39f917ea59fff9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beeAni25
+      rect:
+        serializedVersion: 2
+        x: 1381
+        y: 1243
+        width: 555
+        height: 351
+      alignment: 9
+      pivot: {x: 0.4963964, y: 0.49287748}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fdd50e205b4d6348b9637937a863edb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beeAni26
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 866
+        width: 569
+        height: 370
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8ba40e137121334a95ecfc9db8d6f72
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beeAni27
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 1082
+        width: 150
+        height: 154
+      alignment: 9
+      pivot: {x: 0.41, y: 0.5194805}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f40356aef440e441923f0568c4fe167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beeAni28
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 1038
+        width: 138
+        height: 198
+      alignment: 9
+      pivot: {x: 0.4021739, y: 0.45959595}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca86b947670fb2243a090e65c347629b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beeAni29
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 999
+        width: 137
+        height: 237
+      alignment: 9
+      pivot: {x: 0.41970804, y: 0.5021097}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6054e6289fde70d4387e07f30df7d497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beeAni30
+      rect:
+        serializedVersion: 2
+        x: 1003
+        y: 997
+        width: 153
+        height: 239
+      alignment: 9
+      pivot: {x: 0.4738562, y: 0.5230126}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39abc02b0e5876b42b7ed17886a6b228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beeAni31
+      rect:
+        serializedVersion: 2
+        x: 1158
+        y: 982
+        width: 160
+        height: 254
+      alignment: 9
+      pivot: {x: 0.428125, y: 0.507874}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2222938c70af6f4f9f6163b2c0d44e1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beeAni32
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 987
+        width: 173
+        height: 249
+      alignment: 9
+      pivot: {x: 0.3901734, y: 0.48192772}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1127dec975a6bbc489da0dbaf86e1b93
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beeAni33
+      rect:
+        serializedVersion: 2
+        x: 1495
+        y: 1017
+        width: 179
+        height: 219
+      alignment: 9
+      pivot: {x: 0.3547486, y: 0.4520548}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a104f06661210d43b655e057a1acacc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beeAni34
+      rect:
+        serializedVersion: 2
+        x: 1676
+        y: 1062
+        width: 184
+        height: 174
+      alignment: 9
+      pivot: {x: 0.39402175, y: 0.4597701}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 337397cde64ae704c9b5265b84af219a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beeAni35
+      rect:
+        serializedVersion: 2
+        x: 1862
+        y: 1060
+        width: 159
+        height: 176
+      alignment: 9
+      pivot: {x: 0.39937106, y: 0.45454547}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fdf345c4dd4167449432781c648b8a5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beeAni36
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 713
+        width: 149
+        height: 151
+      alignment: 9
+      pivot: {x: 0.4261745, y: 0.5231788}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1c1dab65dbbb9c4d8f9e250bca63ebb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

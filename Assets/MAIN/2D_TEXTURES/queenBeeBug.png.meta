@@ -1,0 +1,1327 @@
+fileFormatVersion: 2
+guid: ccc2458ea31fe0542adcda109c4f2bec
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: queenBeeAni01
+    21300002: queenBeeAni02
+    21300004: queenBeeAni03
+    21300006: queenBeeAni04
+    21300008: queenBeeAni05
+    21300010: queenBeeAni06
+    21300012: queenBeeAni07
+    21300014: queenBeeAni08
+    21300016: queenBeeAni09
+    21300018: queenBeeAni10
+    21300020: queenBeeAni11
+    21300022: queenBeeAni12
+    21300024: queenBeeAni13
+    21300026: queenBeeAni14
+    21300028: queenBeeAni15
+    21300030: queenBeeAni16
+    21300032: queenBeeAni17
+    21300034: queenBeeAni18
+    21300036: queenBeeAni19
+    21300038: queenBeeAni20
+    21300040: queenBeeAni21
+    21300042: queenBeeAni22
+    21300044: queenBeeAni23
+    21300046: queenBeeAni24
+    21300048: queenBeeAni25
+    21300050: queenBeeAni26
+    21300052: queenBeeAni27
+    21300054: queenBeeAni28
+    21300056: queenBeeAni29
+    21300058: queenBeeAni30
+    21300060: queenBeeAni31
+    21300062: queenBeeAni32
+    21300064: queenBeeAni33
+    21300066: queenBeeAni34
+    21300068: queenBeeAni35
+    21300070: queenBeeAni36
+    21300072: queenBeeAni37
+    21300074: queenBeeAni38
+    21300076: queenBeeAni39
+    21300078: queenBeeAni40
+    21300080: queenBeeAni41
+    21300082: queenBeeAni42
+    21300084: queenBeeAni43
+    21300086: queenBeeAni44
+    21300088: queenBeeAni45
+    21300090: queenBeeAni46
+    21300092: queenBeeAni47
+    21300094: queenBeeAni48
+    21300096: queenBeeAni49
+    21300098: queenBeeAni50
+    21300100: queenBeeAni51
+    21300102: queenBeeAni52
+    21300104: queenBeeAni53
+    21300106: queenBeeAni54
+    21300108: queenBeeAni55
+    21300110: queenBeeAni56
+    21300112: queenBeeAni57
+    21300114: queenBeeAni58
+    21300116: queenBeeAni59
+  externalObjects: {}
+  serializedVersion: 9
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: queenBeeAni01
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 866
+        width: 127
+        height: 157
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48089173}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97a54656a0e22064396abe29c9a13c70
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: queenBeeAni02
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 885
+        width: 137
+        height: 138
+      alignment: 9
+      pivot: {x: 0.48540145, y: 0.53985506}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57eb4a3a70f6f294b9cce3ed051344f9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: queenBeeAni03
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 887
+        width: 131
+        height: 136
+      alignment: 9
+      pivot: {x: 0.46946564, y: 0.55514705}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 039674ceefafb604ea5a0ec45524ee65
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: queenBeeAni04
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 884
+        width: 127
+        height: 139
+      alignment: 9
+      pivot: {x: 0.492126, y: 0.5359712}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2880797d3143274eaaf99bf568cf591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: queenBeeAni05
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 888
+        width: 125
+        height: 135
+      alignment: 9
+      pivot: {x: 0.508, y: 0.55185187}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb1da904cc48db14da106bcfa6839a63
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: queenBeeAni06
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 885
+        width: 127
+        height: 138
+      alignment: 9
+      pivot: {x: 0.52362204, y: 0.53985506}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 390fbca734c7da04e805347b7db1e61b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: queenBeeAni07
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 889
+        width: 133
+        height: 134
+      alignment: 9
+      pivot: {x: 0.5150376, y: 0.5634328}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09a84cad2d5fa034f900c4df202d42e7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: queenBeeAni08
+      rect:
+        serializedVersion: 2
+        x: 922
+        y: 884
+        width: 127
+        height: 139
+      alignment: 9
+      pivot: {x: 0.507874, y: 0.54316545}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0761aab304df2c34fa7a391abacd4a95
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: queenBeeAni09
+      rect:
+        serializedVersion: 2
+        x: 1051
+        y: 889
+        width: 132
+        height: 134
+      alignment: 9
+      pivot: {x: 0.48863637, y: 0.5410448}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61c315c90416d404b94507205301195c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: queenBeeAni10
+      rect:
+        serializedVersion: 2
+        x: 1185
+        y: 873
+        width: 134
+        height: 150
+      alignment: 9
+      pivot: {x: 0.48880598, y: 0.50333333}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 084ef24fc2cbf5d44b647fd71c12ed54
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: queenBeeAni11
+      rect:
+        serializedVersion: 2
+        x: 1321
+        y: 879
+        width: 133
+        height: 144
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5590278}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96abd556a0db1f74194ffe95e7072596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: queenBeeAni12
+      rect:
+        serializedVersion: 2
+        x: 1456
+        y: 878
+        width: 134
+        height: 145
+      alignment: 9
+      pivot: {x: 0.48134327, y: 0.55517244}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9916eeb07d6b0cb4b8fbdec80e68f5e8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: queenBeeAni13
+      rect:
+        serializedVersion: 2
+        x: 1592
+        y: 886
+        width: 130
+        height: 137
+      alignment: 9
+      pivot: {x: 0.49615383, y: 0.54379565}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cff23a5134a38e4da62384d83937861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: queenBeeAni14
+      rect:
+        serializedVersion: 2
+        x: 1724
+        y: 884
+        width: 121
+        height: 139
+      alignment: 9
+      pivot: {x: 0.5247934, y: 0.55755395}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eceac50d2b3052e4bb6c167e66f43120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: queenBeeAni15
+      rect:
+        serializedVersion: 2
+        x: 1847
+        y: 873
+        width: 127
+        height: 150
+      alignment: 9
+      pivot: {x: 0.52362204, y: 0.49666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4a7040b585283f439c27130288be585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: queenBeeAni16
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 726
+        width: 127
+        height: 138
+      alignment: 9
+      pivot: {x: 0.492126, y: 0.5615942}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27a85fd0736e85048a05cdfd7cb3555c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: queenBeeAni17
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 721
+        width: 126
+        height: 143
+      alignment: 9
+      pivot: {x: 0.50396824, y: 0.54195803}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a9580910fec8ac498106218dd9443d6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: queenBeeAni18
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 724
+        width: 133
+        height: 140
+      alignment: 9
+      pivot: {x: 0.52255636, y: 0.5392857}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b850ec6b3d61524d95bc01fb57f3ac7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: queenBeeAni19
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 702
+        width: 138
+        height: 162
+      alignment: 9
+      pivot: {x: 0.4673913, y: 0.47839507}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe32d9de1a89d3c48a1c7e62ecd23a1d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: queenBeeAni20
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 714
+        width: 137
+        height: 150
+      alignment: 9
+      pivot: {x: 0.46350366, y: 0.49}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4afac172f6a02284dad4ed23bcbbaea0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: queenBeeAni21
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 726
+        width: 128
+        height: 138
+      alignment: 9
+      pivot: {x: 0.48046875, y: 0.53985506}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dd7979509f6a4344a44b8fc284df586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: queenBeeAni22
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 720
+        width: 122
+        height: 144
+      alignment: 9
+      pivot: {x: 0.51229507, y: 0.5173611}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9991aae86ffcf94db9eebcd3a17f852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: queenBeeAni23
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 730
+        width: 129
+        height: 134
+      alignment: 9
+      pivot: {x: 0.48449612, y: 0.5410448}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b56ac89ee92704d4d8f88bcfa83bdaf2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: queenBeeAni24
+      rect:
+        serializedVersion: 2
+        x: 1057
+        y: 730
+        width: 129
+        height: 134
+      alignment: 9
+      pivot: {x: 0.5155039, y: 0.55597013}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7fe37d3b63b9004c8aeef9c0398d56d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: queenBeeAni25
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 729
+        width: 132
+        height: 135
+      alignment: 9
+      pivot: {x: 0.5037879, y: 0.54444444}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 186d2dc319ae39d4d96f8a5cb85390bf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: queenBeeAni26
+      rect:
+        serializedVersion: 2
+        x: 1322
+        y: 730
+        width: 135
+        height: 134
+      alignment: 9
+      pivot: {x: 0.46296296, y: 0.54850745}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdfe8d2df60d9e446b53d1b585f60419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: queenBeeAni27
+      rect:
+        serializedVersion: 2
+        x: 1459
+        y: 721
+        width: 125
+        height: 143
+      alignment: 9
+      pivot: {x: 0.5, y: 0.53496504}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb8e89024dbb3484bb6151724fb9d1d2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: queenBeeAni28
+      rect:
+        serializedVersion: 2
+        x: 1586
+        y: 715
+        width: 132
+        height: 149
+      alignment: 9
+      pivot: {x: 0.4810606, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcd64c324711df0489f5a9589cb55890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: queenBeeAni29
+      rect:
+        serializedVersion: 2
+        x: 1720
+        y: 725
+        width: 127
+        height: 139
+      alignment: 9
+      pivot: {x: 0.46850392, y: 0.528777}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a17993453b2d7dd40b0beb38ef74080e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: queenBeeAni30
+      rect:
+        serializedVersion: 2
+        x: 1849
+        y: 748
+        width: 132
+        height: 116
+      alignment: 9
+      pivot: {x: 0.4659091, y: 0.48706895}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df5c99d620f5b2443bbffd3064628a78
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: queenBeeAni31
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 597
+        width: 130
+        height: 103
+      alignment: 9
+      pivot: {x: 0.40384614, y: 0.46116504}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eaddce5ffc3838043acb27bfa02dfc2d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: queenBeeAni32
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 589
+        width: 127
+        height: 111
+      alignment: 9
+      pivot: {x: 0.3031496, y: 0.527027}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 412369193b9ab4e4e8eb16d7de69dd2e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: queenBeeAni33
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 588
+        width: 115
+        height: 112
+      alignment: 9
+      pivot: {x: 0.24782608, y: 0.61160713}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b69b06911000abc4e9b0e7a4ea3ad3e8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: queenBeeAni34
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 602
+        width: 127
+        height: 98
+      alignment: 9
+      pivot: {x: 0.32677165, y: 0.65816325}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d81c3d87e8b07248ab2152751e16956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: queenBeeAni35
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 584
+        width: 124
+        height: 116
+      alignment: 9
+      pivot: {x: 0.35080644, y: 0.7198276}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 754a0e34d2e3f8a4a9d47acaf704025c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: queenBeeAni36
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 577
+        width: 107
+        height: 123
+      alignment: 9
+      pivot: {x: 0.37850466, y: 0.7520325}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9095e48f5ac1a6a4e9481f0971a09d5b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: queenBeeAni37
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 581
+        width: 120
+        height: 119
+      alignment: 9
+      pivot: {x: 0.45416668, y: 0.74369746}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f270783f512b34b45967f4b42b629a56
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: queenBeeAni38
+      rect:
+        serializedVersion: 2
+        x: 865
+        y: 592
+        width: 147
+        height: 108
+      alignment: 9
+      pivot: {x: 0.5680272, y: 0.7638889}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 070b640e921c21d4aafb932d2e5502fa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: queenBeeAni39
+      rect:
+        serializedVersion: 2
+        x: 1014
+        y: 593
+        width: 137
+        height: 107
+      alignment: 9
+      pivot: {x: 0.5729927, y: 0.78971964}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db87ff10a1747bb4299211c37a51eac2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: queenBeeAni40
+      rect:
+        serializedVersion: 2
+        x: 1153
+        y: 598
+        width: 162
+        height: 102
+      alignment: 9
+      pivot: {x: 0.6018519, y: 0.7892157}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d19e83d0ef5c14b48bf7bbad6bbd5874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: queenBeeAni41
+      rect:
+        serializedVersion: 2
+        x: 1317
+        y: 574
+        width: 194
+        height: 126
+      alignment: 9
+      pivot: {x: 0.52835053, y: 0.57539684}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4349372973e65504f99d643cf761df74
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: queenBeeAni42
+      rect:
+        serializedVersion: 2
+        x: 1513
+        y: 545
+        width: 265
+        height: 155
+      alignment: 9
+      pivot: {x: 0.50754714, y: 0.5516129}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62fa5ffed3ce1db4e8530b77f9381a84
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: queenBeeAni43
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 384
+        width: 276
+        height: 159
+      alignment: 9
+      pivot: {x: 0.4981884, y: 0.5691824}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf85623c5b59b7241ad3be012c86f1e1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: queenBeeAni44
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 367
+        width: 285
+        height: 176
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5255682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7cb0e54d44308048a4e16ddc176feaf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: queenBeeAni45
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 386
+        width: 127
+        height: 157
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48089173}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 488c95956711dee45a15cb1543faa0b6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: queenBeeAni46
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 392
+        width: 122
+        height: 151
+      alignment: 9
+      pivot: {x: 0.50409836, y: 0.51324505}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47e141392540e24448a13641ca95cb5b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: queenBeeAni47
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 378
+        width: 97
+        height: 165
+      alignment: 9
+      pivot: {x: 0.5927835, y: 0.4878788}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e25c47dde820a143ae49bfb56392747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: queenBeeAni48
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 370
+        width: 105
+        height: 173
+      alignment: 9
+      pivot: {x: 0.6047619, y: 0.4768786}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e3d4d4dda137a94c89244fd94f75499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: queenBeeAni49
+      rect:
+        serializedVersion: 2
+        x: 1025
+        y: 361
+        width: 113
+        height: 182
+      alignment: 9
+      pivot: {x: 0.6061947, y: 0.49175823}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 614eaedadd1fca144b841606d7d02563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: queenBeeAni50
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 370
+        width: 125
+        height: 173
+      alignment: 9
+      pivot: {x: 0.62, y: 0.4768786}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4b1394619025064ba5bf32c4c155c30
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: queenBeeAni51
+      rect:
+        serializedVersion: 2
+        x: 1267
+        y: 369
+        width: 126
+        height: 174
+      alignment: 9
+      pivot: {x: 0.61507934, y: 0.4683908}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cef963490de2194fba4b778795ddad8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: queenBeeAni52
+      rect:
+        serializedVersion: 2
+        x: 1395
+        y: 361
+        width: 129
+        height: 182
+      alignment: 9
+      pivot: {x: 0.61627907, y: 0.49175823}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 384ffc9e6a5daa745a5e12a5ffb5da73
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: queenBeeAni53
+      rect:
+        serializedVersion: 2
+        x: 1526
+        y: 372
+        width: 133
+        height: 171
+      alignment: 9
+      pivot: {x: 0.575188, y: 0.4883041}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a3a83073cfb88d46834d513068a238a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: queenBeeAni54
+      rect:
+        serializedVersion: 2
+        x: 1661
+        y: 365
+        width: 128
+        height: 178
+      alignment: 9
+      pivot: {x: 0.61328125, y: 0.497191}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be324e059b26cb24595b942debdac5da
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: queenBeeAni55
+      rect:
+        serializedVersion: 2
+        x: 1791
+        y: 370
+        width: 130
+        height: 173
+      alignment: 9
+      pivot: {x: 0.61923075, y: 0.49421966}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf89378ace1cfcb468a91ba04e9a8154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: queenBeeAni56
+      rect:
+        serializedVersion: 2
+        x: 1923
+        y: 385
+        width: 114
+        height: 158
+      alignment: 9
+      pivot: {x: 0.627193, y: 0.51582277}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 691c917bdc0c3c145a8bc2855058e172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: queenBeeAni57
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 210
+        width: 104
+        height: 149
+      alignment: 9
+      pivot: {x: 0.6105769, y: 0.5604027}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51846c95beee9a4499846ed25e69c540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: queenBeeAni58
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 212
+        width: 115
+        height: 147
+      alignment: 9
+      pivot: {x: 0.5347826, y: 0.54761904}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17f39145f9b7b0944b252b75e95d3879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: queenBeeAni59
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 202
+        width: 127
+        height: 157
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48089173}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2967465c4575f3c4e952f4f4c47ada48
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

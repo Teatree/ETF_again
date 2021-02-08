@@ -1,0 +1,24 @@
+version: 2
+importPivots: 1
+tpsheetFileNames:
+- Assets/codeandweb.com/Example/SpriteSheet/sprites.tpsheet
+- Assets/MAIN/2D_TEXTURES/beeBug.tpsheet
+- Assets/MAIN/2D_TEXTURES/chargerBug.tpsheet
+- Assets/MAIN/2D_TEXTURES/drunkBug.tpsheet
+- Assets/MAIN/2D_TEXTURES/queenBeeBug.tpsheet
+- Assets/MAIN/2D_TEXTURES/simpleBug.tpsheet
+textureFileNames:
+- Assets/codeandweb.com/Example/SpriteSheet/sprites.png
+- Assets/MAIN/2D_TEXTURES/beeBug.png
+- Assets/MAIN/2D_TEXTURES/chargerBug.png
+- Assets/MAIN/2D_TEXTURES/drunkBug.png
+- Assets/MAIN/2D_TEXTURES/queenBeeBug.png
+- Assets/MAIN/2D_TEXTURES/simpleBug.png
+normalmapFileNames:
+- Assets/codeandweb.com/Example/SpriteSheet/sprites_n.png
+- 
+- 
+- 
+- 
+- 
+enableDebugOutput: 0

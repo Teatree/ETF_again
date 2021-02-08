@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spriter_data scml_version="1.0" generator="BrashMonkey Spriter" generator_version="r7">
+    <folder id="0">
+        <file id="0" name="leaf_left.png" width="300" height="300" pivot_x="0" pivot_y="1"/>
+        <file id="1" name="leaf_right.png" width="300" height="300" pivot_x="0" pivot_y="1"/>
+        <file id="2" name="pot.png" width="300" height="300" pivot_x="0" pivot_y="1"/>
+    </folder>
+    <entity id="0" name="entity_000">
+        <obj_info name="bone_leaf_left" type="bone" w="103.942" h="10"/>
+        <obj_info name="bone_leaf_right" type="bone" w="117.004" h="10"/>
+        <animation id="0" name="idle" length="3000" interval="100">
+            <mainline>
+                <key id="0" curve_type="cubic" c1="0" c2="0.8436">
+                    <bone_ref id="0" timeline="2" key="0"/>
+                    <bone_ref id="1" timeline="3" key="0"/>
+                    <object_ref id="0" timeline="4" key="0" z_index="0"/>
+                    <object_ref id="1" parent="0" timeline="0" key="0" z_index="1"/>
+                    <object_ref id="2" parent="1" timeline="1" key="0" z_index="2"/>
+                </key>
+                <key id="1" time="1185" curve_type="cubic" c1="0" c2="0.8436">
+                    <bone_ref id="0" timeline="2" key="1"/>
+                    <bone_ref id="1" timeline="3" key="1"/>
+                    <object_ref id="0" timeline="4" key="1" z_index="0"/>
+                    <object_ref id="1" parent="0" timeline="0" key="1" z_index="1"/>
+                    <object_ref id="2" parent="1" timeline="1" key="1" z_index="2"/>
+                </key>
+                <key id="2" time="1714" curve_type="cubic" c1="0" c2="0.8436">
+                    <bone_ref id="0" timeline="2" key="1"/>
+                    <bone_ref id="1" timeline="3" key="1"/>
+                    <object_ref id="0" timeline="4" key="2" z_index="0"/>
+                    <object_ref id="1" parent="0" timeline="0" key="2" z_index="1"/>
+                    <object_ref id="2" parent="1" timeline="1" key="2" z_index="2"/>
+                </key>
+            </mainline>
+            <timeline id="0" name="leaf_left">
+                <key id="0" spin="0">
+                    <object folder="0" file="0" x="211.809838" y="-146.716027" angle="210.018367"/>
+                </key>
+                <key id="1" time="1185" spin="0">
+                    <object folder="0" file="0" x="213.763627" y="-153.079447" angle="210.018367" scale_x="0.983516" scale_y="1.025391"/>
+                </key>
+                <key id="2" time="1714" spin="0">
+                    <object folder="0" file="0" x="212.821083" y="-151.440338" angle="210.018367" scale_x="0.97573" scale_y="1.01799"/>
+                </key>
+            </timeline>
+            <timeline id="1" name="leaf_right">
+                <key id="0" spin="0">
+                    <object folder="0" file="1" x="-48.06662" y="263.733957" angle="341.565051"/>
+                </key>
+                <key id="1" time="1185" spin="0">
+                    <object folder="0" file="1" x="-42.001907" y="269.589808" angle="341.565051" scale_x="0.979853" scale_y="1.035156"/>
+                </key>
+                <key id="2" time="1714" spin="0">
+                    <object folder="0" file="1" x="-40.336131" y="264.487841" angle="341.565051" scale_x="0.959819" scale_y="1.018256"/>
+                </key>
+            </timeline>
+            <timeline id="2" obj="0" name="bone_leaf_left" object_type="bone">
+                <key id="0" spin="0">
+                    <bone x="-27" y="-48" angle="149.981633"/>
+                </key>
+                <key id="1" time="1185" spin="0">
+                    <bone x="-27" y="-49" angle="149.981633"/>
+                </key>
+            </timeline>
+            <timeline id="3" obj="1" name="bone_leaf_right" object_type="bone">
+                <key id="0">
+                    <bone x="-8" y="-50" angle="18.434949"/>
+                </key>
+                <key id="1" time="1185" spin="-1">
+                    <bone x="-8" y="-51" angle="19.595946"/>
+                </key>
+            </timeline>
+            <timeline id="4" name="pot">
+                <key id="0" spin="0">
+                    <object folder="0" file="2" x="-137" y="185.000001" angle="0"/>
+                </key>
+                <key id="1" time="1185" spin="0">
+                    <object folder="0" file="2" x="-137" y="184.999996" angle="0"/>
+                </key>
+                <key id="2" time="1714" spin="0">
+                    <object folder="0" file="2" x="-137" y="185.000005" angle="0"/>
+                </key>
+            </timeline>
+        </animation>
+        <animation id="1" name="attack_idle" length="3000" interval="100">
+            <mainline>
+                <key id="0" curve_type="cubic" c1="0" c2="0.8436">
+                    <bone_ref id="0" timeline="2" key="0"/>
+                    <bone_ref id="1" timeline="3" key="0"/>
+                    <object_ref id="0" timeline="4" key="0" z_index="0"/>
+                    <object_ref id="1" parent="0" timeline="0" key="0" z_index="1"/>
+                    <object_ref id="2" parent="1" timeline="1" key="0" z_index="2"/>
+                </key>
+                <key id="1" time="1185" curve_type="cubic" c1="0" c2="0.8436">
+                    <bone_ref id="0" timeline="2" key="0"/>
+                    <bone_ref id="1" timeline="3" key="0"/>
+                    <object_ref id="0" timeline="4" key="1" z_index="0"/>
+                    <object_ref id="1" parent="0" timeline="0" key="1" z_index="1"/>
+                    <object_ref id="2" parent="1" timeline="1" key="1" z_index="2"/>
+                </key>
+                <key id="2" time="1714" curve_type="cubic" c1="0" c2="0.8436">
+                    <bone_ref id="0" timeline="2" key="0"/>
+                    <bone_ref id="1" timeline="3" key="0"/>
+                    <object_ref id="0" timeline="4" key="2" z_index="0"/>
+                    <object_ref id="1" parent="0" timeline="0" key="2" z_index="1"/>
+                    <object_ref id="2" parent="1" timeline="1" key="2" z_index="2"/>
+                </key>
+            </mainline>
+            <timeline id="0" name="leaf_left">
+                <key id="0" spin="0">
+                    <object folder="0" file="0" x="230.974317" y="-211.867563" angle="210.018367"/>
+                </key>
+                <key id="1" time="1185" spin="0">
+                    <object folder="0" file="0" x="191.251138" y="-114.115522" angle="210.018367" scale_x="0.983516" scale_y="1.025391"/>
+                </key>
+                <key id="2" time="1714" spin="0">
+                    <object folder="0" file="0" x="190.308589" y="-112.476405" angle="210.018367" scale_x="0.97573" scale_y="1.01799"/>
+                </key>
+            </timeline>
+            <timeline id="1" name="leaf_right">
+                <key id="0" spin="0">
+                    <object folder="0" file="1" x="-62.29687" y="221.043208" angle="341.565051"/>
+                </key>
+                <key id="1" time="1185" spin="0">
+                    <object folder="0" file="1" x="-57.094227" y="227.196159" angle="341.565051" scale_x="0.979853" scale_y="1.035156"/>
+                </key>
+                <key id="2" time="1714" spin="0">
+                    <object folder="0" file="1" x="-55.177818" y="222.005789" angle="341.565051" scale_x="0.959819" scale_y="1.018256"/>
+                </key>
+            </timeline>
+            <timeline id="2" obj="0" name="bone_leaf_left" object_type="bone">
+                <key id="0" spin="0">
+                    <bone x="-27" y="-48" angle="149.981633"/>
+                </key>
+            </timeline>
+            <timeline id="3" obj="1" name="bone_leaf_right" object_type="bone">
+                <key id="0" spin="0">
+                    <bone x="-8" y="-50" angle="18.434949"/>
+                </key>
+            </timeline>
+            <timeline id="4" name="pot">
+                <key id="0" spin="0">
+                    <object folder="0" file="2" x="-137" y="140" angle="0"/>
+                </key>
+                <key id="1" time="1185" spin="0">
+                    <object folder="0" file="2" x="-137" y="140" angle="0"/>
+                </key>
+                <key id="2" time="1714" spin="0">
+                    <object folder="0" file="2" x="-137" y="140" angle="0"/>
+                </key>
+            </timeline>
+        </animation>
+        <animation id="2" name="attack_trans" length="3000" interval="100">
+            <mainline>
+                <key id="0" curve_type="cubic" c1="0" c2="0.8436">
+                    <bone_ref id="0" timeline="2" key="0"/>
+                    <bone_ref id="1" timeline="3" key="0"/>
+                    <object_ref id="0" timeline="4" key="0" z_index="0"/>
+                    <object_ref id="1" parent="0" timeline="0" key="0" z_index="1"/>
+                    <object_ref id="2" parent="1" timeline="1" key="0" z_index="2"/>
+                </key>
+                <key id="1" time="1185" curve_type="cubic" c1="0" c2="0.8436">
+                    <bone_ref id="0" timeline="2" key="0"/>
+                    <bone_ref id="1" timeline="3" key="0"/>
+                    <object_ref id="0" timeline="4" key="1" z_index="0"/>
+                    <object_ref id="1" parent="0" timeline="0" key="1" z_index="1"/>
+                    <object_ref id="2" parent="1" timeline="1" key="1" z_index="2"/>
+                </key>
+                <key id="2" time="1714" curve_type="cubic" c1="0" c2="0.8436">
+                    <bone_ref id="0" timeline="2" key="0"/>
+                    <bone_ref id="1" timeline="3" key="0"/>
+                    <object_ref id="0" timeline="4" key="2" z_index="0"/>
+                    <object_ref id="1" parent="0" timeline="0" key="2" z_index="1"/>
+                    <object_ref id="2" parent="1" timeline="1" key="2" z_index="2"/>
+                </key>
+            </mainline>
+            <timeline id="0" name="leaf_left">
+                <key id="0" spin="0">
+                    <object folder="0" file="0" x="189.297346" y="-107.752098" angle="210.018367"/>
+                </key>
+                <key id="1" time="1185" spin="0">
+                    <object folder="0" file="0" x="191.251138" y="-114.115522" angle="210.018367" scale_x="0.983516" scale_y="1.025391"/>
+                </key>
+                <key id="2" time="1714" spin="0">
+                    <object folder="0" file="0" x="190.308589" y="-112.476405" angle="210.018367" scale_x="0.97573" scale_y="1.01799"/>
+                </key>
+            </timeline>
+            <timeline id="1" name="leaf_right">
+                <key id="0" spin="0">
+                    <object folder="0" file="1" x="-23.084627" y="338.679937" angle="341.565051"/>
+                </key>
+                <key id="1" time="1185" spin="0">
+                    <object folder="0" file="1" x="-57.094227" y="227.196159" angle="341.565051" scale_x="0.979853" scale_y="1.035156"/>
+                </key>
+                <key id="2" time="1714" spin="0">
+                    <object folder="0" file="1" x="-55.177818" y="222.005789" angle="341.565051" scale_x="0.959819" scale_y="1.018256"/>
+                </key>
+            </timeline>
+            <timeline id="2" obj="0" name="bone_leaf_left" object_type="bone">
+                <key id="0" spin="0">
+                    <bone x="-27" y="-48" angle="149.981633"/>
+                </key>
+            </timeline>
+            <timeline id="3" obj="1" name="bone_leaf_right" object_type="bone">
+                <key id="0" spin="0">
+                    <bone x="-8" y="-50" angle="18.434949"/>
+                </key>
+            </timeline>
+            <timeline id="4" name="pot">
+                <key id="0" spin="0">
+                    <object folder="0" file="2" x="-137" y="140" angle="0"/>
+                </key>
+                <key id="1" time="1185" spin="0">
+                    <object folder="0" file="2" x="-137" y="140" angle="0"/>
+                </key>
+                <key id="2" time="1714" spin="0">
+                    <object folder="0" file="2" x="-137" y="140" angle="0"/>
+                </key>
+            </timeline>
+        </animation>
+        <animation id="3" name="attack" length="3000" interval="100">
+            <mainline>
+                <key id="0" curve_type="cubic" c1="0" c2="0.8436">
+                    <bone_ref id="0" timeline="2" key="0"/>
+                    <bone_ref id="1" timeline="3" key="0"/>
+                    <object_ref id="0" timeline="4" key="0" z_index="0"/>
+                    <object_ref id="1" parent="0" timeline="0" key="0" z_index="1"/>
+                    <object_ref id="2" parent="1" timeline="1" key="0" z_index="2"/>
+                </key>
+                <key id="1" time="1185" curve_type="cubic" c1="0" c2="0.8436">
+                    <bone_ref id="0" timeline="2" key="0"/>
+                    <bone_ref id="1" timeline="3" key="0"/>
+                    <object_ref id="0" timeline="4" key="1" z_index="0"/>
+                    <object_ref id="1" parent="0" timeline="0" key="1" z_index="1"/>
+                    <object_ref id="2" parent="1" timeline="1" key="1" z_index="2"/>
+                </key>
+                <key id="2" time="1714" curve_type="cubic" c1="0" c2="0.8436">
+                    <bone_ref id="0" timeline="2" key="0"/>
+                    <bone_ref id="1" timeline="3" key="0"/>
+                    <object_ref id="0" timeline="4" key="2" z_index="0"/>
+                    <object_ref id="1" parent="0" timeline="0" key="2" z_index="1"/>
+                    <object_ref id="2" parent="1" timeline="1" key="2" z_index="2"/>
+                </key>
+            </mainline>
+            <timeline id="0" name="leaf_left">
+                <key id="0" spin="0">
+                    <object folder="0" file="0" x="424.889613" y="12.199075" angle="210.018367"/>
+                </key>
+                <key id="1" time="1185" spin="0">
+                    <object folder="0" file="0" x="191.251138" y="-114.115522" angle="210.018367" scale_x="0.983516" scale_y="1.025391"/>
+                </key>
+                <key id="2" time="1714" spin="0">
+                    <object folder="0" file="0" x="190.308589" y="-112.476405" angle="210.018367" scale_x="0.97573" scale_y="1.01799"/>
+                </key>
+            </timeline>
+            <timeline id="1" name="leaf_right">
+                <key id="0" spin="0">
+                    <object folder="0" file="1" x="249.819935" y="161.276159" angle="341.565051"/>
+                </key>
+                <key id="1" time="1185" spin="0">
+                    <object folder="0" file="1" x="-57.094227" y="227.196159" angle="341.565051" scale_x="0.979853" scale_y="1.035156"/>
+                </key>
+                <key id="2" time="1714" spin="0">
+                    <object folder="0" file="1" x="-55.177818" y="222.005789" angle="341.565051" scale_x="0.959819" scale_y="1.018256"/>
+                </key>
+            </timeline>
+            <timeline id="2" obj="0" name="bone_leaf_left" object_type="bone">
+                <key id="0" spin="0">
+                    <bone x="-27" y="-48" angle="149.981633"/>
+                </key>
+            </timeline>
+            <timeline id="3" obj="1" name="bone_leaf_right" object_type="bone">
+                <key id="0" spin="0">
+                    <bone x="-8" y="-50" angle="18.434949"/>
+                </key>
+            </timeline>
+            <timeline id="4" name="pot">
+                <key id="0" spin="0">
+                    <object folder="0" file="2" x="-137" y="140" angle="0"/>
+                </key>
+                <key id="1" time="1185" spin="0">
+                    <object folder="0" file="2" x="-137" y="140" angle="0"/>
+                </key>
+                <key id="2" time="1714" spin="0">
+                    <object folder="0" file="2" x="-137" y="140" angle="0"/>
+                </key>
+            </timeline>
+        </animation>
+        <animation id="4" name="attack_bite" length="3000" interval="100">
+            <mainline>
+                <key id="0" curve_type="cubic" c1="0" c2="0.8436">
+                    <bone_ref id="0" timeline="2" key="0"/>
+                    <bone_ref id="1" timeline="3" key="0"/>
+                    <object_ref id="0" timeline="4" key="0" z_index="0"/>
+                    <object_ref id="1" parent="0" timeline="0" key="0" z_index="1"/>
+                    <object_ref id="2" parent="1" timeline="1" key="0" z_index="2"/>
+                </key>
+                <key id="1" time="1185" curve_type="cubic" c1="0" c2="0.8436">
+                    <bone_ref id="0" timeline="2" key="0"/>
+                    <bone_ref id="1" timeline="3" key="0"/>
+                    <object_ref id="0" timeline="4" key="1" z_index="0"/>
+                    <object_ref id="1" parent="0" timeline="0" key="1" z_index="1"/>
+                    <object_ref id="2" parent="1" timeline="1" key="1" z_index="2"/>
+                </key>
+                <key id="2" time="1714" curve_type="cubic" c1="0" c2="0.8436">
+                    <bone_ref id="0" timeline="2" key="0"/>
+                    <bone_ref id="1" timeline="3" key="0"/>
+                    <object_ref id="0" timeline="4" key="2" z_index="0"/>
+                    <object_ref id="1" parent="0" timeline="0" key="2" z_index="1"/>
+                    <object_ref id="2" parent="1" timeline="1" key="2" z_index="2"/>
+                </key>
+            </mainline>
+            <timeline id="0" name="leaf_left">
+                <key id="0" spin="0">
+                    <object folder="0" file="0" x="162.647945" y="96.284196" angle="210.018367"/>
+                </key>
+                <key id="1" time="1185" spin="0">
+                    <object folder="0" file="0" x="191.251138" y="-114.115522" angle="210.018367" scale_x="0.983516" scale_y="1.025391"/>
+                </key>
+                <key id="2" time="1714" spin="0">
+                    <object folder="0" file="0" x="190.308589" y="-112.476405" angle="210.018367" scale_x="0.97573" scale_y="1.01799"/>
+                </key>
+            </timeline>
+            <timeline id="1" name="leaf_right">
+                <key id="0" spin="0">
+                    <object folder="0" file="1" x="-110.679719" y="9.486833" angle="341.565051"/>
+                </key>
+                <key id="1" time="1185" spin="0">
+                    <object folder="0" file="1" x="-57.094227" y="227.196159" angle="341.565051" scale_x="0.979853" scale_y="1.035156"/>
+                </key>
+                <key id="2" time="1714" spin="0">
+                    <object folder="0" file="1" x="-55.177818" y="222.005789" angle="341.565051" scale_x="0.959819" scale_y="1.018256"/>
+                </key>
+            </timeline>
+            <timeline id="2" obj="0" name="bone_leaf_left" object_type="bone">
+                <key id="0" spin="0">
+                    <bone x="-27" y="-48" angle="149.981633"/>
+                </key>
+            </timeline>
+            <timeline id="3" obj="1" name="bone_leaf_right" object_type="bone">
+                <key id="0" spin="0">
+                    <bone x="-8" y="-50" angle="18.434949"/>
+                </key>
+            </timeline>
+            <timeline id="4" name="pot">
+                <key id="0" spin="0">
+                    <object folder="0" file="2" x="-137" y="140" angle="0"/>
+                </key>
+                <key id="1" time="1185" spin="0">
+                    <object folder="0" file="2" x="-137" y="140" angle="0"/>
+                </key>
+                <key id="2" time="1714" spin="0">
+                    <object folder="0" file="2" x="-137" y="140" angle="0"/>
+                </key>
+            </timeline>
+        </animation>
+        <animation id="5" name="dead" length="3000" interval="100">
+            <mainline>
+                <key id="0" curve_type="cubic" c1="0" c2="0.8436">
+                    <bone_ref id="0" timeline="2" key="0"/>
+                    <bone_ref id="1" timeline="3" key="0"/>
+                    <object_ref id="0" timeline="4" key="0" z_index="0"/>
+                    <object_ref id="1" parent="0" timeline="0" key="0" z_index="1"/>
+                    <object_ref id="2" parent="1" timeline="1" key="0" z_index="2"/>
+                </key>
+                <key id="1" time="1185" curve_type="cubic" c1="0" c2="0.8436">
+                    <bone_ref id="0" timeline="2" key="0"/>
+                    <bone_ref id="1" timeline="3" key="0"/>
+                    <object_ref id="0" timeline="4" key="1" z_index="0"/>
+                    <object_ref id="1" parent="0" timeline="0" key="1" z_index="1"/>
+                    <object_ref id="2" parent="1" timeline="1" key="1" z_index="2"/>
+                </key>
+                <key id="2" time="1714" curve_type="cubic" c1="0" c2="0.8436">
+                    <bone_ref id="0" timeline="2" key="0"/>
+                    <bone_ref id="1" timeline="3" key="0"/>
+                    <object_ref id="0" timeline="4" key="2" z_index="0"/>
+                    <object_ref id="1" parent="0" timeline="0" key="2" z_index="1"/>
+                    <object_ref id="2" parent="1" timeline="1" key="2" z_index="2"/>
+                </key>
+            </mainline>
+            <timeline id="0" name="leaf_left">
+                <key id="0" spin="0">
+                    <object folder="0" file="0" x="346.923272" y="-76.734888" angle="210.018367"/>
+                </key>
+                <key id="1" time="1185" spin="0">
+                    <object folder="0" file="0" x="133.526797" y="-441.970521" angle="210.018367" scale_x="0.983516" scale_y="1.025391"/>
+                </key>
+                <key id="2" time="1714" spin="0">
+                    <object folder="0" file="0" x="190.308589" y="-112.476405" angle="210.018367" scale_x="0.97573" scale_y="1.01799"/>
+                </key>
+            </timeline>
+            <timeline id="1" name="leaf_right">
+                <key id="0" spin="0">
+                    <object folder="0" file="1" x="134.3968" y="184.993242" angle="341.565051"/>
+                </key>
+                <key id="1" time="1185" spin="0">
+                    <object folder="0" file="1" x="-154.17615" y="533.620865" angle="341.565051" scale_x="0.979853" scale_y="1.035156"/>
+                </key>
+                <key id="2" time="1714" spin="0">
+                    <object folder="0" file="1" x="-55.177818" y="222.005789" angle="341.565051" scale_x="0.959819" scale_y="1.018256"/>
+                </key>
+            </timeline>
+            <timeline id="2" obj="0" name="bone_leaf_left" object_type="bone">
+                <key id="0" spin="0">
+                    <bone x="-27" y="-48" angle="149.981633"/>
+                </key>
+            </timeline>
+            <timeline id="3" obj="1" name="bone_leaf_right" object_type="bone">
+                <key id="0" spin="0">
+                    <bone x="-8" y="-50" angle="18.434949"/>
+                </key>
+            </timeline>
+            <timeline id="4" name="pot">
+                <key id="0" spin="0">
+                    <object folder="0" file="2" x="-137" y="140" angle="0"/>
+                </key>
+                <key id="1" time="1185" spin="0">
+                    <object folder="0" file="2" x="-137" y="140" angle="0"/>
+                </key>
+                <key id="2" time="1714" spin="0">
+                    <object folder="0" file="2" x="-137" y="140" angle="0"/>
+                </key>
+            </timeline>
+        </animation>
+        <animation id="6" name="revive" length="3000" interval="100">
+            <mainline>
+                <key id="0" curve_type="cubic" c1="0" c2="0.8436">
+                    <bone_ref id="0" timeline="2" key="0"/>
+                    <bone_ref id="1" timeline="3" key="0"/>
+                    <object_ref id="0" timeline="4" key="0" z_index="0"/>
+                    <object_ref id="1" parent="0" timeline="0" key="0" z_index="1"/>
+                    <object_ref id="2" parent="1" timeline="1" key="0" z_index="2"/>
+                </key>
+                <key id="1" time="1185" curve_type="cubic" c1="0" c2="0.8436">
+                    <bone_ref id="0" timeline="2" key="0"/>
+                    <bone_ref id="1" timeline="3" key="0"/>
+                    <object_ref id="0" timeline="4" key="1" z_index="0"/>
+                    <object_ref id="1" parent="0" timeline="0" key="1" z_index="1"/>
+                    <object_ref id="2" parent="1" timeline="1" key="1" z_index="2"/>
+                </key>
+                <key id="2" time="1714" curve_type="cubic" c1="0" c2="0.8436">
+                    <bone_ref id="0" timeline="2" key="0"/>
+                    <bone_ref id="1" timeline="3" key="0"/>
+                    <object_ref id="0" timeline="4" key="2" z_index="0"/>
+                    <object_ref id="1" parent="0" timeline="0" key="2" z_index="1"/>
+                    <object_ref id="2" parent="1" timeline="1" key="2" z_index="2"/>
+                </key>
+            </mainline>
+            <timeline id="0" name="leaf_left">
+                <key id="0" spin="0">
+                    <object folder="0" file="0" x="189.297346" y="-107.752098" angle="210.018367"/>
+                </key>
+                <key id="1" time="1185" spin="0">
+                    <object folder="0" file="0" x="191.251138" y="-114.115522" angle="210.018367" scale_x="0.983516" scale_y="1.025391"/>
+                </key>
+                <key id="2" time="1714" spin="0">
+                    <object folder="0" file="0" x="190.308589" y="-112.476405" angle="210.018367" scale_x="0.97573" scale_y="1.01799"/>
+                </key>
+            </timeline>
+            <timeline id="1" name="leaf_right">
+                <key id="0" spin="0">
+                    <object folder="0" file="1" x="304.211111" y="270.690966" angle="341.565051"/>
+                </key>
+                <key id="1" time="1185" spin="0">
+                    <object folder="0" file="1" x="-57.094227" y="227.196159" angle="341.565051" scale_x="0.979853" scale_y="1.035156"/>
+                </key>
+                <key id="2" time="1714" spin="0">
+                    <object folder="0" file="1" x="-55.177818" y="222.005789" angle="341.565051" scale_x="0.959819" scale_y="1.018256"/>
+                </key>
+            </timeline>
+            <timeline id="2" obj="0" name="bone_leaf_left" object_type="bone">
+                <key id="0" spin="0">
+                    <bone x="-27" y="-48" angle="149.981633"/>
+                </key>
+            </timeline>
+            <timeline id="3" obj="1" name="bone_leaf_right" object_type="bone">
+                <key id="0" spin="0">
+                    <bone x="-8" y="-50" angle="18.434949"/>
+                </key>
+            </timeline>
+            <timeline id="4" name="pot">
+                <key id="0" spin="0">
+                    <object folder="0" file="2" x="-328" y="295" angle="0"/>
+                </key>
+                <key id="1" time="1185" spin="0">
+                    <object folder="0" file="2" x="-137" y="140" angle="0"/>
+                </key>
+                <key id="2" time="1714" spin="0">
+                    <object folder="0" file="2" x="-137" y="140" angle="0"/>
+                </key>
+            </timeline>
+        </animation>
+    </entity>
+</spriter_data>
