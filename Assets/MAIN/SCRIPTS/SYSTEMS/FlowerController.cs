@@ -11,10 +11,7 @@ public class FlowerController : MonoBehaviour {
     public _State _state;
 
     public float FLOWER_MOVE_SPEED; // something like 4
-    public UnityAnimator uAnimator;
-
-    public SpriterData old;
-    public FlowerHatCusomizable flowerHatCustomizable;
+    public UnityAnimator uAnimator;    
 
     string currentPlayingAnimation;
 
@@ -39,14 +36,6 @@ public class FlowerController : MonoBehaviour {
         TransitionBack();
 
         // TestSwapAssets();
-    }
-
-    void TestSwapAssets()
-    {
-        old.FileEntries[1].Sprite = flowerHatCustomizable.sprite;
-
-        SceneManager.LoadScene(0);
-        //old.GetComponent<SpriteRenderer>().sprite = flowerHatCustomizable.sprite;
     }
 
     void ProcessInput() {

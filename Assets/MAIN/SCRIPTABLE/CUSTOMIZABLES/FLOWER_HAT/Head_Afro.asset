@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Head_Afro
   m_EditorClassIdentifier: 
   Name: Baseball
-  sprite: {fileID: 21300000, guid: 43412316f585ec14497fb5c1b3a37b31, type: 3}
+  sprite: {fileID: 21300000, guid: 676fc7155d5d3614fa24da8975fb8d9f, type: 3}
