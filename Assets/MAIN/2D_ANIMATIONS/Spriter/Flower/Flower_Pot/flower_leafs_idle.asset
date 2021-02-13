@@ -3,8 +3,9 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -409,8 +410,8 @@ MonoBehaviour:
               EntityId: 0
               FolderId: 0
               FileId: 0
-              PivotX: 0
-              PivotY: 1
+              PivotX: NaN
+              PivotY: NaN
               T: 0
           - Id: 1
             Name: 
@@ -439,8 +440,8 @@ MonoBehaviour:
               EntityId: 0
               FolderId: 0
               FileId: 0
-              PivotX: 0
-              PivotY: 1
+              PivotX: NaN
+              PivotY: NaN
               T: 0
           Meta:
             Varlines: []
@@ -478,8 +479,8 @@ MonoBehaviour:
               EntityId: 0
               FolderId: 0
               FileId: 0
-              PivotX: 0
-              PivotY: 1
+              PivotX: NaN
+              PivotY: NaN
               T: 0
           - Id: 1
             Name: 
@@ -508,8 +509,8 @@ MonoBehaviour:
               EntityId: 0
               FolderId: 0
               FileId: 0
-              PivotX: 0
-              PivotY: 1
+              PivotX: NaN
+              PivotY: NaN
               T: 0
           Meta:
             Varlines: []
@@ -970,8 +971,8 @@ MonoBehaviour:
               EntityId: 0
               FolderId: 0
               FileId: 0
-              PivotX: 0
-              PivotY: 1
+              PivotX: NaN
+              PivotY: NaN
               T: 0
           Meta:
             Varlines: []
@@ -1009,8 +1010,8 @@ MonoBehaviour:
               EntityId: 0
               FolderId: 0
               FileId: 0
-              PivotX: 0
-              PivotY: 1
+              PivotX: NaN
+              PivotY: NaN
               T: 0
           Meta:
             Varlines: []
@@ -1471,8 +1472,8 @@ MonoBehaviour:
               EntityId: 0
               FolderId: 0
               FileId: 0
-              PivotX: 0
-              PivotY: 1
+              PivotX: NaN
+              PivotY: NaN
               T: 0
           Meta:
             Varlines: []
@@ -1510,8 +1511,8 @@ MonoBehaviour:
               EntityId: 0
               FolderId: 0
               FileId: 0
-              PivotX: 0
-              PivotY: 1
+              PivotX: NaN
+              PivotY: NaN
               T: 0
           Meta:
             Varlines: []
@@ -1972,8 +1973,8 @@ MonoBehaviour:
               EntityId: 0
               FolderId: 0
               FileId: 0
-              PivotX: 0
-              PivotY: 1
+              PivotX: NaN
+              PivotY: NaN
               T: 0
           Meta:
             Varlines: []
@@ -2011,8 +2012,8 @@ MonoBehaviour:
               EntityId: 0
               FolderId: 0
               FileId: 0
-              PivotX: 0
-              PivotY: 1
+              PivotX: NaN
+              PivotY: NaN
               T: 0
           Meta:
             Varlines: []
@@ -2473,8 +2474,8 @@ MonoBehaviour:
               EntityId: 0
               FolderId: 0
               FileId: 0
-              PivotX: 0
-              PivotY: 1
+              PivotX: NaN
+              PivotY: NaN
               T: 0
           Meta:
             Varlines: []
@@ -2512,8 +2513,8 @@ MonoBehaviour:
               EntityId: 0
               FolderId: 0
               FileId: 0
-              PivotX: 0
-              PivotY: 1
+              PivotX: NaN
+              PivotY: NaN
               T: 0
           Meta:
             Varlines: []
@@ -2974,8 +2975,8 @@ MonoBehaviour:
               EntityId: 0
               FolderId: 0
               FileId: 0
-              PivotX: 0
-              PivotY: 1
+              PivotX: NaN
+              PivotY: NaN
               T: 0
           Meta:
             Varlines: []
@@ -3013,8 +3014,8 @@ MonoBehaviour:
               EntityId: 0
               FolderId: 0
               FileId: 0
-              PivotX: 0
-              PivotY: 1
+              PivotX: NaN
+              PivotY: NaN
               T: 0
           Meta:
             Varlines: []
@@ -3475,8 +3476,8 @@ MonoBehaviour:
               EntityId: 0
               FolderId: 0
               FileId: 0
-              PivotX: 0
-              PivotY: 1
+              PivotX: NaN
+              PivotY: NaN
               T: 0
           Meta:
             Varlines: []
@@ -3514,8 +3515,8 @@ MonoBehaviour:
               EntityId: 0
               FolderId: 0
               FileId: 0
-              PivotX: 0
-              PivotY: 1
+              PivotX: NaN
+              PivotY: NaN
               T: 0
           Meta:
             Varlines: []
@@ -3631,7 +3632,7 @@ MonoBehaviour:
   FileEntries:
   - FolderId: 0
     FileId: 0
-    Sprite: {fileID: 21300000, guid: 2009be3da2ece124dbbc5d3bdf60b65e, type: 3}
+    Sprite: {fileID: 21300000, guid: 127b2a3d1ab01bf489df4d92a6a27019, type: 3}
     Sound: {fileID: 0}
   - FolderId: 0
     FileId: 1
@@ -3639,5 +3640,5 @@ MonoBehaviour:
     Sound: {fileID: 0}
   - FolderId: 0
     FileId: 2
-    Sprite: {fileID: 21300000, guid: bb333453b3c5460488feef724ffc65aa, type: 3}
+    Sprite: {fileID: 21300000, guid: 871b98b2d4782ef4bb619ced74618e19, type: 3}
     Sound: {fileID: 0}

@@ -8,6 +8,7 @@ public class ShopUIManager : MonoBehaviour
 {
     public SpriterData old;
     public FlowerHatCusomizable flowerHatCustomizable;
+    public GameObject ShopPreviewObject;
 
     void Start()
     {
@@ -29,5 +30,10 @@ public class ShopUIManager : MonoBehaviour
         old.FileEntries[1].Sprite = flowerHatCustomizable.sprite;
 
         //old.GetComponent<SpriteRenderer>().sprite = flowerHatCustomizable.sprite;
+    }
+
+    public void OpenShopPreview()
+    {
+        ShopPreviewObject.SetActive(true);
     }
 }
