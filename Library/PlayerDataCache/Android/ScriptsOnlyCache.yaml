@@ -6,8 +6,10 @@ ScriptsOnlyBuild:
     - BugSpawnManager
     - FlowerController
     - FlowerHatCusomizable
+    - GameManager
     - InputManager
     - MainMenuManager
+    - ReviveController
     - ShopPreview
     - ShopUIManager
     - SpriterDotNetUnity.SpriterData
@@ -26,8 +28,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -71,38 +75,44 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
+    - Class: 111
+      Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 15090}
+      Script: {instanceID: 11284}
     - Class: 114
-      Script: {instanceID: 15326}
+      Script: {instanceID: 11308}
     - Class: 114
-      Script: {instanceID: 15376}
+      Script: {instanceID: 11604}
     - Class: 114
-      Script: {instanceID: 15618}
+      Script: {instanceID: 11850}
     - Class: 114
-      Script: {instanceID: 15948}
+      Script: {instanceID: 12190}
     - Class: 114
-      Script: {instanceID: 16102}
+      Script: {instanceID: 12352}
     - Class: 114
-      Script: {instanceID: 16354}
+      Script: {instanceID: 12620}
     - Class: 114
-      Script: {instanceID: 16550}
+      Script: {instanceID: 12816}
     - Class: 114
-      Script: {instanceID: 17208}
+      Script: {instanceID: 13496}
     - Class: 114
-      Script: {instanceID: 17228}
+      Script: {instanceID: 13516}
     - Class: 114
-      Script: {instanceID: 17466}
+      Script: {instanceID: 13556}
     - Class: 114
-      Script: {instanceID: 17518}
+      Script: {instanceID: 13760}
     - Class: 114
-      Script: {instanceID: 17730}
+      Script: {instanceID: 13812}
     - Class: 114
-      Script: {instanceID: 17736}
+      Script: {instanceID: 14026}
     - Class: 114
-      Script: {instanceID: 17800}
+      Script: {instanceID: 14032}
     - Class: 114
-      Script: {instanceID: 38314}
+      Script: {instanceID: 14096}
+    - Class: 114
+      Script: {instanceID: 18522}
+    - Class: 114
+      Script: {instanceID: 31386}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
@@ -141,27 +151,27 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 15090}
+      Script: {instanceID: 11284}
     - Class: 114
-      Script: {instanceID: 15130}
+      Script: {instanceID: 11308}
     - Class: 114
-      Script: {instanceID: 15244}
+      Script: {instanceID: 11350}
     - Class: 114
-      Script: {instanceID: 15326}
+      Script: {instanceID: 11470}
     - Class: 114
-      Script: {instanceID: 15376}
+      Script: {instanceID: 11604}
     - Class: 114
-      Script: {instanceID: 15948}
+      Script: {instanceID: 12190}
     - Class: 114
-      Script: {instanceID: 16550}
+      Script: {instanceID: 12816}
     - Class: 114
-      Script: {instanceID: 16562}
+      Script: {instanceID: 12828}
     - Class: 114
-      Script: {instanceID: 17208}
+      Script: {instanceID: 13496}
     - Class: 114
-      Script: {instanceID: 17228}
+      Script: {instanceID: 13516}
     - Class: 114
-      Script: {instanceID: 17730}
+      Script: {instanceID: 14026}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -179,6 +189,12 @@ ScriptsOnlyBuild:
     - Class: 224
       Script: {instanceID: 0}
   scriptHashData:
+  - hash:
+      serializedVersion: 2
+      Hash: aeb62f729c52c814dec86c47dcac1471
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Text
   - hash:
       serializedVersion: 2
       Hash: 4bc4346a71a8df53a6b106f68ef3a190
@@ -257,12 +273,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: ActivationTrack
-  - hash:
-      serializedVersion: 2
-      Hash: aeb62f729c52c814dec86c47dcac1471
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Text
   - hash:
       serializedVersion: 2
       Hash: 499fd23433e68e265d153aa6b95d0047
@@ -691,6 +701,12 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
+      Hash: e4a92be7c9a768a5400ab56a942651b5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MainMenuManager
+  - hash:
+      serializedVersion: 2
       Hash: 1dcb82730d983b77cec736c6ef19f814
     assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
     namespaceName: UnityEngine.Networking
@@ -859,10 +875,16 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: e4a92be7c9a768a5400ab56a942651b5
+      Hash: f238e3e9cc350c827a3001f00a094319
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: MainMenuManager
+    className: GameManager
+  - hash:
+      serializedVersion: 2
+      Hash: c9087d99e22039528856fbd9eda13258
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ReviveController
   platform: 13
   scenePathNames:
   - Assets/MAIN/SCENES/shop.unity

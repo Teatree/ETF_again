@@ -28,12 +28,18 @@ public class FlowerController : MonoBehaviour {
         }
 
         //Debug.Log("uAnimator.Time = " + uAnimator.Time);
-
-        ProcessInput();
-        Transition();
-        AttackAndRetreat();
-        Idle();
-        TransitionBack();
+        if (GameManager.IsPaused == false)
+        {
+            ProcessInput();
+            Transition();
+            AttackAndRetreat();
+            TransitionBack();
+            Idle();
+        }
+        else
+        {
+            
+        }
 
         // TestSwapAssets();
     }

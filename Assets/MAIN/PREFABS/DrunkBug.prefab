@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1421781502244122}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10, y: 0.7042096, z: 0}
+  m_LocalPosition: {x: -10, y: 1.4600991, z: 0}
   m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_Children: []
   m_Father: {fileID: 0}
@@ -172,8 +172,8 @@ MonoBehaviour:
   endY: 0
   y: 0
   duration: 14
-  curveSpeed: 2
-  amplitude: 6
+  curveSpeed: 4
+  amplitude: 4
   time: 0
   reverse: 0
   began: 0

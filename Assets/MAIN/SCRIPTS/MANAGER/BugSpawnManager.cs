@@ -18,10 +18,14 @@ public class BugSpawnManager : MonoBehaviour {
     private void SpawnBugWithInterval() {
         // TODO: Interval based on level/time of the game.
 
-        i++;
-        if (i == 150) {
-            SpawnBug();
-            i = 0;
+        if (GameManager.IsPaused == false)
+        {
+            i++;
+            if (i == 150)
+            {
+                SpawnBug();
+                i = 0;
+            }
         }
     }
 

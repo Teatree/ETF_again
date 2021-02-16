@@ -64,6 +64,7 @@
   <ItemGroup>
     <Compile Include="Assets\MAIN\SCRIPTABLE\CUSTOMIZABLES\FLOWER_HAT\FlowerHatCusomizable.cs" />
     <Compile Include="Assets\MAIN\SCRIPTS\MANAGER\BugSpawnManager.cs" />
+    <Compile Include="Assets\MAIN\SCRIPTS\MANAGER\GameManager.cs" />
     <Compile Include="Assets\MAIN\SCRIPTS\MANAGER\InputManager.cs" />
     <Compile Include="Assets\MAIN\SCRIPTS\MANAGER\MainMenuManager.cs" />
     <Compile Include="Assets\MAIN\SCRIPTS\SCRIPTABLE_SCRIPTS\Bug.cs" />
@@ -71,6 +72,7 @@
     <Compile Include="Assets\MAIN\SCRIPTS\SHOP\ShopUIManager.cs" />
     <Compile Include="Assets\MAIN\SCRIPTS\SYSTEMS\BugController.cs" />
     <Compile Include="Assets\MAIN\SCRIPTS\SYSTEMS\FlowerController.cs" />
+    <Compile Include="Assets\MAIN\SCRIPTS\SYSTEMS\ReviveController.cs" />
     <Compile Include="Assets\MAIN\SCRIPTS\SYSTEMS\UIController.cs" />
     <Compile Include="Assets\SpriterDotNet\DefaultContentLoader.cs" />
     <Compile Include="Assets\SpriterDotNet\IContentLoader.cs" />

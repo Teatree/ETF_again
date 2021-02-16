@@ -37,16 +37,26 @@ public class BugController : MonoBehaviour {
     }
 
     public void Update() {
-        velocity += bug.acceleration;
+        if (GameManager.IsPaused == false)
+        {
+            anim.speed = 1;
+            velocity += bug.acceleration;
 
-        if (bug.name == "Charger") {
-            MoveCharger();
-        }
-        else {
-            MoveBug();
-        }
+            if (bug.name == "Charger")
+            {
+                MoveCharger();
+            }
+            else
+            {
+                MoveBug();
+            }
 
-        if (transform.position.x > 12) { KillMeWithoutAni(); }
+            if (transform.position.x > 12) { KillMeWithoutAni(); }
+        }
+        else
+        {
+            anim.speed = 0;
+        }
     }
 
     public void MoveBug() {
