@@ -9,7 +9,9 @@ ScriptsOnlyBuild:
     - GameManager
     - InputManager
     - MainMenuManager
+    - ResultScreenManager
     - ReviveController
+    - SceneController
     - ShopPreview
     - ShopUIManager
     - SpriterDotNetUnity.SpriterData
@@ -28,10 +30,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -42,8 +42,14 @@ ScriptsOnlyBuild:
     - UnityEngine.EventSystems.StandaloneInputModule
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
+    - UnityEngine.UI.ContentSizeFitter
     - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.HorizontalLayoutGroup
     - UnityEngine.UI.Image
+    - UnityEngine.UI.Mask
+    - UnityEngine.UI.ScrollRect
+    - UnityEngine.UI.Scrollbar
+    - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
     com.unity.multiplayer-hlapi.Runtime.dll:
     - UnityEngine.Networking.NetworkCallbacks
@@ -88,31 +94,31 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12190}
     - Class: 114
-      Script: {instanceID: 12352}
+      Script: {instanceID: 12226}
     - Class: 114
-      Script: {instanceID: 12620}
+      Script: {instanceID: 12354}
     - Class: 114
-      Script: {instanceID: 12816}
+      Script: {instanceID: 12622}
     - Class: 114
-      Script: {instanceID: 13496}
+      Script: {instanceID: 12818}
     - Class: 114
-      Script: {instanceID: 13516}
+      Script: {instanceID: 13226}
     - Class: 114
-      Script: {instanceID: 13556}
+      Script: {instanceID: 13500}
     - Class: 114
-      Script: {instanceID: 13760}
+      Script: {instanceID: 13520}
     - Class: 114
-      Script: {instanceID: 13812}
+      Script: {instanceID: 13560}
     - Class: 114
-      Script: {instanceID: 14026}
+      Script: {instanceID: 13764}
     - Class: 114
-      Script: {instanceID: 14032}
+      Script: {instanceID: 13816}
     - Class: 114
-      Script: {instanceID: 14096}
+      Script: {instanceID: 14030}
     - Class: 114
-      Script: {instanceID: 18522}
+      Script: {instanceID: 14036}
     - Class: 114
-      Script: {instanceID: 31386}
+      Script: {instanceID: 14100}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
@@ -124,6 +130,76 @@ ScriptsOnlyBuild:
     - Class: 196
       Script: {instanceID: 0}
     - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/MAIN/SCENES/permanent.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 20358}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    Assets/MAIN/SCENES/result.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 11284}
+    - Class: 114
+      Script: {instanceID: 11308}
+    - Class: 114
+      Script: {instanceID: 11604}
+    - Class: 114
+      Script: {instanceID: 12190}
+    - Class: 114
+      Script: {instanceID: 12818}
+    - Class: 114
+      Script: {instanceID: 13120}
+    - Class: 114
+      Script: {instanceID: 13500}
+    - Class: 114
+      Script: {instanceID: 14030}
+    - Class: 114
+      Script: {instanceID: 14072}
+    - Class: 114
+      Script: {instanceID: 18076}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -159,19 +235,29 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11470}
     - Class: 114
+      Script: {instanceID: 11556}
+    - Class: 114
       Script: {instanceID: 11604}
+    - Class: 114
+      Script: {instanceID: 11752}
+    - Class: 114
+      Script: {instanceID: 12050}
     - Class: 114
       Script: {instanceID: 12190}
     - Class: 114
-      Script: {instanceID: 12816}
+      Script: {instanceID: 12510}
     - Class: 114
-      Script: {instanceID: 12828}
+      Script: {instanceID: 12818}
     - Class: 114
-      Script: {instanceID: 13496}
+      Script: {instanceID: 12830}
     - Class: 114
-      Script: {instanceID: 13516}
+      Script: {instanceID: 13120}
     - Class: 114
-      Script: {instanceID: 14026}
+      Script: {instanceID: 13500}
+    - Class: 114
+      Script: {instanceID: 13520}
+    - Class: 114
+      Script: {instanceID: 14030}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -455,6 +541,12 @@ ScriptsOnlyBuild:
     className: ControlPlayableAsset
   - hash:
       serializedVersion: 2
+      Hash: f238e3e9cc350c827a3001f00a094319
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameManager
+  - hash:
+      serializedVersion: 2
       Hash: b8a5e8091ab0b8861d2add371082c5e0
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -563,7 +655,7 @@ ScriptsOnlyBuild:
     className: Button
   - hash:
       serializedVersion: 2
-      Hash: c18c01be91c15cba197a71e6794aa4c9
+      Hash: 5bbca6b69e8b0747d2be7e7e45ba06bf
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ShopUIManager
@@ -639,6 +731,12 @@ ScriptsOnlyBuild:
     assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
     namespaceName: UnityEngine.Networking
     className: NetworkMigrationManager
+  - hash:
+      serializedVersion: 2
+      Hash: c9087d99e22039528856fbd9eda13258
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ReviveController
   - hash:
       serializedVersion: 2
       Hash: c1933cc0a2f4ff6eb13333347497beb3
@@ -875,18 +973,20 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: f238e3e9cc350c827a3001f00a094319
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: GameManager
+    className: ResultScreenManager
   - hash:
       serializedVersion: 2
-      Hash: c9087d99e22039528856fbd9eda13258
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: ReviveController
+    className: SceneController
   platform: 13
   scenePathNames:
-  - Assets/MAIN/SCENES/shop.unity
+  - Assets/MAIN/SCENES/permanent.unity
   - Assets/MAIN/SCENES/main.unity
+  - Assets/MAIN/SCENES/shop.unity
+  - Assets/MAIN/SCENES/result.unity
   playerPath: D:/avatars_vrchat/turnbasedtut/ETF/test2.apk
