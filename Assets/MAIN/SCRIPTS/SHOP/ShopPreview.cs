@@ -6,7 +6,7 @@ public class ShopPreview : MonoBehaviour
 {
     void Start()
     {
-        //
+        // 
     }
 
     private void OnEnable()

@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ShopUIManager : MonoBehaviour
 {
@@ -10,9 +10,15 @@ public class ShopUIManager : MonoBehaviour
     public FlowerHatCusomizable flowerHatCustomizable;
     public GameObject ShopPreviewObject;
 
+    public GameObject ShopItemPrefab;
+    public GameObject LevelListContent;
+
+    List<ItemShopData> shopItems;
+
     void Start()
     {
-        
+        shopItems = DataController.LoadShopItems();
+        FillShopItemList();
     }
 
     void Update()
@@ -20,9 +26,20 @@ public class ShopUIManager : MonoBehaviour
         
     }
 
-    public void ReturnToScene()
+    public void FillShopItemList()
     {
-        SceneManager.LoadScene(1);
+        foreach (ItemShopData i in shopItems)
+        {
+            GameObject g = Instantiate(ShopItemPrefab);
+            g.transform.GetChild(1).GetComponent<Text>().text = i.name;
+            g.transform.parent = LevelListContent.transform;
+            
+        }
+    }
+
+    public void ReturnToGame()
+    {
+        SceneController.sceneController.LoadGame();
     }
 
     public void TestSwapAssets()
@@ -32,7 +49,7 @@ public class ShopUIManager : MonoBehaviour
         //old.GetComponent<SpriteRenderer>().sprite = flowerHatCustomizable.sprite;
     }
 
-    public void OpenShopPreview()
+    public void OpenShopPreview(Text text)
     {
         ShopPreviewObject.SetActive(true);
     }

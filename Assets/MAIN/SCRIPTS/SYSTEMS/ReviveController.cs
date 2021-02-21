@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class ReviveController : MonoBehaviour
 {
@@ -35,7 +34,7 @@ public class ReviveController : MonoBehaviour
         else
         {
             GameManager.IsPaused = false;
-            SceneManager.LoadScene(0);
+            SceneController.sceneController.LoadResult();
         }
     }
 }
