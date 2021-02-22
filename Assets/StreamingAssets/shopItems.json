@@ -1,0 +1,95 @@
+{
+	"Rows": [{
+			"name": "Test",
+			"description": "TASTE DESCRIPTION",
+			"priceBJ": 100,
+			"imageIcon": "",
+			"imageAsset": "",
+			"bodyPart": ""
+		}, {
+			"name": "Test2",
+			"description": "TASTE DESCRIPTION",
+			"priceBJ": 100,
+			"imageIcon": "",
+			"imageAsset": "",
+			"bodyPart": ""
+		}, {
+			"name": "Tes3",
+			"description": "TASTE DESCRIPTION",
+			"priceBJ": 100,
+			"imageIcon": "",
+			"imageAsset": "",
+			"bodyPart": ""
+		}, {
+			"name": "Testarino",
+			"description": "TASTE DESCRIPTION",
+			"priceBJ": 100,
+			"imageIcon": "",
+			"imageAsset": "",
+			"bodyPart": ""
+		}, {
+			"name": "Testov",
+			"description": "TASTE DESCRIPTION",
+			"priceBJ": 100,
+			"imageIcon": "",
+			"imageAsset": "",
+			"bodyPart": ""
+		}, {
+			"name": "Test",
+			"description": "TASTE DESCRIPTION",
+			"priceBJ": 100,
+			"imageIcon": "",
+			"imageAsset": "",
+			"bodyPart": ""
+		}, {
+			"name": "Test",
+			"description": "TASTE DESCRIPTION",
+			"priceBJ": 100,
+			"imageIcon": "",
+			"imageAsset": "",
+			"bodyPart": ""
+		}, {
+			"name": "Test",
+			"description": "TASTE DESCRIPTION",
+			"priceBJ": 100,
+			"imageIcon": "",
+			"imageAsset": "",
+			"bodyPart": ""
+		}, {
+			"name": "Test",
+			"description": "TASTE DESCRIPTION",
+			"priceBJ": 100,
+			"imageIcon": "",
+			"imageAsset": "",
+			"bodyPart": ""
+		}, {
+			"name": "Test",
+			"description": "TASTE DESCRIPTION",
+			"priceBJ": 100,
+			"imageIcon": "",
+			"imageAsset": "",
+			"bodyPart": ""
+		}, {
+			"name": "Test",
+			"description": "TASTE DESCRIPTION",
+			"priceBJ": 100,
+			"imageIcon": "",
+			"imageAsset": "",
+			"bodyPart": ""
+		}, {
+			"name": "Test",
+			"description": "TASTE DESCRIPTION",
+			"priceBJ": 100,
+			"imageIcon": "",
+			"imageAsset": "",
+			"bodyPart": ""
+		}, {
+			"name": "Test",
+			"description": "TASTE DESCRIPTION",
+			"priceBJ": 100,
+			"imageIcon": "",
+			"imageAsset": "",
+			"bodyPart": ""
+		}
+	]
+}
