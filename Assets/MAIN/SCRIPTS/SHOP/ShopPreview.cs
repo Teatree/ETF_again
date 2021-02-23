@@ -1,9 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ShopPreview : MonoBehaviour
 {
+    public Text name;
+    public Text price;
+    public Text priceShadow;
+    public Image icon;
+
     void Start()
     {
         // 

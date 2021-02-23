@@ -76,16 +76,16 @@ public class DataController {
     public static List<ItemShopData> LoadShopItems()
     {
         string jsonData = "";
-        if (Application.platform == RuntimePlatform.Android)
-        {
-            WWW reader = new WWW(shopItemsFilePath);
+        //if (Application.platform == RuntimePlatform.Android)
+        //{
+            WWW reader = new WWW("https://raw.githubusercontent.com/Teatree/ETF_again/master/Assets/StreamingAssets/shopItems.json");
             while (!reader.isDone) { }
             jsonData = reader.text;
-        }
-        else
-        {
-            jsonData = File.ReadAllText(shopItemsFilePath);
-        }
+        //}
+        //else
+        //{
+        //    jsonData = File.ReadAllText(shopItemsFilePath);
+        //}
         ItemShopData[] id = JsonHelper.FromJson<ItemShopData>(jsonData);
         return new List<ItemShopData>(id);
     }
