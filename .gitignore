@@ -76,3 +76,8 @@ crashlytics-build.properties
 /*.sln
 /*.sln
 /*_mapping.txt
+/.vs
+/b_Data
+/obj
+/hooks
+/info
