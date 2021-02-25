@@ -3,28 +3,28 @@
 			"name": "Test",
 			"description": "TASTE DESCRIPTION",
 			"priceBJ": 100,
-			"imageIcon": "",
+			"imageIcon": "cat_icon",
 			"imageAsset": "",
 			"bodyPart": ""
 		}, {
 			"name": "Test2",
 			"description": "TASTE DESCRIPTION",
 			"priceBJ": 100,
-			"imageIcon": "",
+			"imageIcon": "itembowtie",
 			"imageAsset": "",
 			"bodyPart": ""
 		}, {
 			"name": "Tes3",
 			"description": "TASTE DESCRIPTION",
 			"priceBJ": 100,
-			"imageIcon": "",
+			"imageIcon": "cat_icon",
 			"imageAsset": "",
 			"bodyPart": ""
 		}, {
 			"name": "Testarino",
 			"description": "TASTE DESCRIPTION",
 			"priceBJ": 100,
-			"imageIcon": "",
+			"imageIcon": "cat_icon",
 			"imageAsset": "",
 			"bodyPart": ""
 		}, {
