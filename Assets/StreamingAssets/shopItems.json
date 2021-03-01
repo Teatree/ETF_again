@@ -1,9 +1,9 @@
 {
 	"Rows": [{
-			"name": "Test",
+			"name": "Bricks",
 			"description": "TASTE DESCRIPTION",
-			"priceBJ": 100,
-			"imageIcon": "cat_icon",
+			"priceBJ": 25,
+			"imageIcon": "itembricks",
 			"image_Head_Top": "",
 			"image_Head_Bottom": "",
 			"image_Leaf_Left": "",
@@ -11,10 +11,10 @@
 			"image_Middle_Leafs": "",
 			"image_Pot": "pot_bricks"
 		}, {
-			"name": "Test2",
+			"name": "Coffee",
 			"description": "TASTE DESCRIPTION",
-			"priceBJ": 100,
-			"imageIcon": "itembowtie",
+			"priceBJ": 50,
+			"imageIcon": "itemcoffeecup",
 			"image_Head_Top": "",
 			"image_Head_Bottom": "",
 			"image_Leaf_Left": "leaf_left_coffe_cup",
@@ -22,10 +22,10 @@
 			"image_Middle_Leafs": "",
 			"image_Pot": ""
 		}, {
-			"name": "Tes3",
+			"name": "Couldron",
 			"description": "TASTE DESCRIPTION",
-			"priceBJ": 100,
-			"imageIcon": "cat_icon",
+			"priceBJ": 75,
+			"imageIcon": "itemcouldron",
 			"image_Head_Top": "",
 			"image_Head_Bottom": "",
 			"image_Leaf_Left": "",
@@ -33,21 +33,21 @@
 			"image_Middle_Leafs": "",
 			"image_Pot": "pot_couldron"
 		}, {
-			"name": "Testarino",
+			"name": "Clover",
 			"description": "TASTE DESCRIPTION",
 			"priceBJ": 100,
-			"imageIcon": "cat_icon",
+			"imageIcon": "itemstpatrickclover",
 			"image_Head_Top": "",
 			"image_Head_Bottom": "",
-			"image_Leaf_Left": "leaf_left_lettuce",
-			"image_Leaf_Right": "leaf_right_lettuce",
+			"image_Leaf_Left": "leaf_left_st_patrick_clover",
+			"image_Leaf_Right": "leaf_right_st_patrick_clover",
 			"image_Middle_Leafs": "",
 			"image_Pot": ""
 		}, {
 			"name": "Testov",
 			"description": "TASTE DESCRIPTION",
-			"priceBJ": 100,
-			"imageIcon": "itemiceycrown",
+			"priceBJ": 125,
+			"imageIcon": "itemhoneyspoon",
 			"image_Head_Top": "head_top_icey_crown",
 			"image_Head_Bottom": "",
 			"image_Leaf_Left": "",
@@ -55,10 +55,10 @@
 			"image_Middle_Leafs": "",
 			"image_Pot": ""
 		}, {
-			"name": "Test",
+			"name": "Handkerchief",
 			"description": "TASTE DESCRIPTION",
-			"priceBJ": 100,
-			"imageIcon": "",
+			"priceBJ": 150,
+			"imageIcon": "itemhandkerchief",
 			"image_Head_Top": "",
 			"image_Head_Bottom": "",
 			"image_Leaf_Left": "",

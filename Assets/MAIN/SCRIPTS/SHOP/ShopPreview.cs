@@ -6,7 +6,8 @@ using UnityEngine.UI;
 
 public class ShopPreview : MonoBehaviour
 {
-    public SpriterData old;
+    public SpriterData oldIdle;
+    public SpriterData oldPot;
     public ShopItemObject sio;
     public List<Sprite> sprites;
 
@@ -62,14 +63,34 @@ public class ShopPreview : MonoBehaviour
     public void EquipShopItem()
     {
         // head bottom
-        if (sio.image_Head_Bottom != "" && old.FileEntries[0].Sprite.name != sio.image_Head_Bottom)
+        if (sio.image_Head_Bottom != "" && oldIdle.FileEntries[0].Sprite.name != sio.image_Head_Bottom)
         {
-            old.FileEntries[0].Sprite = GetSpriteFromList(sio.image_Head_Bottom);
+            oldIdle.FileEntries[0].Sprite = GetSpriteFromList(sio.image_Head_Bottom);
         }
 
-        if (sio.image_Head_Top != "" && old.FileEntries[1].Sprite.name != sio.image_Head_Top)
+        if (sio.image_Head_Top != "" && oldIdle.FileEntries[1].Sprite.name != sio.image_Head_Top)
         {
-            old.FileEntries[1].Sprite = GetSpriteFromList(sio.image_Head_Top);
+            oldIdle.FileEntries[1].Sprite = GetSpriteFromList(sio.image_Head_Top);
+        }
+
+        if (sio.image_Middle_Leafs != "" && oldIdle.FileEntries[2].Sprite.name != sio.image_Middle_Leafs)
+        {
+            oldIdle.FileEntries[2].Sprite = GetSpriteFromList(sio.image_Middle_Leafs);
+        }
+
+        if (sio.image_Leaf_Left != "" && oldPot.FileEntries[1].Sprite.name != sio.image_Leaf_Left)
+        {
+            oldPot.FileEntries[0].Sprite = GetSpriteFromList(sio.image_Leaf_Left);
+        }
+
+        if (sio.image_Leaf_Right != "" && oldPot.FileEntries[2].Sprite.name != sio.image_Leaf_Right)
+        {
+            oldPot.FileEntries[1].Sprite = GetSpriteFromList(sio.image_Leaf_Right);
+        }
+
+        if (sio.image_Pot != "" && oldPot.FileEntries[2].Sprite.name != sio.image_Pot)
+        {
+            oldPot.FileEntries[2].Sprite = GetSpriteFromList(sio.image_Pot);
         }
 
         //old.FileEntries[1].Sprite = flowerHatCustomizable.sprite;
@@ -80,7 +101,7 @@ public class ShopPreview : MonoBehaviour
         Sprite result = null;
         foreach (Sprite s in sprites)
         {
-            if (s.name == sio.imageIcon)
+            if (s.name == name)
             {
                 result = s;
                 break;
