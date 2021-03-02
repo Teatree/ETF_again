@@ -15,19 +15,45 @@ public class ShopUIManager : MonoBehaviour
 
     public Sprite questionMark;
     public List<Sprite> shopIconImages;
-    List<ItemShopData> shopItems;
+    List<ShopItemObject> shopItems;
+
+    public Text bjAmountText;
+    public Text bjAmountTextShadow;
 
     void Start()
     {
         shopUIManager = this;
 
         shopItems = DataController.LoadShopItems();
+        updateShopItemsStates();
+
         FillShopItemList();
+        setBJAmiountText();
     }
+
+    public void setBJAmiountText()
+    {
+        bjAmountText.text = ""+PlayerController.player.BJamount;
+        bjAmountTextShadow.text = ""+PlayerController.player.BJamount;
+    }
+
+    public void updateShopItemsStates ()
+    {
+      
+        foreach (ShopItemObject o in shopItems)
+        {
+            if (PlayerController.player.ownShopItemsMap.ContainsKey(o.name))
+            {
+                o.isBought = PlayerController.player.ownShopItemsMap[o.name].isBought;
+                o.isUsed = PlayerController.player.ownShopItemsMap[o.name].isUsed;
+            }
+        }
+    }
+
 
     public void FillShopItemList()
     {
-        foreach (ItemShopData i in shopItems)
+        foreach (ShopItemObject i in shopItems)
         {
             GameObject g = Instantiate(ShopItemPrefab);
             g.transform.GetChild(1).GetComponent<Text>().text = i.name;
@@ -39,7 +65,7 @@ public class ShopUIManager : MonoBehaviour
             g.transform.GetChild(0).gameObject.GetComponent<Image>().sprite = questionMark;
             foreach (Sprite s in shopIconImages)
             {
-                if (s.name == i.imageIcon)
+                if (s.name == i.imageIcon && i.isBought)
                 {
                     g.transform.GetChild(0).gameObject.GetComponent<Image>().sprite = s;
                     break;
@@ -55,7 +81,7 @@ public class ShopUIManager : MonoBehaviour
         SceneController.sceneController.LoadGame();
     }
 
-    public void OpenShopPreview(ItemShopData itemShopData)
+    public void OpenShopPreview(ShopItemObject itemShopData)
     {
         ShopPreviewObject.SetActive(true);
 
@@ -75,6 +101,6 @@ public class ShopUIManager : MonoBehaviour
         sp.price.text = ""+itemShopData.priceBJ;
         sp.priceShadow.text = "" + itemShopData.priceBJ;
 
-        sp.sio = new ShopItemObject(itemShopData);
+        sp.sio = itemShopData;
     }
 }

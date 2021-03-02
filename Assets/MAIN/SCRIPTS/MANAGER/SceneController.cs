@@ -82,6 +82,7 @@ public class SceneController : MonoBehaviour {
         UnloadScene("result");
         UnloadScene("shop");
         LoadScene("main");
+        PlayerController.player.SavePlayerData();
     }
 
     public void LoadResult()
@@ -96,6 +97,7 @@ public class SceneController : MonoBehaviour {
         UnloadScene("main");
         UnloadScene("result");
         LoadScene("shop");
+        
     }
 
     //public void UnloadGame()

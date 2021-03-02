@@ -6,15 +6,16 @@ using UnityEngine.UI;
 
 public class ShopPreview : MonoBehaviour
 {
-    public SpriterData oldIdle;
-    public SpriterData oldPot;
+    //public SpriterData oldIdle;
+    //public SpriterData oldPot;
     public ShopItemObject sio;
-    public List<Sprite> sprites;
+   // public List<Sprite> sprites;
 
     public Text name;
     public Text price;
     public Text priceShadow;
     public Image icon;
+    public GameObject buyButton;
 
     void Start()
     {
@@ -49,67 +50,85 @@ public class ShopPreview : MonoBehaviour
     public void RollOut()
     {
         StartCoroutine(MoveOverSeconds(this.gameObject, new Vector3(0.0f, 0f, 0f), 1f));
+        if (sio != null && sio.isBought)
+        {
+            buyButton.SetActive(false);
+        }
+
+        if (sio != null && sio.priceBJ > PlayerController.player.BJamount)
+        {
+            buyButton.SetActive(false);
+        }
     }
 
     public void BuyShopItem()
     {
+
+        PlayerController.player.BuyShopItem(sio);
+        buyButton.SetActive(false);
+        ShopUIManager.shopUIManager.setBJAmiountText();
         // if first time buying
+        //sio.isBought = true;
+        //EquipShopItem();
 
-        EquipShopItem();
-
+        //ShopUIManager.shopUIManager.updateShopItemsStates();
         // if not enough money
     }
 
     public void EquipShopItem()
     {
-        // head bottom
-        if (sio.image_Head_Bottom != "" && oldIdle.FileEntries[0].Sprite.name != sio.image_Head_Bottom)
-        {
-            oldIdle.FileEntries[0].Sprite = GetSpriteFromList(sio.image_Head_Bottom);
-        }
 
-        if (sio.image_Head_Top != "" && oldIdle.FileEntries[1].Sprite.name != sio.image_Head_Top)
-        {
-            oldIdle.FileEntries[1].Sprite = GetSpriteFromList(sio.image_Head_Top);
-        }
+        PlayerController.player.EquipShopItem(sio);
+        //// head bottom
+        //if (sio.image_Head_Bottom != "" && oldIdle.FileEntries[0].Sprite.name != sio.image_Head_Bottom)
+        //{
+        //    oldIdle.FileEntries[0].Sprite = GetSpriteFromList(sio.image_Head_Bottom);
+        //}
 
-        if (sio.image_Middle_Leafs != "" && oldIdle.FileEntries[2].Sprite.name != sio.image_Middle_Leafs)
-        {
-            oldIdle.FileEntries[2].Sprite = GetSpriteFromList(sio.image_Middle_Leafs);
-        }
+        //if (sio.image_Head_Top != "" && oldIdle.FileEntries[1].Sprite.name != sio.image_Head_Top)
+        //{
+        //    oldIdle.FileEntries[1].Sprite = GetSpriteFromList(sio.image_Head_Top);
+        //}
 
-        if (sio.image_Leaf_Left != "" && oldPot.FileEntries[1].Sprite.name != sio.image_Leaf_Left)
-        {
-            oldPot.FileEntries[0].Sprite = GetSpriteFromList(sio.image_Leaf_Left);
-        }
+        //if (sio.image_Middle_Leafs != "" && oldIdle.FileEntries[2].Sprite.name != sio.image_Middle_Leafs)
+        //{
+        //    oldIdle.FileEntries[2].Sprite = GetSpriteFromList(sio.image_Middle_Leafs);
+        //}
 
-        if (sio.image_Leaf_Right != "" && oldPot.FileEntries[2].Sprite.name != sio.image_Leaf_Right)
-        {
-            oldPot.FileEntries[1].Sprite = GetSpriteFromList(sio.image_Leaf_Right);
-        }
+        //if (sio.image_Leaf_Left != "" && oldPot.FileEntries[1].Sprite.name != sio.image_Leaf_Left)
+        //{
+        //    oldPot.FileEntries[0].Sprite = GetSpriteFromList(sio.image_Leaf_Left);
+        //}
 
-        if (sio.image_Pot != "" && oldPot.FileEntries[2].Sprite.name != sio.image_Pot)
-        {
-            oldPot.FileEntries[2].Sprite = GetSpriteFromList(sio.image_Pot);
-        }
+        //if (sio.image_Leaf_Right != "" && oldPot.FileEntries[2].Sprite.name != sio.image_Leaf_Right)
+        //{
+        //    oldPot.FileEntries[1].Sprite = GetSpriteFromList(sio.image_Leaf_Right);
+        //}
 
+        //if (sio.image_Pot != "" && oldPot.FileEntries[2].Sprite.name != sio.image_Pot)
+        //{
+        //    oldPot.FileEntries[2].Sprite = GetSpriteFromList(sio.image_Pot);
+        //}
+
+        //sio.isUsed = true;
+        //PlayerController.player.ownShopItemsMap[sio.name] = sio;
         //old.FileEntries[1].Sprite = flowerHatCustomizable.sprite;
     }
 
-    public Sprite GetSpriteFromList(string name)
-    {
-        Sprite result = null;
-        foreach (Sprite s in sprites)
-        {
-            if (s.name == name)
-            {
-                result = s;
-                break;
-            }
-        }
+    //public Sprite GetSpriteFromList(string name)
+    //{
+    //    Sprite result = null;
+    //    foreach (Sprite s in sprites)
+    //    {
+    //        if (s.name == name)
+    //        {
+    //            result = s;
+    //            break;
+    //        }
+    //    }
 
-        return result;
-    }
+    //    return result;
+    //}
 
     // ShowInfo
 

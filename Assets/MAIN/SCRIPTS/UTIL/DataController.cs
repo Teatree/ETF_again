@@ -3,198 +3,142 @@ using System.Collections.Generic;
 using System.IO;
 using System;
 
-public class DataController {
+public class DataController
+{
     private static string shopItemsFileName = "shopItems.json";
-    //private static string playerFileName = "playerInfo.json";
+    private static string playerFileName = "playerInfo.json";
 
     public static string AjsonData;
     private const string CASHE_FOLDER = "LocalStorage";
 
 #if UNITY_EDITOR
     public static string shopItemsFilePath = Path.Combine(Application.dataPath + "/StreamingAssets", shopItemsFileName);
-    //public static string playerfilePath = Path.Combine(Application.dataPath + "/StreamingAssets", playerFileName);
+    public static string playerfilePath = Path.Combine(Application.dataPath + "/StreamingAssets", playerFileName);
     //public static string playerfilePath = Path.Combine(Application.persistentDataPath, playerFileName);
 
 #elif UNITY_ANDROID
     public static string shopItemsFilePath = Path.Combine ("jar:file://" + Application.dataPath + "!/assets/", shopItemsFileName);
+    public static string playerfilePath = Path.Combine(Application.dataPath + "/StreamingAssets", playerFileName);
 
 #elif UNITY_IOS
     private static string shopItemsFilePath = Path.Combine (Application.persistentDataPath  + "/Raw", shopItemsFileName);
+    public static string playerfilePath = Path.Combine(Application.dataPath + "/StreamingAssets", playerFileName);
 #endif
 
-    ////--------- Player Info ----------
-    //public static PlayerData LoadPlayer()
-    //{
-    //    string jsonData = "";
-    //    //if (Application.platform == RuntimePlatform.Android) {
+    //--------- Player Info ----------
+    public static PlayerData LoadPlayer()
+    {
+        string jsonData = "";
+        if (Application.platform == RuntimePlatform.Android)
+        {
 
-    //    if (!File.Exists(playerfilePath))
-    //    {
-    //        TextAsset file = Resources.Load("playerInfo") as TextAsset;
-    //        jsonData = file.ToString();
-    //        PlayerData pi = JsonUtility.FromJson<PlayerData>(jsonData);
-    //        pi.firstLoginAt = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-    //        return pi;
-    //        //StreamReader f = new StreamReader(playerfilePath);
-    //        //jsonData = f.ReadToEnd();
-    //        //f.Close();
+            if (File.Exists(playerfilePath))
+            {
+                TextAsset file = Resources.Load("playerInfo") as TextAsset;
+                jsonData = file.ToString();
+                PlayerData pi = JsonUtility.FromJson<PlayerData>(jsonData);
+                return pi;
+                //StreamReader f = new StreamReader(playerfilePath);
+                //jsonData = f.ReadToEnd();
+                //f.Close();
 
 
-    //        //WWW reader = new WWW(playerfilePath);
-    //        //while (!reader.isDone) { }
-    //        //jsonData = reader.text;
-    //    }
-    //    else
-    //    {
-    //        jsonData = File.ReadAllText(playerfilePath);
-    //        PlayerData pi = JsonUtility.FromJson<PlayerData>(jsonData);
-    //        Debug.Log(">>>> jsonData > " + jsonData);
-    //        return pi;
+                //WWW reader = new WWW(playerfilePath);
+                //while (!reader.isDone) { }
+                //jsonData = reader.text;
+            }
+            return new PlayerData();
+        }
+        else
+        {
+            jsonData = File.ReadAllText(playerfilePath);
+            PlayerData pi = JsonUtility.FromJson<PlayerData>(jsonData);
+            Debug.Log(">>>> jsonData > " + jsonData);
+            return pi;
 
-    //    }
-    //    // PlayerData pi = JsonUtility.FromJson<PlayerData>(jsonData);
-    //    //   AjsonData = "<color=#a52a2aff> " + jsonData + "</color>";
+        }
+        // PlayerData pi = JsonUtility.FromJson<PlayerData>(jsonData);
+        //   AjsonData = "<color=#a52a2aff> " + jsonData + "</color>";
 
-    //}
+    }
 
-    //public static void SavePlayer(PlayerData pi)
-    //{
-    //    string jsonData = JsonUtility.ToJson(pi);
-    //    // Debug.Log(">>> player info > " + jsonData);
-    //    // if (Application.platform == RuntimePlatform.Android) {
-    //    StreamWriter writer = new StreamWriter(playerfilePath, false);
-    //    writer.WriteLine(jsonData);
-    //    writer.Close();
-    //    //} else {
-    //    //    File.WriteAllText(playerfilePath, jsonData);
-    //    //} 
-    //}
+    public static void SavePlayer(PlayerData pi)
+    {
+        string jsonData = JsonUtility.ToJson(pi);
+       Debug.Log(">>> player info > " + jsonData);
+      if (Application.platform == RuntimePlatform.Android)
+        {
+            StreamWriter writer = new StreamWriter(playerfilePath, false);
+        writer.WriteLine(jsonData);
+        writer.Close();
+    } else {
+            File.WriteAllText(playerfilePath, jsonData);
+        } 
+    }
 
     //------------Items ---------------------------
 
     // items
-    public static List<ItemShopData> LoadShopItems()
+    public static List<ShopItemObject> LoadShopItems()
     {
         string jsonData = "";
-        //if (Application.platform == RuntimePlatform.Android)
-        //{
+        if (Application.platform == RuntimePlatform.Android)
+        {
             WWW reader = new WWW("https://raw.githubusercontent.com/Teatree/ETF_again/master/Assets/StreamingAssets/shopItems.json");
             while (!reader.isDone) { }
             jsonData = reader.text;
-        //}
-        //else
-        //{
-        //    jsonData = File.ReadAllText(shopItemsFilePath);
-        //}
-        ItemShopData[] id = JsonHelper.FromJson<ItemShopData>(jsonData);
-        return new List<ItemShopData>(id);
+        }
+        else
+        {
+
+        }
+        {
+            jsonData = File.ReadAllText(shopItemsFilePath);
+        }
+        ItemShopData[] sid = JsonHelper.FromJson<ItemShopData>(jsonData);
+        List<ShopItemObject> res = new List<ShopItemObject>();
+        foreach (ItemShopData si in sid)
+        {
+            res.Add(new ShopItemObject(si));
+        }
+        return res;
     }
-
-//    //------------Load Levels --------------------
-//    public static List<LevelData> LoadLevels()
-//    {
-//        List<LevelData> lvlsData = new List<LevelData>();
-//        string jsonData = "";
-//        if (Application.platform == RuntimePlatform.Android)
-//        {
-//            WWW reader = new WWW(levelfilePath);
-//            while (!reader.isDone) { }
-
-//            jsonData = reader.text;
-//        }
-//        else
-//        {
-//            jsonData = File.ReadAllText(levelfilePath);
-//        }
-
-
-//        if (jsonData != null)
-//        {
-//            string separ = "Level_[0-9][0-9][0-9]";
-//            string[] lvls = System.Text.RegularExpressions.Regex.Split(jsonData, separ);
-
-//            for (int i = 1; i < lvls.Length; i++)
-//            {
-
-//                string editedLvl = "{ \"Rows" + lvls[i].Substring(1, lvls[i].Length - 7);
-//                if (editedLvl.LastIndexOf("]") == editedLvl.Length - 1)
-//                {
-//                    editedLvl += "}";
-//                }
-//                else
-//                {
-//                    editedLvl += "]}";
-//                }
-//                RowData[] rows = JsonHelper.FromJson<RowData>(editedLvl);
-//                LevelData lvlData = new LevelData();
-//                System.Array.Reverse(rows);
-
-//                foreach (RowData row in rows)
-//                {
-//                    if (!row.IsEmpty())
-//                    {
-//                        lvlData.rows.Add(row);
-//                    }
-//                }
-
-//                foreach (RowData row in rows)
-//                {
-//                    if (row.IsEmpty())
-//                    {
-//                        lvlData.emptyRowsCount++;
-//                    }
-//                    else
-//                    {
-//                        break;
-//                    }
-//                }
-
-//                lvlsData.Add(lvlData);
-//            }
-//            return lvlsData;
-//        }
-//        else
-//        {
-//            //Debug.LogError("Cannot find the file " + levelfilePath);
-//            //AjsonData = "<color=#a52a2aff>JSON IS NULL</color>";
-//            return lvlsData;
-//        }
-//    }
 
 }
 
 //// PLAYER DATA
-//[System.Serializable]
-//public class PlayerData {
-//    public int gems;
-//    public int stars;
-//    public int progressTowardsNextStarBox; // how many stars player already gathered for the current star box
-//    public int numStarBoxesOpened; // how many boxs were already opened
-//    public string giveBoxAt;
-//    public string firstLoginAt;
-//    public bool noAds;
-//    public string specialBallImageName;
-//    public string specialBallName;
-//    public bool boughtStarter;
+[System.Serializable]
+public class PlayerData
+{
+    public int bjAmount = 0;
+    public string uniqueId = ""; 
+    public List<ItemShopData> items = new List<ItemShopData>();
 
-//    public List<CompletedLevel> completedLvls = new List<CompletedLevel>();
-//    public List<ItemData> items = new List<ItemData>();
+    public void setItems (Dictionary<string, ShopItemObject> itemObj)
+    {
+        List<ItemShopData> data = new List<ItemShopData>();
+        foreach(ShopItemObject o in itemObj.Values) {
+            data.Add(new ItemShopData(o));
+        }
+        items = data;
+    }
 
-//    public int GetStarsAmount()
-//    {
-//        int sum = 0;
-//        foreach (CompletedLevel lvl in completedLvls)
-//        {
-//            sum += lvl.stars;
-//        }
-//        stars = sum;
-//        return sum;
-//    }
-//}
+    public List<ShopItemObject> getItems()
+    {
+        List<ShopItemObject> data = new List<ShopItemObject>();
+        foreach (ItemShopData o in items)
+        {
+            data.Add(new ShopItemObject(o));
+        }
+        return data;
+    }
+}
 
 [System.Serializable]
-public class ItemShopData {
+public class ItemShopData
+{
     public bool isBought;
+    public bool isUsed;
     public string name;
     public string description;
     public int priceBJ;
@@ -228,7 +172,8 @@ public class ItemShopData {
     }
 }
 
-public static class JsonHelper {
+public static class JsonHelper
+{
     public static T[] FromJson<T>(string json)
     {
         Wrapper<T> wrapper = JsonUtility.FromJson<Wrapper<T>>(json);
@@ -250,7 +195,8 @@ public static class JsonHelper {
     }
 
     [System.Serializable]
-    private class Wrapper<T> {
+    private class Wrapper<T>
+    {
         public T[] Rows;
     }
 }

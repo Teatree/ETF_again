@@ -24,7 +24,7 @@ public class BugController : MonoBehaviour {
     public void Start() {
         bug = GetComponent<Bug>();
         anim = GetComponentInChildren<Animator>();
-
+                            
         chargerChangePostionIdle = Random.Range(-10, -5);
 
         velocity = bug.speed;
@@ -102,6 +102,7 @@ public class BugController : MonoBehaviour {
     }
 
     public void KillMeWithoutAni() {
+        PlayerController.player.BJamount += bug.bjAmount;
         Destroy(this.gameObject);
     }
 

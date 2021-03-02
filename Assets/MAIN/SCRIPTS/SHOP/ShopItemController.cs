@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ShopItemController : MonoBehaviour
 {
-    public ItemShopData sio;
+    public ShopItemObject sio;
 
     public void OpenShopItemPreview()
     {

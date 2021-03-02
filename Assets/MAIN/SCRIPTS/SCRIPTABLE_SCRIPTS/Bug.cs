@@ -31,4 +31,11 @@ public class Bug : MonoBehaviour {
     public float IDLE_MVMNT_SPEED;
     public float PREPARING_MVMNT_SPEED;
     public float CHARGING_MVMNT_SPEED;
+
+    public int bjAmount = 0;
+
+    public void Awake()
+    {
+        bjAmount = Random.Range(1, 5);
+    }
 }
