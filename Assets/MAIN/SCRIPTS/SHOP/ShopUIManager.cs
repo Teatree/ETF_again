@@ -8,8 +8,6 @@ public class ShopUIManager : MonoBehaviour
 {
     public static ShopUIManager shopUIManager;
 
-    public SpriterData old;
-    public FlowerHatCusomizable flowerHatCustomizable;
     public GameObject ShopPreviewObject;
 
     public GameObject ShopItemPrefab;
@@ -57,13 +55,6 @@ public class ShopUIManager : MonoBehaviour
         SceneController.sceneController.LoadGame();
     }
 
-    public void TestSwapAssets()
-    {
-        old.FileEntries[1].Sprite = flowerHatCustomizable.sprite;
-
-        //old.GetComponent<SpriteRenderer>().sprite = flowerHatCustomizable.sprite;
-    }
-
     public void OpenShopPreview(ItemShopData itemShopData)
     {
         ShopPreviewObject.SetActive(true);
@@ -83,5 +74,7 @@ public class ShopUIManager : MonoBehaviour
         sp.name.text = itemShopData.name;
         sp.price.text = ""+itemShopData.priceBJ;
         sp.priceShadow.text = "" + itemShopData.priceBJ;
+
+        sp.sio = new ShopItemObject(itemShopData);
     }
 }
