@@ -81,26 +81,29 @@ public class ShopUIManager : MonoBehaviour
         SceneController.sceneController.LoadGame();
     }
 
-    public void OpenShopPreview(ShopItemObject itemShopData)
+    public void OpenShopPreview(ShopItemObject itemi)
     {
+        
         ShopPreviewObject.SetActive(true);
 
         ShopPreview sp = ShopPreviewObject.GetComponent<ShopPreview>();
+        sp.sio = itemi;
 
         sp.icon.sprite = questionMark;
         foreach (Sprite s in shopIconImages)
         {
-            if (s.name == itemShopData.imageIcon)
+            if (s.name == itemi.imageIcon && itemi.isBought)
             {
                 sp.icon.sprite = s;
                 break;
             }
         }
 
-        sp.name.text = itemShopData.name;
-        sp.price.text = ""+itemShopData.priceBJ;
-        sp.priceShadow.text = "" + itemShopData.priceBJ;
+        sp.name.text = itemi.name;
+        sp.price.text = ""+itemi.priceBJ;
+        sp.priceShadow.text = "" + itemi.priceBJ;
 
-        sp.sio = itemShopData;
+       
     }
 }
+ 
