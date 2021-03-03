@@ -4,7 +4,7 @@ using System.Collections.Generic;
 public class ShopItemObject
 {
     public bool isBought;
-    public bool isUsed;
+    public bool isEquipped;
     public string name;
     public string description;
     public string type; // type iap or not
@@ -22,7 +22,7 @@ public class ShopItemObject
     public ShopItemObject(ItemShopData sio)
     {
         isBought = sio.isBought;
-        isUsed = sio.isUsed;
+        isEquipped = sio.isEquipped;
         name = sio.name;
         description = sio.description;
         priceBJ = sio.priceBJ;

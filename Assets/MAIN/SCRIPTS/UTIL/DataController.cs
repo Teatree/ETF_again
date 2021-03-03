@@ -138,7 +138,7 @@ public class PlayerData
 public class ItemShopData
 {
     public bool isBought;
-    public bool isUsed;
+    public bool isEquipped;
     public string name;
     public string description;
     public int priceBJ;
@@ -155,6 +155,7 @@ public class ItemShopData
     public ItemShopData(ShopItemObject sio)
     {
         isBought = sio.isBought;
+        isEquipped = sio.isEquipped;
         name = sio.name;
         description = sio.description;
         priceBJ = sio.priceBJ;

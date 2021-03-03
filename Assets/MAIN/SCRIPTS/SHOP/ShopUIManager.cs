@@ -45,11 +45,10 @@ public class ShopUIManager : MonoBehaviour
             if (PlayerController.player.ownShopItemsMap.ContainsKey(o.name))
             {
                 o.isBought = PlayerController.player.ownShopItemsMap[o.name].isBought;
-                o.isUsed = PlayerController.player.ownShopItemsMap[o.name].isUsed;
+                o.isEquipped = PlayerController.player.ownShopItemsMap[o.name].isEquipped;
             }
         }
     }
-
 
     public void FillShopItemList()
     {
@@ -68,6 +67,16 @@ public class ShopUIManager : MonoBehaviour
                 if (s.name == i.imageIcon && i.isBought)
                 {
                     g.transform.GetChild(0).gameObject.GetComponent<Image>().sprite = s;
+
+                    if(i.isEquipped)
+                    {
+                        g.transform.GetChild(2).gameObject.SetActive(true);
+                    }
+                    else
+                    {
+                        g.transform.GetChild(2).gameObject.SetActive(false);
+                    }
+
                     break;
                 }
             }
@@ -75,6 +84,11 @@ public class ShopUIManager : MonoBehaviour
             g.GetComponent<ShopItemController>().sio = i;
         }
     }
+
+    public void UpdateItemList()
+    {
+
+    } 
 
     public void ReturnToGame()
     {
@@ -101,8 +115,39 @@ public class ShopUIManager : MonoBehaviour
         sp.name.text = itemi.name;
         sp.price.text = ""+itemi.priceBJ;
         sp.priceShadow.text = "" + itemi.priceBJ;
-
-       
     }
+
+    public Sprite GetSpriteByName(string iconName)
+    {
+        foreach (Sprite s in shopIconImages)
+        {
+            if (s.name == iconName)
+            {
+                return s;
+            }
+        }
+        return null;
+    }
+
+    public void UpdateShopItemList(string iconName, string name, bool isEquipped)
+    {
+        Sprite iconSprite = GetSpriteByName(iconName);
+        foreach (Transform child in LevelListContent.transform)
+        {
+            if (child.name == name) {
+                child.GetChild(0).gameObject.GetComponent<Image>().sprite = iconSprite;
+
+                if (isEquipped)
+                {
+                    child.GetChild(2).gameObject.SetActive(true);
+                }
+                else
+                {
+                    child.GetChild(2).gameObject.SetActive(false);
+                }
+            }
+        }
+    }
+
 }
  

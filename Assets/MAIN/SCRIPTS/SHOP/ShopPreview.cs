@@ -6,16 +6,17 @@ using UnityEngine.UI;
 
 public class ShopPreview : MonoBehaviour
 {
-    //public SpriterData oldIdle;
-    //public SpriterData oldPot;
     public ShopItemObject sio;
-   // public List<Sprite> sprites;
 
     public Text name;
     public Text price;
     public Text priceShadow;
     public Image icon;
     public GameObject buyButton;
+    public GameObject equipButton;
+    public GameObject unequipButton;
+    public GameObject equippedMarker;
+    public GameObject notEnoughLabel;
 
     void Start()
     {
@@ -25,7 +26,11 @@ public class ShopPreview : MonoBehaviour
     private void OnEnable()
     {
         if (sio != null)
-        RollOut();
+        {
+            init();
+            RollOut();
+        }
+        
     }
 
     public void CloseWindow()
@@ -48,31 +53,72 @@ public class ShopPreview : MonoBehaviour
         transform.localPosition = end;
     }
 
+    public void init()
+    {
+        buyButton.SetActive(false);
+        equipButton.SetActive(false);
+        unequipButton.SetActive(false);
+        equippedMarker.SetActive(false);
+        notEnoughLabel.SetActive(true);
+
+        // if bought not equiped
+        if (sio != null && (sio.isBought == true && sio.isEquipped == false))
+        {
+            buyButton.SetActive(false);
+            equipButton.SetActive(true);
+            unequipButton.SetActive(false);
+            equippedMarker.SetActive(false);
+            notEnoughLabel.SetActive(false);
+        }
+
+        // if bought and equipped
+        if (sio != null && (sio.isBought == true && sio.isEquipped == true))
+        {
+            buyButton.SetActive(false);
+            equipButton.SetActive(false);
+            unequipButton.SetActive(true);
+            equippedMarker.SetActive(true);
+            notEnoughLabel.SetActive(false);
+        }
+
+        // if not bought not enoguh mney
+        if (sio != null && (sio.isBought == false && sio.priceBJ <= PlayerController.player.BJamount))
+        {
+            buyButton.SetActive(true);
+            equipButton.SetActive(false);
+            unequipButton.SetActive(false);
+            equippedMarker.SetActive(false);
+            notEnoughLabel.SetActive(false);
+        }
+
+        // if not bought enough money
+        if (sio != null && (sio.isBought == false && sio.priceBJ > PlayerController.player.BJamount))
+        {
+            buyButton.SetActive(false);
+            equipButton.SetActive(false);
+            unequipButton.SetActive(false);
+            equippedMarker.SetActive(false);
+            notEnoughLabel.SetActive(true);
+        }
+    }
+
     public void RollOut()
     {
         StartCoroutine(MoveOverSeconds(this.gameObject, new Vector3(0.0f, 0f, 0f), 1f));
         Debug.Log(">>>> show preview > " + sio.name + " > " + sio.priceBJ + " > " + sio.isBought + " > " + PlayerController.player.BJamount);
-        
-        if (sio != null &&  (sio.isBought || sio.priceBJ > PlayerController.player.BJamount))
-        {
-            buyButton.SetActive(false);
-        } else
-        {
-            buyButton.SetActive(true);
-        }
-
-      
     }
 
     public void BuyShopItem()
     {
-
         PlayerController.player.BuyShopItem(sio);
         buyButton.SetActive(false);
         ShopUIManager.shopUIManager.setBJAmiountText();
+        icon.sprite = ShopUIManager.shopUIManager.GetSpriteByName(sio.imageIcon);
+        ShopUIManager.shopUIManager.UpdateShopItemList(sio.imageIcon, sio.name, true);
+
         // if first time buying
-        //sio.isBought = true;
-        //EquipShopItem();
+        // sio.isBought = true;
+        // EquipShopItem();
 
         //ShopUIManager.shopUIManager.updateShopItemsStates();
         // if not enough money
@@ -80,8 +126,14 @@ public class ShopPreview : MonoBehaviour
 
     public void EquipShopItem()
     {
-
         PlayerController.player.EquipShopItem(sio);
+        ShopUIManager.shopUIManager.UpdateShopItemList(sio.imageIcon, sio.name, true);
+    }
+
+    public void UnEquipShopItem()
+    {
+        PlayerController.player.UnEquipShopItem(sio);
+        ShopUIManager.shopUIManager.UpdateShopItemList(sio.imageIcon, sio.name, false);
     }
 
     // ShowInfo

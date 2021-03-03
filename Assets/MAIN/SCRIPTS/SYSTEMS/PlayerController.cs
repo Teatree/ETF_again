@@ -62,7 +62,45 @@ public class PlayerController : MonoBehaviour
             oldPot.FileEntries[2].Sprite = GetSpriteFromList(sio.image_Pot);
         }
 
-        sio.isUsed = true;
+        sio.isEquipped = true;
+        PlayerController.player.ownShopItemsMap[sio.name] = sio;
+        //old.FileEntries[1].Sprite = flowerHatCustomizable.sprite;
+    }
+
+    public void UnEquipShopItem(ShopItemObject sio)
+    {
+        // head bottom
+        if (sio.image_Head_Bottom != "")
+        {
+            oldIdle.FileEntries[0].Sprite = GetSpriteFromList("head_bottom");
+        }
+
+        if (sio.image_Head_Top != "")
+        {
+            oldIdle.FileEntries[1].Sprite = GetSpriteFromList("head_top");
+        }
+
+        if (sio.image_Middle_Leafs != "")
+        {
+            oldIdle.FileEntries[2].Sprite = GetSpriteFromList("middle_leafs");
+        }
+
+        if (sio.image_Leaf_Left != "")
+        {
+            oldPot.FileEntries[0].Sprite = GetSpriteFromList("leaf_left");
+        }
+
+        if (sio.image_Leaf_Right != "")
+        {
+            oldPot.FileEntries[1].Sprite = GetSpriteFromList("leaf_right");
+        }
+
+        if (sio.image_Pot != "")
+        {
+            oldPot.FileEntries[2].Sprite = GetSpriteFromList("pot_default");
+        }
+
+        sio.isEquipped = false;
         PlayerController.player.ownShopItemsMap[sio.name] = sio;
         //old.FileEntries[1].Sprite = flowerHatCustomizable.sprite;
     }
