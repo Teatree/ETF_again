@@ -83,11 +83,10 @@ public class ShopUIManager : MonoBehaviour
 
     public void OpenShopPreview(ShopItemObject itemi)
     {
-        
-        ShopPreviewObject.SetActive(true);
-
         ShopPreview sp = ShopPreviewObject.GetComponent<ShopPreview>();
         sp.sio = itemi;
+
+        ShopPreviewObject.SetActive(true);
 
         sp.icon.sprite = questionMark;
         foreach (Sprite s in shopIconImages)
