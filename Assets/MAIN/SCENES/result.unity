@@ -1108,7 +1108,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.38
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1384,6 +1384,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f9be5ca2a6ba0f43b9220cc1e34d0ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bjBestText: {fileID: 1388527266}
+  bjEarnedText: {fileID: 695161211}
+  bjTotalText: {fileID: 1947688131}
+  bjUntilNextText: {fileID: 1513384702}
+  proressBar: {fileID: 1011589010}
 --- !u!1 &1388527264
 GameObject:
   m_ObjectHideFlags: 0

@@ -15,7 +15,7 @@ public class ShopUIManager : MonoBehaviour
 
     public Sprite questionMark;
     public List<Sprite> shopIconImages;
-    List<ShopItemObject> shopItems;
+   
 
     public Text bjAmountText;
     public Text bjAmountTextShadow;
@@ -24,7 +24,6 @@ public class ShopUIManager : MonoBehaviour
     {
         shopUIManager = this;
 
-        shopItems = DataController.LoadShopItems();
         updateShopItemsStates();
 
         FillShopItemList();
@@ -33,14 +32,14 @@ public class ShopUIManager : MonoBehaviour
 
     public void setBJAmiountText()
     {
-        bjAmountText.text = ""+PlayerController.player.BJamount;
-        bjAmountTextShadow.text = ""+PlayerController.player.BJamount;
+        bjAmountText.text = ""+PlayerController.player.BJamountTotal;
+        bjAmountTextShadow.text = ""+PlayerController.player.BJamountTotal;
     }
 
     public void updateShopItemsStates ()
     {
       
-        foreach (ShopItemObject o in shopItems)
+        foreach (ShopItemObject o in PlayerController.player.avaliableShopItems)
         {
             if (PlayerController.player.ownShopItemsMap.ContainsKey(o.name))
             {
@@ -52,7 +51,7 @@ public class ShopUIManager : MonoBehaviour
 
     public void FillShopItemList()
     {
-        foreach (ShopItemObject i in shopItems)
+        foreach (ShopItemObject i in PlayerController.player.avaliableShopItems)
         {
             GameObject g = Instantiate(ShopItemPrefab);
             g.transform.GetChild(1).GetComponent<Text>().text = i.name;
@@ -92,7 +91,7 @@ public class ShopUIManager : MonoBehaviour
 
     public bool IsSioDirectionCap(ShopItemObject sio, bool isLeft)
     {
-        int sioIndex = shopItems.IndexOf(sio);
+        int sioIndex = PlayerController.player.avaliableShopItems.IndexOf(sio);
 
         if (isLeft)
         {
@@ -101,35 +100,35 @@ public class ShopUIManager : MonoBehaviour
         }
         else
         {
-            if (sioIndex + 1 == shopItems.Count) return true;
+            if (sioIndex + 1 == PlayerController.player.avaliableShopItems.Count) return true;
             return false;
         }
     }
 
     public ShopItemObject FindSioInListAndSwitchToDirection(ShopItemObject sio, bool isLeft)
     {
-        int sioIndex = shopItems.IndexOf(sio);
+        int sioIndex = PlayerController.player.avaliableShopItems.IndexOf(sio);
 
         if (isLeft)
         {
             if (sioIndex - 1 > -1)
             {
-                return shopItems[sioIndex - 1];
+                return PlayerController.player.avaliableShopItems[sioIndex - 1];
             }
             else
             {
-                return shopItems[sioIndex];
+                return PlayerController.player.avaliableShopItems[sioIndex];
             }
         }
         else
         {
-            if (sioIndex - 1 < shopItems.Count)
+            if (sioIndex - 1 < PlayerController.player.avaliableShopItems.Count)
             {
-                return shopItems[sioIndex + 1];
+                return PlayerController.player.avaliableShopItems[sioIndex + 1];
             }
             else
             {
-                return shopItems[sioIndex];
+                return PlayerController.player.avaliableShopItems[sioIndex];
             }
         }
     }

@@ -5,7 +5,7 @@ using SpriterDotNetUnity;
 
 public class PlayerController : MonoBehaviour
 {
-
+    public List<ShopItemObject> avaliableShopItems;
     public static PlayerController player;
     
     public Dictionary<string, ShopItemObject> ownShopItemsMap = new Dictionary<string, ShopItemObject>();
@@ -33,10 +33,15 @@ public class PlayerController : MonoBehaviour
 
     public void Awake()
     {
-        Debug.Log(" Player awake");
         player = this;
+        LoadSave();
+    }
+
+    private void LoadSave()
+    {
         PlayerData pd = DataController.LoadPlayer();
         BJamountTotal = pd.bjAmount;
+        BJamountBest = pd.bjAmountBest;
         List<ShopItemObject> ownShopItems = pd.getItems();
         if (ownShopItems != null && ownShopItems.Count > 0)
         {
@@ -45,19 +50,49 @@ public class PlayerController : MonoBehaviour
                 ownShopItemsMap[o.name] = o;
             }
         }
+
+        avaliableShopItems = DataController.LoadShopItems();
+    }
+
+    public ShopItemObject getNextTargetItem()
+    {
+        foreach (ShopItemObject sio in avaliableShopItems)
+        {
+            if (!ownShopItemsMap.ContainsKey(sio.name)
+                && !sio.wasATarget)
+            {
+                sio.wasATarget = true;
+                player.ownShopItemsMap[sio.name] = sio;
+                
+                return sio; 
+            }
+        }
+        return null;
     }
 
     public void SavePlayerData ()
     {
         PlayerData pi = new PlayerData();
         pi.bjAmount = BJamountTotal;
+        pi.bjAmountBest = BJamountBest;
+
         pi.setItems( ownShopItemsMap);
+        
         DataController.SavePlayer(pi);
+    }
+
+    public void checkAndUpdateBest()
+    {
+        if (BJamountSession > BJamountBest)
+        {
+            BJamountBest = BJamountSession;
+        }
     }
 
     public void AddBJToTotal ()
     {
         BJamountTotal += BJamountSession;
+        checkAndUpdateBest();
     }
 
     #region Equip/unequip items

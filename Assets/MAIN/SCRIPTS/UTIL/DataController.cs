@@ -25,7 +25,7 @@ public class DataController
     public static string playerfilePath = Path.Combine(Application.dataPath + "/StreamingAssets", playerFileName);
 #endif
 
-    //--------- Player Info ----------
+    #region PlayerData
     public static PlayerData LoadPlayer()
     {
         string jsonData = "";
@@ -75,10 +75,11 @@ public class DataController
             File.WriteAllText(playerfilePath, jsonData);
         } 
     }
+    #endregion
 
-    //------------Items ---------------------------
 
-    // items
+
+    #region Shop Items
     public static List<ShopItemObject> LoadShopItems()
     {
         string jsonData = "";
@@ -103,6 +104,7 @@ public class DataController
         }
         return res;
     }
+    #endregion
 
 }
 
@@ -140,6 +142,7 @@ public class ItemShopData
 {
     public bool isBought;
     public bool isEquipped;
+    public bool wasATarget;
     public string name;
     public string description;
     public int priceBJ;
@@ -157,7 +160,7 @@ public class ItemShopData
     {
         isBought = sio.isBought;
         isEquipped = sio.isEquipped;
-        name = sio.name;
+        wasATarget = sio.wasATarget;
         description = sio.description;
         priceBJ = sio.priceBJ;
         imageIcon = sio.imageIcon;

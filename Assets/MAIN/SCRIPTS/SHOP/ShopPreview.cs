@@ -86,7 +86,7 @@ public class ShopPreview : MonoBehaviour
         }
 
         // if not bought not enoguh mney
-        if (sio != null && (sio.isBought == false && sio.priceBJ <= PlayerController.player.BJamount))
+        if (sio != null && (sio.isBought == false && sio.priceBJ <= PlayerController.player.BJamountTotal))
         {
             buyButton.SetActive(true);
             equipButton.SetActive(false);
@@ -96,7 +96,7 @@ public class ShopPreview : MonoBehaviour
         }
 
         // if not bought enough money
-        if (sio != null && (sio.isBought == false && sio.priceBJ > PlayerController.player.BJamount))
+        if (sio != null && (sio.isBought == false && sio.priceBJ > PlayerController.player.BJamountTotal))
         {
             buyButton.SetActive(false);
             equipButton.SetActive(false);
@@ -109,7 +109,6 @@ public class ShopPreview : MonoBehaviour
     public void RollOut()
     {
         StartCoroutine(MoveOverSeconds(this.gameObject, new Vector3(0.0f, 0f, 0f), 1f));
-        Debug.Log(">>>> show preview > " + sio.name + " > " + sio.priceBJ + " > " + sio.isBought + " > " + PlayerController.player.BJamount);
     }
 
     public void BuyShopItem()

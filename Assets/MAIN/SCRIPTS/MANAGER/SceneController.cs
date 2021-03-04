@@ -15,7 +15,6 @@ public class SceneController : MonoBehaviour {
     public void Awake()
     {
         Application.targetFrameRate = 60;
-        Debug.Log(" >>>>> scene " + initScene);
         if (!gameStart)
         {
             if (sceneStateTracker == null)
@@ -49,6 +48,7 @@ public class SceneController : MonoBehaviour {
             gameStart = true;
         }
 
+
         Debug.Log("I'm loadin services here !");
     }
 
@@ -79,7 +79,6 @@ public class SceneController : MonoBehaviour {
 
     public void LoadGame()
     {
-        Debug.Log(">>>  load Game > ");
         UnloadScene("result");
         UnloadScene("shop");
         LoadScene("main");
@@ -127,5 +126,10 @@ public class SceneController : MonoBehaviour {
     {
         initScene = "main";
         LoadGame();
+    }
+
+    public void OnDestroy()
+    {
+        PlayerController.player.SavePlayerData();
     }
 }

@@ -5,6 +5,7 @@ public class ShopItemObject
 {
     public bool isBought;
     public bool isEquipped;
+    public bool wasATarget;
     public string name;
     public string description;
     public string type; // type iap or not
@@ -23,6 +24,8 @@ public class ShopItemObject
     {
         isBought = sio.isBought;
         isEquipped = sio.isEquipped;
+        wasATarget = sio.wasATarget;
+
         name = sio.name;
         description = sio.description;
         priceBJ = sio.priceBJ;
