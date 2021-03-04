@@ -90,6 +90,50 @@ public class ShopUIManager : MonoBehaviour
 
     } 
 
+    public bool IsSioDirectionCap(ShopItemObject sio, bool isLeft)
+    {
+        int sioIndex = shopItems.IndexOf(sio);
+
+        if (isLeft)
+        {
+            if (sioIndex - 1 == -1) return true;
+            return false;
+        }
+        else
+        {
+            if (sioIndex + 1 == shopItems.Count) return true;
+            return false;
+        }
+    }
+
+    public ShopItemObject FindSioInListAndSwitchToDirection(ShopItemObject sio, bool isLeft)
+    {
+        int sioIndex = shopItems.IndexOf(sio);
+
+        if (isLeft)
+        {
+            if (sioIndex - 1 > -1)
+            {
+                return shopItems[sioIndex - 1];
+            }
+            else
+            {
+                return shopItems[sioIndex];
+            }
+        }
+        else
+        {
+            if (sioIndex - 1 < shopItems.Count)
+            {
+                return shopItems[sioIndex + 1];
+            }
+            else
+            {
+                return shopItems[sioIndex];
+            }
+        }
+    }
+
     public void ReturnToGame()
     {
         SceneController.sceneController.LoadGame();
@@ -114,6 +158,27 @@ public class ShopUIManager : MonoBehaviour
 
         sp.name.text = itemi.name;
         sp.price.text = ""+itemi.priceBJ;
+        sp.priceShadow.text = "" + itemi.priceBJ;
+    }
+
+    // STUPID STUPID STUPID DIMA
+    public void UpdateShopPreview(ShopItemObject itemi)
+    {
+        ShopPreview sp = ShopPreviewObject.GetComponent<ShopPreview>();
+        sp.sio = itemi;
+
+        sp.icon.sprite = questionMark;
+        foreach (Sprite s in shopIconImages)
+        {
+            if (s.name == itemi.imageIcon && itemi.isBought)
+            {
+                sp.icon.sprite = s;
+                break;
+            }
+        }
+
+        sp.name.text = itemi.name;
+        sp.price.text = "" + itemi.priceBJ;
         sp.priceShadow.text = "" + itemi.priceBJ;
     }
 

@@ -12,11 +12,16 @@ public class ShopPreview : MonoBehaviour
     public Text price;
     public Text priceShadow;
     public Image icon;
+
+    public Button left;
+    public Button right;
+
     public GameObject buyButton;
     public GameObject equipButton;
     public GameObject unequipButton;
     public GameObject equippedMarker;
     public GameObject notEnoughLabel;
+    public GameObject frameThing;
 
     void Start()
     {
@@ -27,10 +32,9 @@ public class ShopPreview : MonoBehaviour
     {
         if (sio != null)
         {
-            init();
+            Init();
             RollOut();
         }
-        
     }
 
     public void CloseWindow()
@@ -53,7 +57,7 @@ public class ShopPreview : MonoBehaviour
         transform.localPosition = end;
     }
 
-    public void init()
+    public void Init()
     {
         buyButton.SetActive(false);
         equipButton.SetActive(false);
@@ -134,6 +138,60 @@ public class ShopPreview : MonoBehaviour
     {
         PlayerController.player.UnEquipShopItem(sio);
         ShopUIManager.shopUIManager.UpdateShopItemList(sio.imageIcon, sio.name, false);
+    }
+
+    public void SwitchToLeft()
+    {
+        Debug.Log("||| ShopUIManager.shopUIManager.IsSioDirectionCap(sio, true): " + ShopUIManager.shopUIManager.IsSioDirectionCap(sio, true));
+        if (ShopUIManager.shopUIManager.IsSioDirectionCap(sio, true) == true) return;
+        StartCoroutine(SwtichToNext(frameThing, true, 0.25f));
+    }
+
+    public void SwitchToRight()
+    {
+        Debug.Log("||| ShopUIManager.shopUIManager.IsSioDirectionCap(sio, false): "+ ShopUIManager.shopUIManager.IsSioDirectionCap(sio, false));
+        if (ShopUIManager.shopUIManager.IsSioDirectionCap(sio, false) == true) return;
+        StartCoroutine(SwtichToNext(frameThing, false, 0.25f));
+    }
+
+    public IEnumerator SwtichToNext(GameObject g, bool isLeft, float seconds)
+    {
+        left.interactable = false;
+        right.interactable = false;
+
+        float elapsedTime = 0;
+        Vector3 startingPos = g.transform.position;
+        Vector3 itemRollOutPos = new Vector3(startingPos.x - 750, startingPos.y);
+        Vector3 itemRollInPos = new Vector3(startingPos.x + 750, startingPos.y);
+
+        if (isLeft)
+        {
+            itemRollOutPos = new Vector3(startingPos.x + 750, startingPos.y);
+            itemRollInPos = new Vector3(startingPos.x - 750, startingPos.y);
+        }
+
+        while (elapsedTime < seconds)
+        {
+            g.transform.position = Vector3.Lerp(startingPos, itemRollOutPos, (elapsedTime / seconds));
+            elapsedTime += Time.deltaTime;
+            yield return new WaitForEndOfFrame();
+        }
+        g.transform.position = itemRollInPos;
+        elapsedTime = 0;
+        // choose next sio
+        sio = ShopUIManager.shopUIManager.FindSioInListAndSwitchToDirection(sio, isLeft);
+        ShopUIManager.shopUIManager.UpdateShopPreview(sio);
+        Init();
+        while (elapsedTime < seconds)
+        {
+            g.transform.position = Vector3.Lerp(itemRollInPos, startingPos, (elapsedTime / seconds));
+            elapsedTime += Time.deltaTime;
+            yield return new WaitForEndOfFrame();
+        }
+        g.transform.position = startingPos;
+
+        left.interactable = true;
+        right.interactable = true;
     }
 
     // ShowInfo
