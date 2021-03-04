@@ -94,6 +94,11 @@ public class PlayerController : MonoBehaviour
         checkAndUpdateBest();
     }
 
+    public void AddBJ(int bj)
+    {
+        PlayerController.player.BJamountSession += bj;
+        UIController.uIController.animateBJ();
+    }
     #region Equip/unequip items
     public void EquipShopItem(ShopItemObject sio)
     {

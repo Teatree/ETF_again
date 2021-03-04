@@ -102,7 +102,7 @@ public class BugController : MonoBehaviour {
     }
 
     public void KillMeWithoutAni() {
-        PlayerController.player.BJamountSession += bug.bjAmount;
+        PlayerController.player.AddBJ(bug.bjAmount);
         Destroy(this.gameObject);
     }
 

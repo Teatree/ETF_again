@@ -130,6 +130,6 @@ public class SceneController : MonoBehaviour {
 
     public void OnDestroy()
     {
-        PlayerController.player.SavePlayerData();
+      //  PlayerController.player.SavePlayerData();
     }
 }
