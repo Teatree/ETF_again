@@ -79,6 +79,7 @@ public class SceneController : MonoBehaviour {
 
     public void LoadGame()
     {
+        Debug.Log(">>>  load Game > ");
         UnloadScene("result");
         UnloadScene("shop");
         LoadScene("main");

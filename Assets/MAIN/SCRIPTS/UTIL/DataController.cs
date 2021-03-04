@@ -111,6 +111,7 @@ public class DataController
 public class PlayerData
 {
     public int bjAmount = 0;
+    public int bjAmountBest = 0;
     public string uniqueId = ""; 
     public List<ItemShopData> items = new List<ItemShopData>();
 

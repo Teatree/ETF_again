@@ -10,7 +10,9 @@ public class PlayerController : MonoBehaviour
     
     public Dictionary<string, ShopItemObject> ownShopItemsMap = new Dictionary<string, ShopItemObject>();
    // public List<ShopItemObject> ownShopItems;
-    public int BJamount;
+    public int BJamountTotal;
+    public int BJamountSession;
+    public int BJamountBest;
 
     //FLOWER UI
     public SpriterData oldIdle;
@@ -26,9 +28,39 @@ public class PlayerController : MonoBehaviour
         EquipShopItem(sio);
 
         ShopUIManager.shopUIManager.updateShopItemsStates();
-        BJamount -= sio.priceBJ;
+        BJamountTotal -= sio.priceBJ;
     }
 
+    public void Awake()
+    {
+        Debug.Log(" Player awake");
+        player = this;
+        PlayerData pd = DataController.LoadPlayer();
+        BJamountTotal = pd.bjAmount;
+        List<ShopItemObject> ownShopItems = pd.getItems();
+        if (ownShopItems != null && ownShopItems.Count > 0)
+        {
+            foreach (ShopItemObject o in ownShopItems)
+            {
+                ownShopItemsMap[o.name] = o;
+            }
+        }
+    }
+
+    public void SavePlayerData ()
+    {
+        PlayerData pi = new PlayerData();
+        pi.bjAmount = BJamountTotal;
+        pi.setItems( ownShopItemsMap);
+        DataController.SavePlayer(pi);
+    }
+
+    public void AddBJToTotal ()
+    {
+        BJamountTotal += BJamountSession;
+    }
+
+    #region Equip/unequip items
     public void EquipShopItem(ShopItemObject sio)
     {
         // head bottom
@@ -119,28 +151,6 @@ public class PlayerController : MonoBehaviour
 
         return result;
     }
+    #endregion
 
-
-    public void Awake()
-    {
-        player = this;
-        PlayerData pd = DataController.LoadPlayer();
-        BJamount = pd.bjAmount;
-        List<ShopItemObject> ownShopItems = pd.getItems();
-        if (ownShopItems != null && ownShopItems.Count > 0)
-        {
-            foreach (ShopItemObject o in ownShopItems)
-            {
-                ownShopItemsMap[o.name] = o;
-            }
-        }
-    }
-
-    public void SavePlayerData ()
-    {
-        PlayerData pi = new PlayerData();
-        pi.bjAmount = BJamount;
-        pi.setItems( ownShopItemsMap);
-        DataController.SavePlayer(pi);
-    }
 }

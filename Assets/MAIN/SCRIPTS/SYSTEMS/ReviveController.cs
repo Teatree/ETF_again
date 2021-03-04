@@ -34,6 +34,7 @@ public class ReviveController : MonoBehaviour
         else
         {
             GameManager.IsPaused = false;
+            PlayerController.player.AddBJToTotal();
             SceneController.sceneController.LoadResult();
         }
     }
