@@ -116,7 +116,7 @@ public class ShopPreview : MonoBehaviour
         PlayerController.player.BuyShopItem(sio);
         buyButton.SetActive(false);
         ShopUIManager.shopUIManager.setBJAmiountText();
-        icon.sprite = ShopUIManager.shopUIManager.GetSpriteByName(sio.imageIcon);
+        icon.sprite = AllManager.allManager.GetSpriteByName(sio.imageIcon);
         ShopUIManager.shopUIManager.UpdateShopItemList(sio.imageIcon, sio.name, true);
 
         // if first time buying

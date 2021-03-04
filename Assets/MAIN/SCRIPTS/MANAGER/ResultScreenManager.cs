@@ -5,23 +5,25 @@ using UnityEngine.UI;
 
 public class ResultScreenManager : MonoBehaviour
 {
-
     public Text bjBestText;
     public Text bjEarnedText;
     public Text bjTotalText;
     public Text bjUntilNextText;
     public Slider proressBar;
-
+    public Image revealIcon;
+     
     public ShopItemObject targetShopItem;
 
     public void Awake()
     {
-        bjBestText.text = "" + PlayerController.player.BJamountBest;
-        bjEarnedText.text = "" + PlayerController.player.BJamountSession;
-        bjTotalText.text = "" + PlayerController.player.BJamountTotal;
+        targetShopItem = PlayerController.player.getNextTargetItem(false);
 
-        targetShopItem = PlayerController.player.getNextTargetItem();
+        bjBestText.text = "BEST: " + PlayerController.player.BJamountBest;
+        bjEarnedText.text = "+" + PlayerController.player.BJamountSession;
+        bjTotalText.text = "" + (PlayerController.player.BJamountTotal - PlayerController.player.BJamountSession);
+
         float needUntilNextItem = targetShopItem.priceBJ - PlayerController.player.BJamountTotal;
+
         if (needUntilNextItem > 0)
         {
             bjUntilNextText.text = System.String.Format("YOU NEED {0} TO UNLOCK NEXT ITEM", needUntilNextItem);
@@ -29,10 +31,56 @@ public class ResultScreenManager : MonoBehaviour
         {
             bjUntilNextText.text = System.String.Format("Congrats! YOU'VE GOT {0}", targetShopItem.name);
         }
+
         if (targetShopItem != null)
         {
-            proressBar.value = targetShopItem.priceBJ - PlayerController.player.BJamountTotal / targetShopItem.priceBJ;
+            proressBar.maxValue = targetShopItem.priceBJ;
+            //proressBar.value = PlayerController.player.BJamountTotal;
+
+            StartCoroutine(UpdateNumbersToReveal(PlayerController.player.BJamountSession));
         }
+    }
+
+    public IEnumerator UpdateNumbersToReveal(int numbers)
+    {
+        float elapsedNumbers = 0;
+        float tempCumulative = 0;
+        proressBar.value = PlayerController.player.BJamountTotal - PlayerController.player.BJamountSession;
+        float totalResult = PlayerController.player.BJamountTotal - PlayerController.player.BJamountSession;
+
+        while (elapsedNumbers < numbers)
+        {
+            elapsedNumbers += 0.25f;
+
+            // progress bar
+            proressBar.value += 0.25f;
+
+            // numbers
+            tempCumulative += 0.25f;
+            if (tempCumulative >= 1)
+            {
+                totalResult += 1;
+                tempCumulative = 0;
+            }
+
+            //result numbers
+            bjTotalText.text = "" + (int)totalResult;
+
+            yield return new WaitForEndOfFrame();
+        }
+
+        bjTotalText.text = "" + PlayerController.player.BJamountTotal;
+
+        if (PlayerController.player.BJamountTotal >= targetShopItem.priceBJ)
+        {
+            RevealIcon();
+            PlayerController.player.getNextTargetItem(true);
+        }
+    }
+
+    public void RevealIcon()
+    {
+        revealIcon.sprite = AllManager.allManager.GetSpriteByName(targetShopItem.imageIcon);
     }
 
     // Start reveal of the screen

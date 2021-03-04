@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
 
     public List<Sprite> sprites;
 
+    public ShopItemObject targetsio;
 
     public void BuyShopItem(ShopItemObject sio)
     {
@@ -54,17 +55,15 @@ public class PlayerController : MonoBehaviour
         avaliableShopItems = DataController.LoadShopItems();
     }
 
-    public ShopItemObject getNextTargetItem()
+    public ShopItemObject getNextTargetItem(bool resetTarget)
     {
+        if (targetsio != null && resetTarget == false) return targetsio;
+
         foreach (ShopItemObject sio in avaliableShopItems)
         {
-            if (!ownShopItemsMap.ContainsKey(sio.name)
-                && !sio.wasATarget)
+            if (!ownShopItemsMap.ContainsKey(sio.name) && sio.priceBJ > BJamountTotal)
             {
-                sio.wasATarget = true;
-                player.ownShopItemsMap[sio.name] = sio;
-                
-                return sio; 
+                return targetsio = sio; 
             }
         }
         return null;

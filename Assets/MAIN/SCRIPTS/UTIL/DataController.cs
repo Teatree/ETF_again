@@ -158,6 +158,7 @@ public class ItemShopData
 
     public ItemShopData(ShopItemObject sio)
     {
+        name = sio.name;
         isBought = sio.isBought;
         isEquipped = sio.isEquipped;
         wasATarget = sio.wasATarget;

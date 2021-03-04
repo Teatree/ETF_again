@@ -14,9 +14,7 @@ public class ShopUIManager : MonoBehaviour
     public GameObject LevelListContent;
 
     public Sprite questionMark;
-    public List<Sprite> shopIconImages;
    
-
     public Text bjAmountText;
     public Text bjAmountTextShadow;
 
@@ -61,7 +59,7 @@ public class ShopUIManager : MonoBehaviour
 
             // icon
             g.transform.GetChild(0).gameObject.GetComponent<Image>().sprite = questionMark;
-            foreach (Sprite s in shopIconImages)
+            foreach (Sprite s in AllManager.allManager.iconImages)
             {
                 if (s.name == i.imageIcon && i.isBought)
                 {
@@ -146,7 +144,7 @@ public class ShopUIManager : MonoBehaviour
         ShopPreviewObject.SetActive(true);
 
         sp.icon.sprite = questionMark;
-        foreach (Sprite s in shopIconImages)
+        foreach (Sprite s in AllManager.allManager.iconImages)
         {
             if (s.name == itemi.imageIcon && itemi.isBought)
             {
@@ -167,7 +165,7 @@ public class ShopUIManager : MonoBehaviour
         sp.sio = itemi;
 
         sp.icon.sprite = questionMark;
-        foreach (Sprite s in shopIconImages)
+        foreach (Sprite s in AllManager.allManager.iconImages)
         {
             if (s.name == itemi.imageIcon && itemi.isBought)
             {
@@ -181,21 +179,11 @@ public class ShopUIManager : MonoBehaviour
         sp.priceShadow.text = "" + itemi.priceBJ;
     }
 
-    public Sprite GetSpriteByName(string iconName)
-    {
-        foreach (Sprite s in shopIconImages)
-        {
-            if (s.name == iconName)
-            {
-                return s;
-            }
-        }
-        return null;
-    }
+    
 
     public void UpdateShopItemList(string iconName, string name, bool isEquipped)
     {
-        Sprite iconSprite = GetSpriteByName(iconName);
+        Sprite iconSprite = AllManager.allManager.GetSpriteByName(iconName);
         foreach (Transform child in LevelListContent.transform)
         {
             if (child.name == name) {
