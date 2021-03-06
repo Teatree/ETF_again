@@ -6,6 +6,7 @@ public class MainMenuManager : MonoBehaviour
 {
     public Camera cam;
     public GameObject GameManager;
+    public GameObject buttonShop; 
 
     void Start()
     {
@@ -22,6 +23,7 @@ public class MainMenuManager : MonoBehaviour
         // Roll In Sequence
         StartCoroutine(ChangeObjectXPos(cam.gameObject.transform, -2.44f, 2.17f, 2f));
 
+        buttonShop.SetActive(true);
         // Logo Appear
         // Camera ride in
         // Buttons appear
@@ -62,6 +64,7 @@ public class MainMenuManager : MonoBehaviour
 
     public void RollOutToGameplay()
     {
+        buttonShop.SetActive(false);
         StartCoroutine(MoveAndScaleOverSeconds(cam.gameObject, new Vector3(2.17f, -1.44f, -10), new Vector3(0, 0, -10), 3.5f, 5f, 3f));
     }
 

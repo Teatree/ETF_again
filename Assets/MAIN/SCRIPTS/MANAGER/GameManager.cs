@@ -4,18 +4,21 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager gameManager;
     public static bool IsPaused;
 
     // Manages start / end of the game condition
     // Keeps track of score
     // Pause State
+ 
 
     public GameObject loseAnimationsGreen;
     public GameObject RevivePopup;
 
+    public LevelInfo level; 
     void Start()
     {
-        
+        gameManager = this;
     }
 
     // Update is called once per frame

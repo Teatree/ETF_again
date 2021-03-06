@@ -7,27 +7,20 @@ public class UIController : MonoBehaviour
     public static UIController uIController;
 
     public Text bjAmount;
-    public AnimationCurve bjAmountCurve;
-    //float scaleModifier = 1;
-    //public float targetScale = 2f;
 
     void Start()
     {
         uIController = this;
-        animateBJ();
     }
 
     void Update()
     {
-        
-        
-
     }
 
     public void animateBJ ()
     {
         bjAmount.text = "" + PlayerController.player.BJamountSession;
-        StartCoroutine(AnimateBJAmount(0.5f,2));
+        StartCoroutine(AnimateBJAmount(0.5f, (bjAmount.transform.localScale.x * 2)));
     }
 
     IEnumerator AnimateBJAmount(float duration, float endValue)
@@ -37,7 +30,7 @@ public class UIController : MonoBehaviour
             float startValue = scaleModifier;
             Vector3 startScale = bjAmount.transform.localScale;
 
-            while (time < duration)
+        while (time < duration)
             {
             if (time < duration / 2)
             {

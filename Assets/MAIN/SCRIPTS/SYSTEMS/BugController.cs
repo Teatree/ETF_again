@@ -17,6 +17,7 @@ public class BugController : MonoBehaviour {
     float percent;
     float fTime = 0;
     Vector3 vLastPos = Vector3.zero;
+    public Vector3 vEndPos = Vector3.zero;
 
     //DeGub
     Color debugColor;
