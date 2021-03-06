@@ -6,13 +6,7 @@ public class BugSpawnManager : MonoBehaviour
 {
     int i;
     public GameObject bugPrefab;
- //   public GameObject[] allBugPrefabs;
-
-    public const string SIMPLE = "Simple";
-    public const string DRUNK = "Drunk";
-    public const string CHARGER = "Charger";
-    public const string BEE = "Bee";
-    public const string QUEENBEE = "QueenBee";
+   // public GameObject[] allBugPrefabs;
 
     public const int DRUNK_SPAWN_PROB = 25;
     public const int SIMPLE_SPAWN_PROB = 63;
@@ -139,28 +133,28 @@ public class BugSpawnManager : MonoBehaviour
                 int probabilityValue = Random.Range(0, curDrunkProb + curSimpleProb + curChargerProb + curQueenBeeProb + curBeeProb); // or 100, I dono
                 if (probabilityValue <= curDrunkProb)
                 {
-                    createBug(DRUNK, currentMultiplier);  // Drunk
+                    createBug(BugsPool.DRUNK, currentMultiplier);  // Drunk
                 }
                 else if (probabilityValue > curDrunkProb && probabilityValue < curDrunkProb + curSimpleProb)
                 {
-                    createBug(SIMPLE, currentMultiplier);   // Simple
+                    createBug(BugsPool.SIMPLE, currentMultiplier);   // Simple
                 }
                 else if (probabilityValue >= curDrunkProb + curSimpleProb + 1 && probabilityValue < curDrunkProb + curSimpleProb + curChargerProb)
                 {
-                    createBug(CHARGER, currentMultiplier);  // Charger
+                    createBug(BugsPool.CHARGER, currentMultiplier);  // Charger
                 }
                 else if (probabilityValue >= curDrunkProb + curSimpleProb + curChargerProb + 1 && probabilityValue < curDrunkProb + curSimpleProb + curChargerProb + curQueenBeeProb)
                 {
                     if (!queenBeeOnStage)
                     {
-                        createBug(QUEENBEE, currentMultiplier);    // Queen Bee, duh
+                        createBug(BugsPool.QUEENBEE, currentMultiplier);    // Queen Bee, duh
                         queenBeeOnStage = true;
                     }
                 }
                 else if (probabilityValue >= curDrunkProb + curSimpleProb + curChargerProb + curQueenBeeProb + 1 &&
                       probabilityValue < curDrunkProb + curSimpleProb + curChargerProb + curQueenBeeProb + curBeeProb)
                 {
-                    createBug(BEE, currentMultiplier);   // Bee
+                    createBug(BugsPool.BEE, currentMultiplier);   // Bee
                 }
                 bugsSpawned++;
                 //if (PowerupSystem.canCocoonSpawn(gameStage))
@@ -215,8 +209,7 @@ public class BugSpawnManager : MonoBehaviour
 
     private void createBug(string tempType, Multiplier currentMultiplier)
     {
-        bugPrefab = GetBugPrefabByName(tempType);
-        Instantiate(bugPrefab);
+        bugPrefab = BugsPool.bugsPool.GetBugByType(tempType);
         BugController bc = bugPrefab.GetComponent<BugController>();
         //   BugComponent bc = new BugComponent(gameStage, tempType, currentMultiplier);
         if (bugPrefab == null)
@@ -234,8 +227,7 @@ public class BugSpawnManager : MonoBehaviour
 
     private void createAngryBee(Multiplier currentMultiplier)
     {
-        bugPrefab = bugPrefab = GetBugPrefabByName("Bee");
-        Instantiate(bugPrefab);
+        bugPrefab = BugsPool.bugsPool.GetBugByType(BugsPool.BEE);
 
         BugController bugController = bugPrefab.GetComponent<BugController>();
         Bug bug = bugPrefab.GetComponent<Bug>();
@@ -335,50 +327,50 @@ public class BugSpawnManager : MonoBehaviour
         bc.vEndPos = new Vector3(1450, res.y, 0);
     }
 
-    private void SpawnBugWithInterval()
-    {
+    //private void SpawnBugWithInterval()
+    //{
 
-        if (GameManager.IsPaused == false)
-        {
-            i++;
-            if (i == 150)
-            {
-                SpawnBug();
-                i = 0;
-            }
-        }
-    }
+    //    if (GameManager.IsPaused == false)
+    //    {
+    //        i++;
+    //        if (i == 150)
+    //        {
+    //            SpawnBug();
+    //            i = 0;
+    //        }
+    //    }
+    //}
 
-    private void SpawnBug()
-    {
-        // TODO: probability value based on level, time in the game...
-        int i = Random.Range(0, 5);
-        if (i == 0)
-        {
-            bugPrefab = GetBugPrefabByName("Simple");
-        }
-        else if (i == 1)
-        {
-            bugPrefab = GetBugPrefabByName("Drunk");
-        }
-        else if (i == 2)
-        {
-            bugPrefab = GetBugPrefabByName("Bee");
-        }
-        else if (i == 3)
-        {
-            bugPrefab = GetBugPrefabByName("Simple");
-        }
-        else
-        {
-            bugPrefab = GetBugPrefabByName("Charger");
-        }
+    //private void SpawnBug()
+    //{
+    //    // TODO: probability value based on level, time in the game...
+    //    int i = Random.Range(0, 5);
+    //    if (i == 0)
+    //    {
+    //        bugPrefab = GetBugPrefabByName("Simple");
+    //    }
+    //    else if (i == 1)
+    //    {
+    //        bugPrefab = GetBugPrefabByName("Drunk");
+    //    }
+    //    else if (i == 2)
+    //    {
+    //        bugPrefab = GetBugPrefabByName("Bee");
+    //    }
+    //    else if (i == 3)
+    //    {
+    //        bugPrefab = GetBugPrefabByName("Simple");
+    //    }
+    //    else
+    //    {
+    //        bugPrefab = GetBugPrefabByName("Charger");
+    //    }
 
-        Instantiate(bugPrefab);
-        bugPrefab.transform.position = GenerateSpawnPos();
+    //    Instantiate(bugPrefab);
+    //    bugPrefab.transform.position = GenerateSpawnPos();
 
-        AdjustBugValues(bugPrefab);
-    }
+    //    AdjustBugValues(bugPrefab);
+    //}
 
     private void AdjustBugValues(GameObject _b)
     {
@@ -386,17 +378,17 @@ public class BugSpawnManager : MonoBehaviour
         //_b.speed = 0.5f;
     }
 
-    private GameObject GetBugPrefabByName(string name)
-    {
-        for (int i = 0; i < allBugPrefabs.Length; i++)
-        {
-            if (allBugPrefabs[i].GetComponent<Bug>().name == name)
-            {
-                return allBugPrefabs[i];
-            }
-        }
-        return null;
-    }
+    //private GameObject GetBugPrefabByName(string name)
+    //{
+    //    for (int i = 0; i < allBugPrefabs.Length; i++)
+    //    {
+    //        if (allBugPrefabs[i].GetComponent<Bug>().name == name)
+    //        {
+    //            return allBugPrefabs[i];
+    //        }
+    //    }
+    //    return null;
+    //}
 
     private Vector2 GenerateSpawnPos()
     {

@@ -30,7 +30,7 @@ public class UIController : MonoBehaviour
             float startValue = scaleModifier;
             Vector3 startScale = bjAmount.transform.localScale;
 
-        while (time < duration)
+        while (time < duration || bjAmount.transform.localScale.x > 1)
             {
             if (time < duration / 2)
             {

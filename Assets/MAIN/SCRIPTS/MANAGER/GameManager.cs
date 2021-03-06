@@ -11,7 +11,6 @@ public class GameManager : MonoBehaviour
     // Keeps track of score
     // Pause State
  
-
     public GameObject loseAnimationsGreen;
     public GameObject RevivePopup;
 
@@ -52,6 +51,7 @@ public class GameManager : MonoBehaviour
         
         IsPaused = true;
     }
+
 
     public void Revive()
     {

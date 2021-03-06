@@ -148,6 +148,7 @@ MonoBehaviour:
   velocity: 0
   curveSpeed: 0
   amplitude: 0
+  vEndPos: {x: 1450, y: 330, z: 0}
 --- !u!114 &114556778014279270
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,11 +176,12 @@ MonoBehaviour:
   curveSpeed: 2
   amplitude: 50
   time: 0
+  interpolation: 0
   reverse: 0
   began: 0
   complete: 0
   isAngeredBee: 0
-  IDLE_MVMNT_SPEED: 0
-  PREPARING_MVMNT_SPEED: 0.005
-  CHARGING_MVMNT_SPEED: 0.1
-  bjAmount: 0
+  IDLE_MVMNT_SPEED: 115
+  PREPARING_MVMNT_SPEED: 40
+  CHARGING_MVMNT_SPEED: 505
+  bjAmount: 3

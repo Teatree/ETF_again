@@ -1772,12 +1772,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bugPrefab: {fileID: 1421781502244122, guid: 202aa5a43f61ed742b47931b49c42043, type: 3}
-  allBugPrefabs:
-  - {fileID: 1326392145722946, guid: 541d19792a8d2724993f03e91f5b46d9, type: 3}
-  - {fileID: 1023899153383600, guid: 1df53ee104503304681418b1676f232d, type: 3}
-  - {fileID: 1421781502244122, guid: 337ac61b4fe64904ea623d34d03109cd, type: 3}
-  - {fileID: 1132990321668790, guid: 79ff6b5c50e3b6d4f81096c710f9fd48, type: 3}
-  - {fileID: 1421781502244122, guid: 202aa5a43f61ed742b47931b49c42043, type: 3}
 --- !u!4 &1880535527
 Transform:
   m_ObjectHideFlags: 0

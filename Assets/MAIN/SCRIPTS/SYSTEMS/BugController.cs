@@ -104,7 +104,8 @@ public class BugController : MonoBehaviour {
 
     public void KillMeWithoutAni() {
         PlayerController.player.AddBJ(bug.bjAmount);
-        Destroy(this.gameObject);
+        this.gameObject.SetActive(false);
+       // Destroy(this.gameObject);
     }
 
 }

@@ -32,6 +32,7 @@ public class ReviveController : MonoBehaviour
             gameObject.SetActive(false);
         else
         {
+            BugsPool.bugsPool.DeactivateAllBugs();
             GameManager.IsPaused = false;
             PlayerController.player.AddBJToTotal();
             SceneController.sceneController.LoadResult();
