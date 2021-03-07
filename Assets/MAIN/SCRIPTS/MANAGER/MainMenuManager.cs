@@ -6,10 +6,13 @@ public class MainMenuManager : MonoBehaviour
 {
     public Camera cam;
     public GameObject GameManager;
+
     public GameObject buttonShop; 
+    public GameObject buttonPause; 
 
     void Start()
     {
+        buttonPause.SetActive(false);
         RollInSequence();
     }
 
@@ -60,6 +63,7 @@ public class MainMenuManager : MonoBehaviour
     public void StartGame()
     {
         GameManager.SetActive(true);
+        buttonPause.SetActive(true);
     }
 
     public void RollOutToGameplay()
