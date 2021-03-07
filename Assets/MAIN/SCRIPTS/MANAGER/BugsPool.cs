@@ -44,20 +44,19 @@ public class BugsPool : MonoBehaviour
     public GameObject GetBugByType (string bugType)
     {
         //Find inactive in the pool
-        foreach(GameObject abug in bugsByType[bugType])
+        Debug.Log(">>> get bug from pool" + bugsByType[bugType].Count);
+        foreach (GameObject abug in bugsByType[bugType])
         {
             if (!abug.activeSelf)
             {
-                Debug.Log(">>> get bug from pool");
                 abug.SetActive(true);
                 return abug;
             }
         }
         //If not found instantiate a new one
-        GameObject newbug= BugsPool.bugsPool.GetBugPrefabByName(bugType);
-        Instantiate(newbug);
+        GameObject newbug = BugsPool.bugsPool.GetBugPrefabByName(bugType);
+        newbug = Instantiate(newbug);
         bugsByType[bugType].Add(newbug);
-
         return newbug;
     }
 
@@ -65,12 +64,17 @@ public class BugsPool : MonoBehaviour
     {
         foreach (string bugType in bugsByType.Keys)
         {
-            foreach (GameObject bug in bugsByType[bugType])
+            for(int i = 0; i < bugsByType[bugType].Count; i++)
             {
-                Debug.LogError(">>> deactivate all bugs > ");
-                bug.SetActive(false);
+                DeactivateBug(bugsByType[bugType][i]);
             }
         }
+    }
+
+    public void DeactivateBug (GameObject b)
+    {
+        b.transform.position = new Vector2(-1000, -1000);
+        b.SetActive(false);
     }
 }
 

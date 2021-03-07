@@ -148,7 +148,7 @@ MonoBehaviour:
   velocity: 0
   curveSpeed: 0
   amplitude: 0
-  vEndPos: {x: 1450, y: 330, z: 0}
+  vEndPos: {x: 1450, y: 417, z: 0}
 --- !u!114 &114556778014279270
 MonoBehaviour:
   m_ObjectHideFlags: 0

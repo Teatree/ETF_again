@@ -43,7 +43,7 @@ public class BugController : MonoBehaviour {
             anim.speed = 1;
             velocity += bug.acceleration;
 
-            if (bug.name == "Charger")
+            if (bug.name == BugsPool.CHARGER)
             {
                 MoveCharger();
             }
@@ -61,7 +61,7 @@ public class BugController : MonoBehaviour {
     }
 
     public void MoveBug() {
-        if (bug.name == "Drunk" || bug.name == "QueenBee") {
+        if (bug.name == BugsPool.DRUNK || bug.name == BugsPool.QUEENBEE) {
 
             //Debug.Log("x: " + x + " y: " + y);
             fTime += Time.deltaTime * curveSpeed;
@@ -104,7 +104,8 @@ public class BugController : MonoBehaviour {
 
     public void KillMeWithoutAni() {
         PlayerController.player.AddBJ(bug.bjAmount);
-        this.gameObject.SetActive(false);
+        UIController.uIController.animateBJ();
+        BugsPool.bugsPool.DeactivateBug(gameObject);
        // Destroy(this.gameObject);
     }
 

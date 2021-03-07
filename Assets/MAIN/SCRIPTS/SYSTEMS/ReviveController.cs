@@ -23,13 +23,15 @@ public class ReviveController : MonoBehaviour
 
         while (elapsedTime > 0)
         {
-            countdownText.text = ""+(int)(elapsedTime % 60);
+            countdownText.text = "" + (int)(elapsedTime % 60);
 
             elapsedTime -= Time.deltaTime;
             yield return new WaitForEndOfFrame();
         }
         if (GameManager.IsPaused == false)
+        {
             gameObject.SetActive(false);
+        }
         else
         {
             BugsPool.bugsPool.DeactivateAllBugs();

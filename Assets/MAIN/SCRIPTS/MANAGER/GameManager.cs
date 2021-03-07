@@ -59,7 +59,7 @@ public class GameManager : MonoBehaviour
         // uncheck pause
 
         loseAnimationsGreen.transform.position = new Vector3(loseAnimationsGreen.transform.position.x + 30, loseAnimationsGreen.transform.position.y, loseAnimationsGreen.transform.position.z);
-
+        BugsPool.bugsPool.DeactivateAllBugs();
         IsPaused = false;
 
     }

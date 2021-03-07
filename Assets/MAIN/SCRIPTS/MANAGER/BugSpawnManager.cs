@@ -5,7 +5,7 @@ using UnityEngine;
 public class BugSpawnManager : MonoBehaviour
 {
     int i;
-    public GameObject bugPrefab;
+  //  public GameObject aBug;
    // public GameObject[] allBugPrefabs;
 
     public const int DRUNK_SPAWN_PROB = 25;
@@ -38,10 +38,10 @@ public class BugSpawnManager : MonoBehaviour
     public static int angerBeePattern1case;
     public static int angerBeePattern2case;
 
-    private int SPAWN_MAX_X = -200;
-    private int SPAWN_MIN_X = -300;
-    private int SPAWN_MIN_Y = 100;
-    private int SPAWN_MAX_Y = 360;
+    private float SPAWN_MAX_X = -10;
+    private float SPAWN_MIN_X = -20;
+    private float SPAWN_MIN_Y = -2.43f;
+    private float SPAWN_MAX_Y = 3.360f;
 
     private float spawner = 0;
     public static float break_counter = 0;
@@ -65,8 +65,8 @@ public class BugSpawnManager : MonoBehaviour
     public static int umbrellaBugsSpawned;
 
   
-    private float angryBeeLinePosY = 150;
-    private float angryBeeLinePosX = -300;
+    private float angryBeeLinePosY = 2.550f;
+    private float angryBeeLinePosX = -20;
 
     public static bool isAngeredBeesMode = false;
     public static int angeredBeesModeTimer = ANGERED_BEES_MODE_DURATION;
@@ -75,10 +75,6 @@ public class BugSpawnManager : MonoBehaviour
     private void Start()
     {
         DataController.LoadAllMultipliers();
-        SPAWN_MIN_X = -400;
-        SPAWN_MIN_Y = 35;
-        SPAWN_MAX_X = -300;
-        SPAWN_MAX_Y = 515;
 
         break_counter = Random.Range(curBreakFreqMax, curBreakFreqMin);
         resetMultipliers();
@@ -86,19 +82,22 @@ public class BugSpawnManager : MonoBehaviour
 
     private void Update()
     {
-        curSpawnInterval = SPAWN_INTERVAL_BASE * currentMultiplier.spawnInterval * GameManager.gameManager.level.spawnInterval;
-        curBreakFreqMin = BREAK_FREQ_BASE_MIN * currentMultiplier.breakFreqMin * GameManager.gameManager.level.breakFreqMin;
-        curBreakFreqMax = BREAK_FREQ_BASE_MAX * currentMultiplier.breakFreqMax * GameManager.gameManager.level.breakFreqMax;
-        curBreakLengthMin = BREAK_LENGTH_BASE_MIN * currentMultiplier.breakLengthMin * GameManager.gameManager.level.breakLengthMin;
-        curBreakLengthMax = BREAK_LENGTH_BASE_MAX * currentMultiplier.breakLengthMax * GameManager.gameManager.level.breakLengthMax;
+        if (!GameManager.IsPaused)
+        {
+            curSpawnInterval = SPAWN_INTERVAL_BASE * currentMultiplier.spawnInterval * GameManager.gameManager.level.spawnInterval;
+            curBreakFreqMin = BREAK_FREQ_BASE_MIN * currentMultiplier.breakFreqMin * GameManager.gameManager.level.breakFreqMin;
+            curBreakFreqMax = BREAK_FREQ_BASE_MAX * currentMultiplier.breakFreqMax * GameManager.gameManager.level.breakFreqMax;
+            curBreakLengthMin = BREAK_LENGTH_BASE_MIN * currentMultiplier.breakLengthMin * GameManager.gameManager.level.breakLengthMin;
+            curBreakLengthMax = BREAK_LENGTH_BASE_MAX * currentMultiplier.breakLengthMax * GameManager.gameManager.level.breakLengthMax;
 
-        curDrunkProb = (int)(DRUNK_SPAWN_PROB * currentMultiplier.drunkBugSpawnChance * GameManager.gameManager.level.drunkBugSpawnChance);
-        curSimpleProb = (int)(SIMPLE_SPAWN_PROB * currentMultiplier.simpleBugSpawnChance * GameManager.gameManager.level.simpleBugSpawnChance);
-        curChargerProb = (int)(CHARGER_SPAWN_PROB * currentMultiplier.chargerBugSpawnChance * GameManager.gameManager.level.chargerBugSpawnChance);
-        curQueenBeeProb = (int)(QUEENBEE_SPAWN_PROB * currentMultiplier.queenBeeSpawnChance * GameManager.gameManager.level.queenBeeSpawnChance);
-        curBeeProb = (int)(BEE_SPAWN_PROB * currentMultiplier.beeSpawnChance * GameManager.gameManager.level.beeSpawnChance);
+            curDrunkProb = (int)(DRUNK_SPAWN_PROB * currentMultiplier.drunkBugSpawnChance * GameManager.gameManager.level.drunkBugSpawnChance);
+            curSimpleProb = (int)(SIMPLE_SPAWN_PROB * currentMultiplier.simpleBugSpawnChance * GameManager.gameManager.level.simpleBugSpawnChance);
+            curChargerProb = (int)(CHARGER_SPAWN_PROB * currentMultiplier.chargerBugSpawnChance * GameManager.gameManager.level.chargerBugSpawnChance);
+            curQueenBeeProb = (int)(QUEENBEE_SPAWN_PROB * currentMultiplier.queenBeeSpawnChance * GameManager.gameManager.level.queenBeeSpawnChance);
+            curBeeProb = (int)(BEE_SPAWN_PROB * currentMultiplier.beeSpawnChance * GameManager.gameManager.level.beeSpawnChance);
 
-        spawn();
+            spawn();
+        }
         // SpawnBugWithInterval();
     }
 
@@ -209,17 +208,18 @@ public class BugSpawnManager : MonoBehaviour
 
     private void createBug(string tempType, Multiplier currentMultiplier)
     {
-        bugPrefab = BugsPool.bugsPool.GetBugByType(tempType);
-        BugController bc = bugPrefab.GetComponent<BugController>();
+        GameObject aBug = BugsPool.bugsPool.GetBugByType(tempType);
+        BugController bc = aBug.GetComponent<BugController>();
         //   BugComponent bc = new BugComponent(gameStage, tempType, currentMultiplier);
-        if (bugPrefab == null)
+        if (aBug == null)
         {
             //            System.out.println("temp bug type " + tempType);
         }
-        Bug bug = bugPrefab.GetComponent<Bug>();
+        Bug bug = aBug.GetComponent<Bug>();
         bug.applyMultiplier(currentMultiplier);
+        bc.bug = bug;
 
-        setPos(bugPrefab, bc);
+        setPos(aBug, bc);
         //bc.startYPosition = tc.y;
         //bugEntity.getComponent(TransformComponent.class).x = tc.x;
         //bugEntity.getComponent(TransformComponent.class).y = tc.y;
@@ -227,10 +227,11 @@ public class BugSpawnManager : MonoBehaviour
 
     private void createAngryBee(Multiplier currentMultiplier)
     {
-        bugPrefab = BugsPool.bugsPool.GetBugByType(BugsPool.BEE);
+        GameObject bugPrefab = BugsPool.bugsPool.GetBugByType(BugsPool.BEE);
 
         BugController bugController = bugPrefab.GetComponent<BugController>();
         Bug bug = bugPrefab.GetComponent<Bug>();
+        bugController.bug = bug;
 
         bug.isAngeredBee = true;
         //bug.interpolation = null;
@@ -323,7 +324,7 @@ public class BugSpawnManager : MonoBehaviour
         Vector2 res = new Vector2();
         res.x = Random.Range(0, SPAWN_MAX_X - SPAWN_MIN_X) + SPAWN_MIN_X;
         res.y = Random.Range(0, SPAWN_MAX_Y - SPAWN_MIN_Y) + SPAWN_MIN_Y;
-        transform.position = res;
+        g.transform.position = res;
         bc.vEndPos = new Vector3(1450, res.y, 0);
     }
 
@@ -347,29 +348,29 @@ public class BugSpawnManager : MonoBehaviour
     //    int i = Random.Range(0, 5);
     //    if (i == 0)
     //    {
-    //        bugPrefab = GetBugPrefabByName("Simple");
+    //        aBug = GetBugPrefabByName("Simple");
     //    }
     //    else if (i == 1)
     //    {
-    //        bugPrefab = GetBugPrefabByName("Drunk");
+    //        aBug = GetBugPrefabByName("Drunk");
     //    }
     //    else if (i == 2)
     //    {
-    //        bugPrefab = GetBugPrefabByName("Bee");
+    //        aBug = GetBugPrefabByName("Bee");
     //    }
     //    else if (i == 3)
     //    {
-    //        bugPrefab = GetBugPrefabByName("Simple");
+    //        aBug = GetBugPrefabByName("Simple");
     //    }
     //    else
     //    {
-    //        bugPrefab = GetBugPrefabByName("Charger");
+    //        aBug = GetBugPrefabByName("Charger");
     //    }
 
-    //    Instantiate(bugPrefab);
-    //    bugPrefab.transform.position = GenerateSpawnPos();
+    //    Instantiate(aBug);
+    //    aBug.transform.position = GenerateSpawnPos();
 
-    //    AdjustBugValues(bugPrefab);
+    //    AdjustBugValues(aBug);
     //}
 
     private void AdjustBugValues(GameObject _b)
