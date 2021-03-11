@@ -92,6 +92,7 @@ public class PlayerController : MonoBehaviour
     {
         BJamountTotal += BJamountSession;
         checkAndUpdateBest();
+        BJamountSession = 0;
     }
 
     public void AddBJ(int bj)

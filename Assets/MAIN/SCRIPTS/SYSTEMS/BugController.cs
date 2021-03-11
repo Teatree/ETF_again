@@ -22,10 +22,13 @@ public class BugController : MonoBehaviour {
     //DeGub
     Color debugColor;
 
-    public void Start() {
+    public void OnEnable()
+    {
+        Debug.Log("YES!!! ``````````");
+
         bug = GetComponent<Bug>();
         anim = GetComponentInChildren<Animator>();
-                            
+
         chargerChangePostionIdle = Random.Range(-10, -5);
 
         velocity = bug.speed;
