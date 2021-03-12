@@ -59,7 +59,7 @@ public class DataController
         {
             jsonData = File.ReadAllText(playerfilePath);
             PlayerData pi = JsonUtility.FromJson<PlayerData>(jsonData);
-            Debug.Log(">>>> jsonData > " + jsonData);
+           // Debug.Log(">>>> jsonData > " + jsonData);
             return pi;
 
         }
@@ -71,7 +71,7 @@ public class DataController
     public static void SavePlayer(PlayerData pi)
     {
         string jsonData = JsonUtility.ToJson(pi);
-        Debug.Log(">>> player info > " + jsonData);
+      //  Debug.Log(">>> player info > " + jsonData);
         if (Application.platform == RuntimePlatform.Android)
         {
             StreamWriter writer = new StreamWriter(playerfilePath, false);
