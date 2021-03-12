@@ -8,10 +8,10 @@ public class AllManager : MonoBehaviour
 
     public List<Sprite> iconImages;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         allManager = this;
-
+        loadEverything();
     }
 
     public Sprite GetSpriteByName(string iconName)
@@ -26,9 +26,10 @@ public class AllManager : MonoBehaviour
         return null;
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnApplicationQuit()
     {
-        
+        Debug.Log("Application ending after " + Time.time + " seconds");
+        PlayerController.player.SavePlayerData();
     }
+   
 }

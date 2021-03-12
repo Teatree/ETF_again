@@ -74,7 +74,7 @@ public class BugSpawnManager : MonoBehaviour
 
     private void Start()
     {
-        DataController.LoadAllMultipliers();
+      //  DataController.LoadAllMultipliers();
 
         break_counter = Random.Range(curBreakFreqMax, curBreakFreqMin);
 

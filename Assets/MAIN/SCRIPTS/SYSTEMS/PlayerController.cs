@@ -35,10 +35,11 @@ public class PlayerController : MonoBehaviour
     public void Awake()
     {
         player = this;
-        LoadSave();
+        Debug.Log(">>>> player awake " + PlayerController.player.BJamountTotal);
+        //LoadSave();
     }
 
-    private void LoadSave()
+    public void LoadSave()
     {
         PlayerData pd = DataController.LoadPlayer();
         BJamountTotal = pd.bjAmount;

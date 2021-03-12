@@ -24,8 +24,6 @@ public class BugController : MonoBehaviour {
 
     public void OnEnable()
     {
-        Debug.Log("YES!!! ``````````");
-
         bug = GetComponent<Bug>();
         anim = GetComponentInChildren<Animator>();
 

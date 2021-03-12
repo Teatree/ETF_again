@@ -45,13 +45,18 @@ public class SceneController : MonoBehaviour {
             {
                 LoadGame();
             }
+            loadEverything();
             gameStart = true;
         }
-
-
-        Debug.Log("I'm loadin services here !");
     }
 
+    public static void loadEverything()
+    {
+        DataController.LoadAllMultipliers();
+        DataController.LoadAllLevels();
+        DataController.LoadShopItems();
+        PlayerController.player.LoadSave();
+    }
     private void UnloadScene(string scene)
     {
         //Debug.Log("> u >" + sceneStateTracker[scene]);
@@ -81,8 +86,7 @@ public class SceneController : MonoBehaviour {
     {
         UnloadScene("result");
         UnloadScene("shop");
-        LoadScene("main");
-        PlayerController.player.SavePlayerData();
+        LoadScene("main"); 
     }
 
     public void LoadResult()

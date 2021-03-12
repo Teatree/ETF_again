@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class BugsPool : MonoBehaviour
 {
-
     public const string SIMPLE = "Simple";
     public const string DRUNK = "Drunk";
     public const string CHARGER = "Charger";
@@ -43,8 +42,7 @@ public class BugsPool : MonoBehaviour
 
     public GameObject GetBugByType (string bugType)
     {
-        //Find inactive in the pool
-        Debug.Log(">>> get bug from pool" + bugsByType[bugType].Count);
+        //Find inactive in the pool;
         foreach (GameObject abug in bugsByType[bugType])
         {
             if (!abug.activeSelf)
