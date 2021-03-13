@@ -94,4 +94,9 @@ public class Bug : MonoBehaviour {
                 }
         }
     }
+    
+    public bool isQueen ()
+    {
+        return _type == _TYPE.QUEENBEE;
+    }
 }

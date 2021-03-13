@@ -11,7 +11,6 @@ public class AllManager : MonoBehaviour
     void Awake()
     {
         allManager = this;
-        loadEverything();
     }
 
     public Sprite GetSpriteByName(string iconName)

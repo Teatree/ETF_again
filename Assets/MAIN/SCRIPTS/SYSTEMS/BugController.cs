@@ -53,7 +53,10 @@ public class BugController : MonoBehaviour {
                 MoveBug();
             }
 
-            if (transform.position.x > 12) { KillMeWithoutAni(); }
+            //if (transform.position.x > 12) {
+            //    Debug.Log(">>>> transform.position.x > 12 > ");
+            //    KillMeWithoutAni(); 
+            //}
         }
         else
         {
@@ -106,8 +109,13 @@ public class BugController : MonoBehaviour {
     public void KillMeWithoutAni() {
         PlayerController.player.AddBJ(bug.bjAmount);
         UIController.uIController.animateBJ();
+        if (bug.isQueen())
+        {
+            BugSpawnManager.queenBeeOnStage = false;
+            BugSpawnManager.bugSpawn.AngerBees();
+            CameraShaker.cameraShaker.TriggerShake();
+        }
         BugsPool.bugsPool.DeactivateBug(gameObject);
-       // Destroy(this.gameObject);
     }
-
+    
 }

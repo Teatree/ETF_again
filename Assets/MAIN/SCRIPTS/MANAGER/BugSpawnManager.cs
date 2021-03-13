@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class BugSpawnManager : MonoBehaviour
 {
-    int i;
-  //  public GameObject aBug;
-   // public GameObject[] allBugPrefabs;
+    public static BugSpawnManager bugSpawn;
 
     public const int DRUNK_SPAWN_PROB = 25;
     public const int SIMPLE_SPAWN_PROB = 63;
@@ -64,7 +62,7 @@ public class BugSpawnManager : MonoBehaviour
     public static int cocconBugsSpawned;
     public static int umbrellaBugsSpawned;
 
-  
+
     private float angryBeeLinePosY = 2.550f;
     private float angryBeeLinePosX = -20;
 
@@ -74,10 +72,9 @@ public class BugSpawnManager : MonoBehaviour
 
     private void Start()
     {
-      //  DataController.LoadAllMultipliers();
+        bugSpawn = this;
 
         break_counter = Random.Range(curBreakFreqMax, curBreakFreqMin);
-
         resetMultipliers();
     }
 
@@ -140,32 +137,32 @@ public class BugSpawnManager : MonoBehaviour
             }
             else
             {
-                int probabilityValue = Random.Range(0, curDrunkProb + curSimpleProb + curChargerProb + curQueenBeeProb + curBeeProb); // or 100, I dono
-                if (probabilityValue <= curDrunkProb)
-                {
-                    createBug(BugsPool.DRUNK, currentMultiplier);  // Drunk
-                }
-                else if (probabilityValue > curDrunkProb && probabilityValue < curDrunkProb + curSimpleProb)
-                {
-                    createBug(BugsPool.SIMPLE, currentMultiplier);   // Simple
-                }
-                else if (probabilityValue >= curDrunkProb + curSimpleProb + 1 && probabilityValue < curDrunkProb + curSimpleProb + curChargerProb)
-                {
-                    createBug(BugsPool.CHARGER, currentMultiplier);  // Charger
-                }
-                else if (probabilityValue >= curDrunkProb + curSimpleProb + curChargerProb + 1 && probabilityValue < curDrunkProb + curSimpleProb + curChargerProb + curQueenBeeProb)
-                {
+                //int probabilityValue = Random.Range(0, curDrunkProb + curSimpleProb + curChargerProb + curQueenBeeProb + curBeeProb); // or 100, I dono
+                //if (probabilityValue <= curDrunkProb)
+                //{
+                //    createBug(BugsPool.DRUNK, currentMultiplier);  // Drunk
+                //}
+                //else if (probabilityValue > curDrunkProb && probabilityValue < curDrunkProb + curSimpleProb)
+                //{
+                //    createBug(BugsPool.SIMPLE, currentMultiplier);   // Simple
+                //}
+                //else if (probabilityValue >= curDrunkProb + curSimpleProb + 1 && probabilityValue < curDrunkProb + curSimpleProb + curChargerProb)
+                //{
+                //    createBug(BugsPool.CHARGER, currentMultiplier);  // Charger
+                //}
+                //else if (probabilityValue >= curDrunkProb + curSimpleProb + curChargerProb + 1 && probabilityValue < curDrunkProb + curSimpleProb + curChargerProb + curQueenBeeProb)
+                //{
                     if (!queenBeeOnStage)
                     {
                         createBug(BugsPool.QUEENBEE, currentMultiplier);    // Queen Bee, duh
                         queenBeeOnStage = true;
                     }
-                }
-                else if (probabilityValue >= curDrunkProb + curSimpleProb + curChargerProb + curQueenBeeProb + 1 &&
-                      probabilityValue < curDrunkProb + curSimpleProb + curChargerProb + curQueenBeeProb + curBeeProb)
-                {
-                    createBug(BugsPool.BEE, currentMultiplier);   // Bee
-                }
+                //}
+                //else if (probabilityValue >= curDrunkProb + curSimpleProb + curChargerProb + curQueenBeeProb + 1 &&
+                //      probabilityValue < curDrunkProb + curSimpleProb + curChargerProb + curQueenBeeProb + curBeeProb)
+                //{
+                //    createBug(BugsPool.BEE, currentMultiplier);   // Bee
+                //}
                 bugsSpawned++;
                 //if (PowerupSystem.canCocoonSpawn(gameStage))
                 //{
@@ -216,6 +213,20 @@ public class BugSpawnManager : MonoBehaviour
         //        System.out.println("break_counter: " + break_counter);
     }
 
+
+    public void AngerBees()
+    {
+        isFirst = true;
+
+        isAngeredBeesMode = true;
+        BugsPool.bugsPool.DeactivateAllBugs();
+        queenBeeOnStage = false;
+
+        angerBeePattern = Random.Range(0, 3);
+        resetBreakCounter();
+        break_counter = Random.Range(0, (int)(curBreakFreqMax * 100) - (int)(curBreakFreqMin * 100)) + (curBreakFreqMin * 100);
+        break_counter /= 100;
+    }
 
     private void createBug(string tempType, Multiplier currentMultiplier)
     {

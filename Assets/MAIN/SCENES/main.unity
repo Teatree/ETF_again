@@ -1973,6 +1973,7 @@ GameObject:
   - component: {fileID: 1965157815}
   - component: {fileID: 1965157813}
   - component: {fileID: 1965157812}
+  - component: {fileID: 1965157814}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1996,6 +1997,18 @@ Behaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1965157811}
   m_Enabled: 1
+--- !u!114 &1965157814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1965157811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 631a6290ccfac9d4b88b2d7791b97c0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!20 &1965157815
 Camera:
   m_ObjectHideFlags: 0
@@ -2377,7 +2390,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: bb333453b3c5460488feef724ffc65aa,
+      objectReference: {fileID: 21300000, guid: 871b98b2d4782ef4bb619ced74618e19,
         type: 3}
     - target: {fileID: 212164980943019206, guid: cd51fb4b5addc6c4c9c7562020161a08,
         type: 3}

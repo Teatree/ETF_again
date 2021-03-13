@@ -35,8 +35,6 @@ public class PlayerController : MonoBehaviour
     public void Awake()
     {
         player = this;
-        Debug.Log(">>>> player awake " + PlayerController.player.BJamountTotal);
-        //LoadSave();
     }
 
     public void LoadSave()
