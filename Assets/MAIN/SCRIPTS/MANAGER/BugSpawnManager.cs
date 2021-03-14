@@ -11,24 +11,24 @@ public class BugSpawnManager : MonoBehaviour
     public const int CHARGER_SPAWN_PROB = 10;
     public const int QUEENBEE_SPAWN_PROB = 1;
     public const int BEE_SPAWN_PROB = 1;
-    public const int ANGERED_BEE_PATTERN_1_y_1 = 32;
-    public const int ANGERED_BEE_PATTERN_1_y_2 = 500;
-    public const int ANGERED_BEE_PATTERN_2_y_1 = 300;
-    public const int ANGERED_BEE_PATTERN_2_y_1Stage = 200;
-    public const int ANGERED_BEE_PATTERN_2_y_2 = 30;
-    public const int ANGERED_BEE_PATTERN_2_y_2Stage = 550;
+    public const float ANGERED_BEE_PATTERN_1_y_1 = -2.43f;
+    public const float ANGERED_BEE_PATTERN_1_y_2 = 3.360f;
+    public const float ANGERED_BEE_PATTERN_2_y_1 = -1.43f;
+    public const float ANGERED_BEE_PATTERN_2_y_1Stage = 1.360f;
+    public const float ANGERED_BEE_PATTERN_2_y_2 = 1;
+    public const float ANGERED_BEE_PATTERN_2_y_2Stage = 3;
 
     public static int curDrunkProb = DRUNK_SPAWN_PROB;
     public static int curSimpleProb = SIMPLE_SPAWN_PROB;
     public static int curChargerProb = CHARGER_SPAWN_PROB;
     public static int curQueenBeeProb = QUEENBEE_SPAWN_PROB;
     public static int curBeeProb = BEE_SPAWN_PROB;
-    public static int angeredBeePattern1Y1 = ANGERED_BEE_PATTERN_1_y_1;
-    public static int angeredBeePattern1Y2 = ANGERED_BEE_PATTERN_1_y_2;
-    public static int angeredBeePattern2Y1 = ANGERED_BEE_PATTERN_2_y_1;
-    public static int angeredBeePattern2Y1stage = ANGERED_BEE_PATTERN_2_y_1Stage;
-    public static int angeredBeePattern2Y2 = ANGERED_BEE_PATTERN_2_y_2;
-    public static int angeredBeePattern2Y2stage = ANGERED_BEE_PATTERN_2_y_2Stage;
+    public static float angeredBeePattern1Y1 = ANGERED_BEE_PATTERN_1_y_1;
+    public static float angeredBeePattern1Y2 = ANGERED_BEE_PATTERN_1_y_2;
+    public static float angeredBeePattern2Y1 = ANGERED_BEE_PATTERN_2_y_1;
+    public static float angeredBeePattern2Y1stage = ANGERED_BEE_PATTERN_2_y_1Stage;
+    public static float angeredBeePattern2Y2 = ANGERED_BEE_PATTERN_2_y_2;
+    public static float angeredBeePattern2Y2stage = ANGERED_BEE_PATTERN_2_y_2Stage;
 
     public static int ANGERED_BEES_MODE_DURATION = 26;
     public static bool queenBeeOnStage = false;
@@ -137,7 +137,7 @@ public class BugSpawnManager : MonoBehaviour
             }
             else
             {
-                //int probabilityValue = Random.Range(0, curDrunkProb + curSimpleProb + curChargerProb + curQueenBeeProb + curBeeProb); // or 100, I dono
+                int probabilityValue = Random.Range(0, curDrunkProb + curSimpleProb + curChargerProb + curQueenBeeProb + curBeeProb); // or 100, I dono
                 //if (probabilityValue <= curDrunkProb)
                 //{
                 //    createBug(BugsPool.DRUNK, currentMultiplier);  // Drunk
@@ -266,7 +266,7 @@ public class BugSpawnManager : MonoBehaviour
             if (isFirst)
             {
                 //            System.out.println("YES, I AM WORKING!");
-                bugPosition.y = angryBeeLinePosY - 60;
+                bugPosition.y = angryBeeLinePosY - 1;
                 isFirst = false;
             }
             else
@@ -284,13 +284,13 @@ public class BugSpawnManager : MonoBehaviour
         {
             if (angerBeePattern1case == 1)
             {
-                bugPosition.y = angeredBeePattern1Y1 += 100;
+                bugPosition.y = angeredBeePattern1Y1 += 2;
                 bug.endX = 1450;
                 bug.endY = bugPosition.y;
             }
             else
             {
-                bugPosition.y = angeredBeePattern1Y2 -= 100;
+                bugPosition.y = angeredBeePattern1Y2 -= 2;
                 bug.endX = 1450;
                 bug.endY = bugPosition.y;
             }
@@ -301,17 +301,17 @@ public class BugSpawnManager : MonoBehaviour
             {
                 if (angeredBeePattern2Y1 < 490)
                 {
-                    bugPosition.y = angeredBeePattern2Y1 += 100;
+                    bugPosition.y = angeredBeePattern2Y1 += 2;
                 }
                 else
                 {
-                    if (angeredBeePattern2Y1stage > 150)
+                    if (angeredBeePattern2Y1stage > 150) // ???
                     {
-                        bugPosition.y = angeredBeePattern2Y1stage -= 100;
+                        bugPosition.y = angeredBeePattern2Y1stage -= 2;
                     }
                     else
                     {
-                        bugPosition.y = angeredBeePattern2Y1stage += 100;
+                        bugPosition.y = angeredBeePattern2Y1stage += 2;
                     }
                 }
 
@@ -322,23 +322,24 @@ public class BugSpawnManager : MonoBehaviour
             {
                 if (angeredBeePattern2Y2 < 150)
                 {
-                    bugPosition.y = angeredBeePattern2Y2 += 100;
+                    bugPosition.y = angeredBeePattern2Y2 += 1;
                 }
                 else
                 {
                     if (angeredBeePattern2Y2stage > 150)
                     {
-                        bugPosition.y = angeredBeePattern2Y2stage -= 100;
+                        bugPosition.y = angeredBeePattern2Y2stage -= 1;
                     }
                     else
                     {
-                        bugPosition.y = angeredBeePattern2Y2stage += 100;
+                        bugPosition.y = angeredBeePattern2Y2stage += 1;
                     }
                 }
                 bug.endX = 1450;
                 bug.endY = bugPosition.y;
             }
         }
+        //setPos(bugPrefab, bugController);
     }
 
     private void setPos(GameObject g, BugController bc)
@@ -349,51 +350,6 @@ public class BugSpawnManager : MonoBehaviour
         g.transform.position = res;
         bc.vEndPos = new Vector3(1450, res.y, 0);
     }
-
-    //private void SpawnBugWithInterval()
-    //{
-
-    //    if (GameManager.IsPaused == false)
-    //    {
-    //        i++;
-    //        if (i == 150)
-    //        {
-    //            SpawnBug();
-    //            i = 0;
-    //        }
-    //    }
-    //}
-
-    //private void SpawnBug()
-    //{
-    //    // TODO: probability value based on level, time in the game...
-    //    int i = Random.Range(0, 5);
-    //    if (i == 0)
-    //    {
-    //        aBug = GetBugPrefabByName("Simple");
-    //    }
-    //    else if (i == 1)
-    //    {
-    //        aBug = GetBugPrefabByName("Drunk");
-    //    }
-    //    else if (i == 2)
-    //    {
-    //        aBug = GetBugPrefabByName("Bee");
-    //    }
-    //    else if (i == 3)
-    //    {
-    //        aBug = GetBugPrefabByName("Simple");
-    //    }
-    //    else
-    //    {
-    //        aBug = GetBugPrefabByName("Charger");
-    //    }
-
-    //    Instantiate(aBug);
-    //    aBug.transform.position = GenerateSpawnPos();
-
-    //    AdjustBugValues(aBug);
-    //}
 
     private void AdjustBugValues(GameObject _b)
     {

@@ -77,7 +77,7 @@ public class BugController : MonoBehaviour {
             // move me regularly
             transform.position = new Vector2(transform.position.x + velocity, transform.position.y);
         }
-        Debug.DrawLine(vLastPos, transform.position, debugColor, 10);
+        //Debug.DrawLine(vLastPos, transform.position, debugColor, 10);
     }
 
     public void MoveCharger() {

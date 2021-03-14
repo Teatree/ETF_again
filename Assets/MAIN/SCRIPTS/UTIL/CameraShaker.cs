@@ -4,13 +4,9 @@ using UnityEngine;
 
 public class CameraShaker : MonoBehaviour
 {
-
     public static CameraShaker cameraShaker;
     // Transform of the GameObject you want to shake
     private Transform transform;
-
-    // Desired duration of the shake effect
-    private float shakeDuration = 0f;
 
     // A measure of magnitude for the shake. Tweak based on your preference
     private float shakeMagnitude = 0.7f;
@@ -23,7 +19,7 @@ public class CameraShaker : MonoBehaviour
 
     public void TriggerShake()
     {
-        shakeDuration = 1.0f;
+        StartCoroutine(Shake(1.0f));
     }
 
     void Awake()
@@ -35,24 +31,20 @@ public class CameraShaker : MonoBehaviour
         }
     }
 
-    void OnEnable()
+    public IEnumerator Shake(float duration)
     {
-        initialPosition = transform.localPosition;
-    }
+        float elapsedTime = 0;
 
-    void Update()
-    {
-        if (shakeDuration > 0)
+        initialPosition = transform.localPosition;
+
+        while (elapsedTime < duration)
         {
             transform.localPosition = initialPosition + Random.insideUnitSphere * shakeMagnitude;
 
-            shakeDuration -= Time.deltaTime * dampingSpeed;
-        }
-        else
-        {
-            shakeDuration = 0f;
-            transform.localPosition = initialPosition;
-        }
-    }
+            elapsedTime += Time.deltaTime;
 
+            yield return new WaitForEndOfFrame();
+        }
+        transform.localPosition = initialPosition;
+    }
 }

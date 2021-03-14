@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MainMenuManager : MonoBehaviour 
 {
@@ -9,16 +10,12 @@ public class MainMenuManager : MonoBehaviour
 
     public GameObject buttonShop; 
     public GameObject buttonPause; 
+    public GameObject buttonStart; 
 
     void Start()
     {
         buttonPause.SetActive(false);
         RollInSequence();
-    }
-
-    private void Update()
-    {
-        
     }
 
     public void RollInSequence()
@@ -38,21 +35,36 @@ public class MainMenuManager : MonoBehaviour
 
         Vector3 pos = transform.position; //Start object's position
 
+        buttonStart.GetComponent<Button>().interactable = false;
+
         while (elapsed_time <= duration) //Inside the loop until the time expires
         {
             pos.x = Mathf.Lerp(x_start, x_target, EaseOut(elapsed_time / duration)); //Changes and interpolates the position's "x" value
 
             transform.position = pos;//Changes the object's position
 
+            Color txtColor = buttonStart.transform.GetChild(0).GetComponent<Text>().color;
+            txtColor.a = Mathf.Lerp(0, 1, EaseIn(elapsed_time / duration));
+            buttonStart.transform.GetChild(0).GetComponent<Text>().color= txtColor;
+
             yield return null; //Waits/skips one frame
+
+
 
             elapsed_time += Time.deltaTime; //Adds to the elapsed time the amount of time needed to skip/wait one frame
         }
+
+        buttonStart.GetComponent<Button>().interactable = true;
     }
 
     float EaseOut(float t)
     {
         return Flip(Mathf.Pow(Flip(t),8f));
+    }
+
+    float EaseIn(float t)
+    {
+        return Mathf.Pow(Flip(t), 8f);
     }
 
     float Flip(float x)
@@ -75,6 +87,8 @@ public class MainMenuManager : MonoBehaviour
     public IEnumerator MoveAndScaleOverSeconds(GameObject g, Vector3 startPos, Vector3 endPos, float startZoom, float endZoom, float seconds)
     {
         float elapsedTime = 0;
+        //buttonStart.interactable = false;
+
         while (elapsedTime < seconds)
         {
             g.transform.position = Vector3.Lerp(startPos, endPos, (elapsedTime / seconds));
@@ -86,6 +100,7 @@ public class MainMenuManager : MonoBehaviour
         g.transform.position = endPos;
         g.GetComponent<Camera>().orthographicSize = endZoom;
 
+        //buttonStart.interactable = true;
         StartGame();
     }
 
