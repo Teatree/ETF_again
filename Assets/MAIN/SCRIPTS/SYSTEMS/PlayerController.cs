@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
 
     public ShopItemObject targetsio;
 
+    public Level level;
     public void BuyShopItem(ShopItemObject sio)
     {
         // if first time buying

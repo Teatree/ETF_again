@@ -9,8 +9,8 @@ public class Level
     public List<LevelInfo> levelsInfo;
     public int difficultyLevel;
     public string name;
-    //public Dictionary<Goal.GoalType, Goal> goals = new HashMap<>();
-    //public GoalGenerator goalGenerator = new GoalGenerator();
+    public Dictionary<GoalType, Goal> goals = new Dictionary<GoalType, Goal>();
+    public GoalGenerator goalGenerator = new GoalGenerator();
 
     public float spawnInterval = 1;
     public float breakFreqMin = 1;
@@ -57,7 +57,7 @@ public class Level
     public float prob_pet_the_pet_n_times;
     public float prob_pet_eat_n_bugs;
     public float prob_pet_dash_n_times;
-    //public Map<String, Integer> rewardChanceGroups;
+    public Dictionary<string, int> rewardChanceGroups;
 
     public Level()
     {
@@ -109,87 +109,85 @@ public class Level
         prob_pet_the_pet_n_times = levelsInfo[difficultyLevel].prob_pet_the_pet_n_times;
         prob_pet_eat_n_bugs = levelsInfo[difficultyLevel].prob_pet_eat_n_bugs;
         prob_pet_dash_n_times = levelsInfo[difficultyLevel].prob_pet_dash_n_times;
-     //   rewardChanceGroups = levelsInfo.get(difficultyLevel).getRewardChanceGroups();
+        //   rewardChanceGroups = levelsInfo.get(difficultyLevel).getRewardChanceGroups();
     }
 
-    //public Goal getGoalByType(Goal.GoalType type)
-    //{
-    //    return goals.get(type);
-    //}
+    public Goal getGoalByType(GoalType type)
+    {
+        return goals[type];
+    }
 
-    //public boolean checkAllGoals()
-    //{
-    //    boolean allAchieved = true;
-    //    for (Goal goal : goals.values())
-    //    {
-    //        allAchieved = allAchieved && goal.achieved;
-    //    }
-    //    return allAchieved;
-    //}
+    public bool checkAllGoals()
+    {
+        bool allAchieved = true;
+        foreach (Goal goal in goals.Values)
+        {
+            allAchieved = allAchieved && goal.achieved;
+        }
+        return allAchieved;
+    }
 
+    public List<Goal> getGoals()
+    {
+        return new List<Goal>(goals.Values);
+    }
 
+    public void updateLevel(PlayerController fpc)
+    {
+        if (checkAllGoals())
+        {
+            //resetNewInfo();
+            goals = goalGenerator.getGoals(fpc);
+        }
+    }
 
-    //public List<Goal> getGoals()
-    //{
-    //    return new ArrayList<>(goals.values());
-    //}
+    public void resetNewInfo()
+    {
+        if (difficultyLevel < levelsInfo.Count)
+        {
+            difficultyLevel++;
+            LevelInfo info = levelsInfo[difficultyLevel - 1];
+            name = info.name;
+            spawnInterval = info.spawnInterval;
+            breakFreqMin = info.breakFreqMin;
+            breakFreqMax = info.breakFreqMax;
+            breakLengthMin = info.breakLengthMin;
+            breakLengthMax = info.breakLengthMax;
+            simpleBugSpawnChance = info.simpleBugSpawnChance;
+            drunkBugSpawnChance = info.drunkBugSpawnChance;
+            chargerBugSpawnChance = info.chargerBugSpawnChance;
+            queenBeeSpawnChance = info.queenBeeSpawnChance;
+            beeSpawnChance = info.beeSpawnChance;
 
-    //public void updateLevel(FlowerPublicComponent fpc)
-    //{
-    //    if (checkAllGoals())
-    //    {
-    //        //resetNewInfo();
-    //        goals = goalGenerator.getGoals(fpc);
-    //    }
-    //}
+            simpleBugMoveDuration = info.simpleBugMoveDuration;
+            simpleBugAmplitude = info.simpleBugAmplitude;
+            drunkBugMoveDuration = info.drunkBugMoveDuration;
+            drunkBugAmplitude = info.drunkBugAmplitude;
+            beeMoveDuration = info.beeMoveDuration;
+            beeAmplitude = info.beeAmplitude;
+            queenBeeMoveDuration = info.queenBeeMoveDuration;
+            queenBeeAmplitude = info.queenBeeAmplitude;
+            chargerBugMove = info.chargerBugMove;
 
-    //public void resetNewInfo()
-    //{
-    //    if (difficultyLevel < levelsInfo.size())
-    //    {
-    //        difficultyLevel++;
-    //        SaveMngr.LevelInfo info = levelsInfo.get(difficultyLevel - 1);
-    //        name = info.name;
-    //        spawnInterval = info.spawnInterval;
-    //        breakFreqMin = info.breakFreqMin;
-    //        breakFreqMax = info.breakFreqMax;
-    //        breakLengthMin = info.breakLengthMin;
-    //        breakLengthMax = info.breakLengthMax;
-    //        simpleBugSpawnChance = info.simpleBugSpawnChance;
-    //        drunkBugSpawnChance = info.drunkBugSpawnChance;
-    //        chargerBugSpawnChance = info.chargerBugSpawnChance;
-    //        queenBeeSpawnChance = info.queenBeeSpawnChance;
-    //        beeSpawnChance = info.beeSpawnChance;
+            maxGoalsAmount = info.maxGoalsAmount;
+            minGoalsAmount = info.minGoalsAmount;
+            easyGoalsAmount = info.easyGoalsAmount;
+            mediumGoalsAmount = info.mediumGoalsAmount;
+            hardGoalsAmount = info.hardGoalsAmount;
+            rewardChanceGroups = info.getRewardChanceGroups();
+        }
+    }
 
-    //        simpleBugMoveDuration = info.simpleBugMoveDuration;
-    //        simpleBugAmplitude = info.simpleBugAmplitude;
-    //        drunkBugMoveDuration = info.drunkBugMoveDuration;
-    //        drunkBugAmplitude = info.drunkBugAmplitude;
-    //        beeMoveDuration = info.beeMoveDuration;
-    //        beeAmplitude = info.beeAmplitude;
-    //        queenBeeMoveDuration = info.queenBeeMoveDuration;
-    //        queenBeeAmplitude = info.queenBeeAmplitude;
-    //        chargerBugMove = info.chargerBugMove;
-
-    //        maxGoalsAmount = info.maxGoalsAmount;
-    //        minGoalsAmount = info.minGoalsAmount;
-    //        easyGoalsAmount = info.easyGoalsAmount;
-    //        mediumGoalsAmount = info.mediumGoalsAmount;
-    //        hardGoalsAmount = info.hardGoalsAmount;
-    //        rewardChanceGroups = info.getRewardChanceGroups();
-    //    }
-    //}
-
-    //public String getRemainingGoals()
-    //{
-    //    int remainingCounter = 0;
-    //    for (Goal g : goals.values())
-    //    {
-    //        if (!g.achieved)
-    //        {
-    //            remainingCounter++;
-    //        }
-    //    }
-    //    return String.valueOf(remainingCounter);
-    //}
+    public string getRemainingGoals()
+    {
+        int remainingCounter = 0;
+        foreach (Goal g in goals.Values)
+        {
+            if (!g.achieved)
+            {
+                remainingCounter++;
+            }
+        }
+        return "" + remainingCounter;
+    }
 }
