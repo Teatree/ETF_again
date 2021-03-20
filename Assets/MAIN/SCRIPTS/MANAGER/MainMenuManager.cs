@@ -6,11 +6,15 @@ using UnityEngine.UI;
 public class MainMenuManager : MonoBehaviour 
 {
     public Camera cam;
-    public GameObject GameManager;
+    public GameObject GameManagerGo;
 
     public GameObject buttonShop; 
     public GameObject buttonPause; 
-    public GameObject buttonStart; 
+    public GameObject buttonStart;
+
+    public AnimationCurve curveScaleAndMove;
+    public AnimationCurve curveRollIn;
+    public AnimationCurve curveFadeIn;
 
     void Start()
     {
@@ -21,7 +25,7 @@ public class MainMenuManager : MonoBehaviour
     public void RollInSequence()
     {
         // Roll In Sequence
-        StartCoroutine(ChangeObjectXPos(cam.gameObject.transform, -2.44f, 2.17f, 2f));
+        StartCoroutine(ChangeObjectXPos(cam.gameObject.transform, -2.44f, 2.17f, 1.5f));
 
         buttonShop.SetActive(true);
         // Logo Appear
@@ -35,53 +39,39 @@ public class MainMenuManager : MonoBehaviour
 
         Vector3 pos = transform.position; //Start object's position
 
+        Color txtColor = buttonStart.transform.GetChild(0).GetComponent<Text>().color;
+
         buttonStart.GetComponent<Button>().interactable = false;
 
         while (elapsed_time <= duration) //Inside the loop until the time expires
         {
-            pos.x = Mathf.Lerp(x_start, x_target, EaseOut(elapsed_time / duration)); //Changes and interpolates the position's "x" value
+            //pos = Vector3.Lerp(pos, new Vector3(x_target, pos.y, -10), curveFadeIn.Evaluate(elapsed_time / duration));
+            txtColor.a = Mathf.Lerp(0, 1, curveFadeIn.Evaluate(elapsed_time*2 / duration));
+            buttonStart.transform.GetChild(0).GetComponent<Text>().color = txtColor;
 
-            transform.position = pos;//Changes the object's position
-
-            Color txtColor = buttonStart.transform.GetChild(0).GetComponent<Text>().color;
-            txtColor.a = Mathf.Lerp(0, 1, EaseIn(elapsed_time / duration));
-            buttonStart.transform.GetChild(0).GetComponent<Text>().color= txtColor;
+            pos = new Vector3(Mathf.Lerp(pos.x, x_target, curveRollIn.Evaluate(elapsed_time/8 / duration)), pos.y, pos.z);
+            transform.position = pos; //Changes the object's position
 
             yield return null; //Waits/skips one frame
-
 
 
             elapsed_time += Time.deltaTime; //Adds to the elapsed time the amount of time needed to skip/wait one frame
         }
 
-        buttonStart.GetComponent<Button>().interactable = true;
-    }
-
-    float EaseOut(float t)
-    {
-        return Flip(Mathf.Pow(Flip(t),8f));
-    }
-
-    float EaseIn(float t)
-    {
-        return Mathf.Pow(Flip(t), 8f);
-    }
-
-    float Flip(float x)
-    {
-        return 1 - x;
+        buttonStart.GetComponent<Button>().interactable = true;     
     }
 
     public void StartGame()
     {
-        GameManager.SetActive(true);
+        GameManagerGo.SetActive(true);
+        GameManager.IsGameStarted = true;
         buttonPause.SetActive(true);
     }
 
     public void RollOutToGameplay()
     {
         buttonShop.SetActive(false);
-        StartCoroutine(MoveAndScaleOverSeconds(cam.gameObject, new Vector3(2.17f, -1.44f, -10), new Vector3(0, 0, -10), 3.5f, 5f, 3f));
+        StartCoroutine(MoveAndScaleOverSeconds(cam.gameObject, cam.transform.position, new Vector3(0, 0, -10), 3.5f, 5f, 1.5f));
     }
 
     public IEnumerator MoveAndScaleOverSeconds(GameObject g, Vector3 startPos, Vector3 endPos, float startZoom, float endZoom, float seconds)
@@ -91,8 +81,9 @@ public class MainMenuManager : MonoBehaviour
 
         while (elapsedTime < seconds)
         {
-            g.transform.position = Vector3.Lerp(startPos, endPos, (elapsedTime / seconds));
-            g.GetComponent<Camera>().orthographicSize = Mathf.Lerp(startZoom, endZoom, (elapsedTime / seconds));
+            g.transform.position = Vector3.Lerp(startPos, endPos, curveScaleAndMove.Evaluate(elapsedTime / seconds));
+
+            g.GetComponent<Camera>().orthographicSize = Mathf.Lerp(startZoom, endZoom, curveScaleAndMove.Evaluate(elapsedTime / seconds));
             elapsedTime += Time.deltaTime;
             yield return new WaitForEndOfFrame();
         }

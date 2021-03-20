@@ -10,7 +10,7 @@ public class FlowerController : MonoBehaviour {
     public _State _state;
 
     public float FLOWER_MOVE_SPEED; // something like 4
-    public UnityAnimator uAnimator;    
+    public UnityAnimator uAnimator;
 
     string currentPlayingAnimation;
 
@@ -29,7 +29,9 @@ public class FlowerController : MonoBehaviour {
         //Debug.Log("uAnimator.Time = " + uAnimator.Time);
         if (GameManager.IsPaused == false)
         {
-            ProcessInput();
+            if (GameManager.IsGameStarted == true) {
+                ProcessInput();
+            }
             Transition();
             AttackAndRetreat();
             TransitionBack();
@@ -130,7 +132,17 @@ public class FlowerController : MonoBehaviour {
     private void OnCollisionEnter2D(Collision2D collision) {
         Debug.Log("colliding! - " + collision.transform);
         BugController bc = collision.transform.gameObject.GetComponent<BugController>();
-        bc.KillMeWithoutAni();
+        if (bc != null)
+        {
+            bc.KillMeWithoutAni();
+        }
+        else if (collision.gameObject.name == "butterfly_000")
+        {
+            Debug.Log("Eating Butterfly, Yum!");
+            PlayerController.player.AddBJ(50);
+            CoccoonController.coccoonController.HideButterfly();
+        }
+        else return;
 
         if (_state.Equals(_State.ATTACK) || _state.Equals(_State.RETREAT)) {
             _state = _State.ATTACK_BITE;

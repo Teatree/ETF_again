@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager gameManager;
     public static bool IsPaused;
+    public static bool IsGameStarted;
 
     // Manages start / end of the game condition
     // Keeps track of score
@@ -28,19 +29,22 @@ public class GameManager : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("colliding loss! - " + collision.transform);
-        loseAnimationsGreen.GetComponent<Animator>().SetTrigger("Activate");
+        if (collision.gameObject.name != "butterfly_000")
+        {
+            Debug.Log("colliding loss! - " + collision.transform);
+            loseAnimationsGreen.GetComponent<Animator>().SetTrigger("Activate");
 
-        loseAnimationsGreen.transform.position = collision.contacts[0].point;
+            loseAnimationsGreen.transform.position = collision.contacts[0].point;
 
-        // show popup
+            // show popup
 
-        
-        // open pause popup
-        RevivePopup.SetActive(true);
-        
-        // pause game
-        PauseGame();
+
+            // open pause popup
+            RevivePopup.SetActive(true);
+
+            // pause game
+            PauseGame();
+        }
     }
 
     private void PauseGame()

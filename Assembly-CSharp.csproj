@@ -77,6 +77,7 @@
     <Compile Include="Assets\MAIN\SCRIPTS\SHOP\ShopPreview.cs" />
     <Compile Include="Assets\MAIN\SCRIPTS\SHOP\ShopUIManager.cs" />
     <Compile Include="Assets\MAIN\SCRIPTS\SYSTEMS\BugController.cs" />
+    <Compile Include="Assets\MAIN\SCRIPTS\SYSTEMS\CoccoonController.cs" />
     <Compile Include="Assets\MAIN\SCRIPTS\SYSTEMS\FlowerController.cs" />
     <Compile Include="Assets\MAIN\SCRIPTS\SYSTEMS\PlayerController.cs" />
     <Compile Include="Assets\MAIN\SCRIPTS\SYSTEMS\ReviveController.cs" />
