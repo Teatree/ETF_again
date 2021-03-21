@@ -53,6 +53,30 @@ public class PlayerController : MonoBehaviour
         }
 
         avaliableShopItems = DataController.LoadShopItems();
+
+        loadGoals(pd);
+    }
+
+    private void loadGoals( PlayerData pd)
+    {
+        if (level == null) level = new Level();
+        foreach (DailyGoalStats dg in pd.goals)
+        {
+            Goal goal = new Goal();
+            goal.achieved = dg.achieved;
+            goal.counter = dg.counter;
+            goal.justAchieved = dg.justAchieved;
+            goal.type = GoalType.getByName(dg.type);
+            goal.periodType = PeriodType.getByName(dg.periodType);
+            goal.n = dg.n;
+            goal.description = dg.description;
+            level.goals[goal.type] = goal;
+            level.difficultyLevel = dg.difficultyLevel - 1;
+            level.name = Level.allLevelsInfo[dg.difficultyLevel - 1].name;
+            level.resetNewInfo();
+
+        }
+        level.updateLevel();
     }
 
     public ShopItemObject getNextTargetItem(bool resetTarget)
@@ -76,10 +100,25 @@ public class PlayerController : MonoBehaviour
         pi.bjAmountBest = BJamountBest;
 
         pi.setItems( ownShopItemsMap);
-        
+        pi.setGoals(level);
         DataController.SavePlayer(pi);
     }
 
+    private void updateScoreGoal()
+    {
+        Goal scoreGoal = level.getGoalByType(GoalType.GET_N_POINTS);
+        if (scoreGoal != null)
+        {
+            if (scoreGoal.periodType.Equals(PeriodType.IN_ONE_LIFE))
+            {
+                scoreGoal.counter = BJamountSession;
+            }
+            //            if (scoreGoal.periodType.equals(Goal.PeriodType.TOTAL)) {
+            //                scoreGoal.counter = (int) totalScore;
+            //            }
+            scoreGoal.update();
+        }
+    }
     public void checkAndUpdateBest()
     {
         if (BJamountSession > BJamountBest)

@@ -6,7 +6,7 @@ public class Level
 {
     public static bool goalStatusChanged;
 
-    public List<LevelInfo> levelsInfo;
+    public static List<LevelInfo> allLevelsInfo;
     public int difficultyLevel;
     public string name;
     public Dictionary<GoalType, Goal> goals = new Dictionary<GoalType, Goal>();
@@ -61,55 +61,55 @@ public class Level
 
     public Level()
     {
-        name = levelsInfo[difficultyLevel].name;
+        name = allLevelsInfo[difficultyLevel].name;
 
         //BUG'S PARAMS
-        spawnInterval = levelsInfo[difficultyLevel].spawnInterval;
-        breakFreqMin = levelsInfo[difficultyLevel].breakFreqMin;
-        breakFreqMax = levelsInfo[difficultyLevel].breakFreqMax;
-        breakLengthMin = levelsInfo[difficultyLevel].breakLengthMin;
-        breakLengthMax = levelsInfo[difficultyLevel].breakLengthMax;
-        simpleBugSpawnChance = levelsInfo[difficultyLevel].simpleBugSpawnChance;
-        drunkBugSpawnChance = levelsInfo[difficultyLevel].drunkBugSpawnChance;
-        chargerBugSpawnChance = levelsInfo[difficultyLevel].chargerBugSpawnChance;
-        queenBeeSpawnChance = levelsInfo[difficultyLevel].queenBeeSpawnChance;
-        beeSpawnChance = levelsInfo[difficultyLevel].beeSpawnChance;
+        spawnInterval = allLevelsInfo[difficultyLevel].spawnInterval;
+        breakFreqMin = allLevelsInfo[difficultyLevel].breakFreqMin;
+        breakFreqMax = allLevelsInfo[difficultyLevel].breakFreqMax;
+        breakLengthMin = allLevelsInfo[difficultyLevel].breakLengthMin;
+        breakLengthMax = allLevelsInfo[difficultyLevel].breakLengthMax;
+        simpleBugSpawnChance = allLevelsInfo[difficultyLevel].simpleBugSpawnChance;
+        drunkBugSpawnChance = allLevelsInfo[difficultyLevel].drunkBugSpawnChance;
+        chargerBugSpawnChance = allLevelsInfo[difficultyLevel].chargerBugSpawnChance;
+        queenBeeSpawnChance = allLevelsInfo[difficultyLevel].queenBeeSpawnChance;
+        beeSpawnChance = allLevelsInfo[difficultyLevel].beeSpawnChance;
 
-        simpleBugMoveDuration = levelsInfo[difficultyLevel].simpleBugMoveDuration;
-        simpleBugAmplitude = levelsInfo[difficultyLevel].simpleBugAmplitude;
-        drunkBugMoveDuration = levelsInfo[difficultyLevel].drunkBugMoveDuration;
-        drunkBugAmplitude = levelsInfo[difficultyLevel].drunkBugAmplitude;
-        beeMoveDuration = levelsInfo[difficultyLevel].beeMoveDuration;
-        beeAmplitude = levelsInfo[difficultyLevel].beeAmplitude;
-        queenBeeMoveDuration = levelsInfo[difficultyLevel].queenBeeMoveDuration;
-        queenBeeAmplitude = levelsInfo[difficultyLevel].queenBeeAmplitude;
-        chargerBugMove = levelsInfo[difficultyLevel].chargerBugMove;
+        simpleBugMoveDuration = allLevelsInfo[difficultyLevel].simpleBugMoveDuration;
+        simpleBugAmplitude = allLevelsInfo[difficultyLevel].simpleBugAmplitude;
+        drunkBugMoveDuration = allLevelsInfo[difficultyLevel].drunkBugMoveDuration;
+        drunkBugAmplitude = allLevelsInfo[difficultyLevel].drunkBugAmplitude;
+        beeMoveDuration = allLevelsInfo[difficultyLevel].beeMoveDuration;
+        beeAmplitude = allLevelsInfo[difficultyLevel].beeAmplitude;
+        queenBeeMoveDuration = allLevelsInfo[difficultyLevel].queenBeeMoveDuration;
+        queenBeeAmplitude = allLevelsInfo[difficultyLevel].queenBeeAmplitude;
+        chargerBugMove = allLevelsInfo[difficultyLevel].chargerBugMove;
 
         //GOALS
-        maxGoalsAmount = levelsInfo[difficultyLevel].maxGoalsAmount;
-        minGoalsAmount = levelsInfo[difficultyLevel].minGoalsAmount;
-        easyGoalsAmount = levelsInfo[difficultyLevel].easyGoalsAmount;
-        mediumGoalsAmount = levelsInfo[difficultyLevel].mediumGoalsAmount;
-        hardGoalsAmount = levelsInfo[difficultyLevel].hardGoalsAmount;
+        maxGoalsAmount = allLevelsInfo[difficultyLevel].maxGoalsAmount;
+        minGoalsAmount = allLevelsInfo[difficultyLevel].minGoalsAmount;
+        easyGoalsAmount = allLevelsInfo[difficultyLevel].easyGoalsAmount;
+        mediumGoalsAmount = allLevelsInfo[difficultyLevel].mediumGoalsAmount;
+        hardGoalsAmount = allLevelsInfo[difficultyLevel].hardGoalsAmount;
 
-        prob_eat_n_bugs = levelsInfo[difficultyLevel].prob_eat_n_bugs;
-        prob_eat_n_drunks = levelsInfo[difficultyLevel].prob_eat_n_drunks;
-        prob_eat_n_chargers = levelsInfo[difficultyLevel].prob_eat_n_chargers;
-        prob_eat_n_simple = levelsInfo[difficultyLevel].prob_eat_n_simple;
-        prob_eat_n_bees = levelsInfo[difficultyLevel].prob_eat_n_bees;
-        prob_eat_n_queens = levelsInfo[difficultyLevel].prob_eat_n_queens;
-        prob_eat_n_umrellas = levelsInfo[difficultyLevel].prob_eat_n_umrellas;
-        prob_eat_n_butterflies = levelsInfo[difficultyLevel].prob_eat_n_butterflies;
-        prob_destroy_n_cocoon = levelsInfo[difficultyLevel].prob_destroy_n_cocoon;
-        prob_bounce_umbrella_n_times = levelsInfo[difficultyLevel].prob_bounce_umbrella_n_times;
-        prob_tap = levelsInfo[difficultyLevel].prob_tap;
-        prob_survive_n_angered_modes = levelsInfo[difficultyLevel].prob_survive_n_angered_modes;
-        prob_spend_n_moneyz = levelsInfo[difficultyLevel].prob_spend_n_moneyz;
-        prob_get_n_moneyz = levelsInfo[difficultyLevel].prob_get_n_moneyz;
-        prob_pet_the_pet_n_times = levelsInfo[difficultyLevel].prob_pet_the_pet_n_times;
-        prob_pet_eat_n_bugs = levelsInfo[difficultyLevel].prob_pet_eat_n_bugs;
-        prob_pet_dash_n_times = levelsInfo[difficultyLevel].prob_pet_dash_n_times;
-        //   rewardChanceGroups = levelsInfo.get(difficultyLevel).getRewardChanceGroups();
+        prob_eat_n_bugs = allLevelsInfo[difficultyLevel].prob_eat_n_bugs;
+        prob_eat_n_drunks = allLevelsInfo[difficultyLevel].prob_eat_n_drunks;
+        prob_eat_n_chargers = allLevelsInfo[difficultyLevel].prob_eat_n_chargers;
+        prob_eat_n_simple = allLevelsInfo[difficultyLevel].prob_eat_n_simple;
+        prob_eat_n_bees = allLevelsInfo[difficultyLevel].prob_eat_n_bees;
+        prob_eat_n_queens = allLevelsInfo[difficultyLevel].prob_eat_n_queens;
+        prob_eat_n_umrellas = allLevelsInfo[difficultyLevel].prob_eat_n_umrellas;
+        prob_eat_n_butterflies = allLevelsInfo[difficultyLevel].prob_eat_n_butterflies;
+        prob_destroy_n_cocoon = allLevelsInfo[difficultyLevel].prob_destroy_n_cocoon;
+        prob_bounce_umbrella_n_times = allLevelsInfo[difficultyLevel].prob_bounce_umbrella_n_times;
+        prob_tap = allLevelsInfo[difficultyLevel].prob_tap;
+        prob_survive_n_angered_modes = allLevelsInfo[difficultyLevel].prob_survive_n_angered_modes;
+        prob_spend_n_moneyz = allLevelsInfo[difficultyLevel].prob_spend_n_moneyz;
+        prob_get_n_moneyz = allLevelsInfo[difficultyLevel].prob_get_n_moneyz;
+        prob_pet_the_pet_n_times = allLevelsInfo[difficultyLevel].prob_pet_the_pet_n_times;
+        prob_pet_eat_n_bugs = allLevelsInfo[difficultyLevel].prob_pet_eat_n_bugs;
+        prob_pet_dash_n_times = allLevelsInfo[difficultyLevel].prob_pet_dash_n_times;
+        //   rewardChanceGroups = allLevelsInfo.get(difficultyLevel).getRewardChanceGroups();
     }
 
     public Goal getGoalByType(GoalType type)
@@ -132,21 +132,21 @@ public class Level
         return new List<Goal>(goals.Values);
     }
 
-    public void updateLevel(PlayerController fpc)
+    public void updateLevel()
     {
         if (checkAllGoals())
         {
             //resetNewInfo();
-            goals = goalGenerator.getGoals(fpc);
+            goals = goalGenerator.getGoals();
         }
     }
 
     public void resetNewInfo()
     {
-        if (difficultyLevel < levelsInfo.Count)
+        if (difficultyLevel < allLevelsInfo.Count)
         {
             difficultyLevel++;
-            LevelInfo info = levelsInfo[difficultyLevel - 1];
+            LevelInfo info = allLevelsInfo[difficultyLevel - 1];
             name = info.name;
             spawnInterval = info.spawnInterval;
             breakFreqMin = info.breakFreqMin;

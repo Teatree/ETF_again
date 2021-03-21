@@ -154,7 +154,8 @@ public class DataController
         }
         LevelInfo[] sid = JsonHelper.FromJson<LevelInfo>(jsonData);
         List<LevelInfo> res = new List<LevelInfo>(sid);
-       // BugSpawnManager.mulipliers = res;
+        // BugSpawnManager.mulipliers = res;
+        Level.allLevelsInfo = res;
         return res;
 
     }
@@ -168,6 +169,7 @@ public class PlayerData
     public int bjAmountBest = 0;
     public string uniqueId = "";
     public List<ItemShopData> items = new List<ItemShopData>();
+    public List<DailyGoalStats> goals = new List<DailyGoalStats>();
 
     public void setItems(Dictionary<string, ShopItemObject> itemObj)
     {
@@ -177,6 +179,26 @@ public class PlayerData
             data.Add(new ItemShopData(o));
         }
         items = data;
+    }
+
+    public void setGoals(Level level)
+    {
+        foreach (Goal goal in level.goals.Values)
+        {
+            DailyGoalStats dgs = new DailyGoalStats();
+            dgs.achieved = goal.achieved;
+            dgs.description = goal.description;
+            dgs.n = goal.n;
+            dgs.type = goal.type.ToString();
+            dgs.justAchieved = goal.justAchieved;
+            dgs.periodType = goal.periodType.ToString();
+            dgs.difficultyLevel = level.difficultyLevel;
+            if (goal.periodType.Equals(PeriodType.TOTAL))
+            {
+                dgs.counter = goal.counter;
+            }
+            goals.Add(dgs);
+        }
     }
 
     public List<ShopItemObject> getItems()
@@ -359,6 +381,19 @@ public class LevelInfo
         rewardChanceGroups[BJ_DOUBLE] = chanceBJ_DOUBLE + chancePET3 + chancePET2 + chancePET1 + chancePHOENIX + chanceMONEY_250 + chanceMONEY_200 + chanceMONEY_150 + chanceMONEY_100 + chanceMONEY_50;
         return rewardChanceGroups;
     }
+}
+
+[Serializable]
+public class DailyGoalStats
+{
+    public int n;
+    public string type;
+    public string periodType;
+    public string description;
+    public bool achieved;
+    public bool justAchieved;
+    public int difficultyLevel;
+    public int counter;
 }
 public static class JsonHelper
 {
