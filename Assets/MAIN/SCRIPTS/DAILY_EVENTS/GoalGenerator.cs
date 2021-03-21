@@ -29,30 +29,32 @@ public class GoalGenerator
         goalTypes.Add(GoalType.PET_DASH_N_TIMES);
     }
 
-    public Dictionary<GoalType, Goal> getGoals()
+    public Dictionary<string, Goal> getGoals()
     {
-        Dictionary<GoalType, Goal> goals = new Dictionary<GoalType, Goal>();
+        Dictionary<string, Goal> goals = new Dictionary<string, Goal>();
         int goalsAmount = Random.Range(PlayerController.player.level.minGoalsAmount, PlayerController.player.level.maxGoalsAmount);
         int medGoalsCounter = PlayerController.player.level.mediumGoalsAmount;
         int hardGoalsCounter = PlayerController.player.level.hardGoalsAmount;
         for (int i = 0; i <= goalsAmount; i++)
         {
-            Goal dg;
             if (hardGoalsCounter > 0)
             {
-                dg = createGoal(2, PlayerController.player);
+                Goal dg = createGoal(2, PlayerController.player);
+                goals[dg.type.name] = dg;
                 hardGoalsCounter--;
             }
             else if (medGoalsCounter > 0)
             {
-                dg = createGoal(1, PlayerController.player);
+                Goal dg = createGoal(1, PlayerController.player);
+                goals[dg.type.name] = dg;
                 medGoalsCounter--;
             }
             else
             {
-                dg = createGoal(0, PlayerController.player);
+                Goal dg = createGoal(0, PlayerController.player);
+                goals[dg.type.name] = dg;
             }
-            goals[dg.type]= dg;
+            
         }
         return goals;
     }

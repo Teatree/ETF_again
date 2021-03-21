@@ -242,13 +242,13 @@ public class GoalConstants
     public static int TAP_1LIFE_HARD_MAX = 120;
     public static string TAP_DESC = "TAP # TIMES";
 
-    private static Dictionary<GoalType, List<int>> bParameters;
+    private static Dictionary<string, List<int>> bParameters;
 
-    public static Dictionary<GoalType, List<int>> getbParameters()
+    public static Dictionary<string, List<int>> getbParameters()
     {
         if (bParameters == null)
         {
-            bParameters = new Dictionary<GoalType, List<int>>();
+            bParameters = new Dictionary<string, List<int>>();
             List<int> eat_n_bug_goals = new List<int>();
             eat_n_bug_goals.Add(EAT_N_BUGS_EASY_MIN);
             eat_n_bug_goals.Add(EAT_N_BUGS_EASY_MAX);
@@ -262,7 +262,7 @@ public class GoalConstants
             eat_n_bug_goals.Add(EAT_N_BUGS_1LIFE_MED_MAX);
             eat_n_bug_goals.Add(EAT_N_BUGS_1LIFE_HARD_MIN);
             eat_n_bug_goals.Add(EAT_N_BUGS_1LIFE_HARD_MAX);
-            bParameters[GoalType.EAT_N_BUGS] =  eat_n_bug_goals;
+            bParameters["EAT_N_BUGS"] =  eat_n_bug_goals;
 
             List<int> pet_charge_n_times_goals = new List<int>();
             pet_charge_n_times_goals.Add(PET_CHARGE_N_TIMES_EASY_MIN);
@@ -277,7 +277,7 @@ public class GoalConstants
             pet_charge_n_times_goals.Add(PET_CHARGE_N_TIMES_1LIFE_MED_MAX);
             pet_charge_n_times_goals.Add(PET_CHARGE_N_TIMES_1LIFE_HARD_MIN);
             pet_charge_n_times_goals.Add(PET_CHARGE_N_TIMES_1LIFE_HARD_MAX);
-            bParameters[GoalType.PET_DASH_N_TIMES] = pet_charge_n_times_goals;
+            bParameters["PET_DASH_N_TIMES"] = pet_charge_n_times_goals;
 
             List<int> destroy_n_cocoon_goals = new List<int>();
             destroy_n_cocoon_goals.Add(DESTROY_N_COCOON_EASY_MIN);
@@ -292,7 +292,7 @@ public class GoalConstants
             destroy_n_cocoon_goals.Add(DESTROY_N_COCOON_1LIFE_MED_MAX);
             destroy_n_cocoon_goals.Add(DESTROY_N_COCOON_1LIFE_HARD_MIN);
             destroy_n_cocoon_goals.Add(DESTROY_N_COCOON_1LIFE_HARD_MAX);
-            bParameters[GoalType.DESTROY_N_COCOON]=destroy_n_cocoon_goals;
+            bParameters["DESTROY_N_COCOON"]=destroy_n_cocoon_goals;
 
             List<int> eat_n_butterflies_goals = new List<int>();
             eat_n_butterflies_goals.Add(EAT_N_BUTTERFLIES_EASY_MIN);
@@ -307,7 +307,7 @@ public class GoalConstants
             eat_n_butterflies_goals.Add(EAT_N_BUTTERFLIES_1LIFE_MED_MAX);
             eat_n_butterflies_goals.Add(EAT_N_BUTTERFLIES_1LIFE_HARD_MIN);
             eat_n_butterflies_goals.Add(EAT_N_BUTTERFLIES_1LIFE_HARD_MAX);
-            bParameters[GoalType.EAT_N_BUTTERFLIES] = eat_n_butterflies_goals;
+            bParameters["EAT_N_BUTTERFLIES"] = eat_n_butterflies_goals;
 
             List<int> get_n_points_goals = new List<int>();
             get_n_points_goals.Add(GET_N_POINTS_EASY_MIN);
@@ -322,7 +322,7 @@ public class GoalConstants
             get_n_points_goals.Add(GET_N_POINTS_1LIFE_MED_MAX);
             get_n_points_goals.Add(GET_N_POINTS_1LIFE_HARD_MIN);
             get_n_points_goals.Add(GET_N_POINTS_1LIFE_HARD_MAX);
-            bParameters[GoalType.GET_N_POINTS] = get_n_points_goals;
+            bParameters["GET_N_POINTS"] = get_n_points_goals;
 
             List<int> spend_moneyz_goals = new List<int>();
             spend_moneyz_goals.Add(SPEND_MONEYZ_EASY_MIN);
@@ -337,7 +337,7 @@ public class GoalConstants
             spend_moneyz_goals.Add(SPEND_MONEYZ_1LIFE_MED_MAX);
             spend_moneyz_goals.Add(SPEND_MONEYZ_1LIFE_HARD_MIN);
             spend_moneyz_goals.Add(SPEND_MONEYZ_1LIFE_HARD_MAX);
-            bParameters[GoalType.SPEND_MONEYZ]= spend_moneyz_goals;
+            bParameters["SPEND_MONEYZ"]= spend_moneyz_goals;
 
             List<int> eat_n_umbrella_goals = new List<int>();
             eat_n_umbrella_goals.Add(EAT_N_UMBRELLA_EASY_MIN);
@@ -352,7 +352,7 @@ public class GoalConstants
             eat_n_umbrella_goals.Add(EAT_N_UMBRELLA_1LIFE_MED_MAX);
             eat_n_umbrella_goals.Add(EAT_N_UMBRELLA_1LIFE_HARD_MIN);
             eat_n_umbrella_goals.Add(EAT_N_UMBRELLA_1LIFE_HARD_MAX);
-            bParameters[GoalType.EAT_N_UMBRELLA]= eat_n_umbrella_goals;
+            bParameters["EAT_N_UMBRELLA"]= eat_n_umbrella_goals;
 
             List<int> bounce_umbrella_goals = new List<int>();
             bounce_umbrella_goals.Add(BOUNCE_UMBRELLA_N_TIMES_EASY_MIN);
@@ -367,7 +367,7 @@ public class GoalConstants
             bounce_umbrella_goals.Add(BOUNCE_UMBRELLA_1LIFE_N_TIMES_MED_MAX);
             bounce_umbrella_goals.Add(BOUNCE_UMBRELLA_1LIFE_N_TIMES_HARD_MIN);
             bounce_umbrella_goals.Add(BOUNCE_UMBRELLA_1LIFE_N_TIMES_HARD_MAX);
-            bParameters[GoalType.BOUNCE_UMBRELLA_N_TIMES] = bounce_umbrella_goals;
+            bParameters["BOUNCE_UMBRELLA_N_TIMES"] = bounce_umbrella_goals;
 
             List<int> eat_n_queens_goals = new List<int>();
             eat_n_queens_goals.Add(EAT_N_QUEENS_EASY_MIN);
@@ -382,7 +382,7 @@ public class GoalConstants
             eat_n_queens_goals.Add(EAT_N_QUEENS_1LIFE_MED_MAX);
             eat_n_queens_goals.Add(EAT_N_QUEENS_1LIFE_HARD_MIN);
             eat_n_queens_goals.Add(EAT_N_QUEENS_1LIFE_HARD_MAX);
-            bParameters[GoalType.EAT_N_QUEENS] = eat_n_queens_goals;
+            bParameters["EAT_N_QUEENS"] = eat_n_queens_goals;
 
             List<int> survive_n_angered_goals = new List<int>();
             survive_n_angered_goals.Add(SURVIVE_N_ANGERED_MODES_EASY_MIN);
@@ -397,7 +397,7 @@ public class GoalConstants
             survive_n_angered_goals.Add(SURVIVE_N_ANGERED_MODES_1LIFE_MED_MAX);
             survive_n_angered_goals.Add(SURVIVE_N_ANGERED_MODES_1LIFE_HARD_MIN);
             survive_n_angered_goals.Add(SURVIVE_N_ANGERED_MODES_1LIFE_HARD_MAX);
-            bParameters[GoalType.SURVIVE_N_ANGERED_MODES] = survive_n_angered_goals;
+            bParameters["SURVIVE_N_ANGERED_MODES"] = survive_n_angered_goals;
 
             List<int> eat_n_bees_goals = new List<int>();
             eat_n_bees_goals.Add(EAT_N_BEES_EASY_MIN);
@@ -412,7 +412,7 @@ public class GoalConstants
             eat_n_bees_goals.Add(EAT_N_BEES_1LIFE_MED_MAX);
             eat_n_bees_goals.Add(EAT_N_BEES_1LIFE_HARD_MIN);
             eat_n_bees_goals.Add(EAT_N_BEES_1LIFE_HARD_MAX);
-            bParameters[GoalType.EAT_N_BEES] = eat_n_bees_goals;
+            bParameters["EAT_N_BEES"] = eat_n_bees_goals;
 
             List<int> eat_n_chargers_goals = new List<int>();
             eat_n_chargers_goals.Add(EAT_N_CHARGERS_EASY_MIN);
@@ -427,7 +427,7 @@ public class GoalConstants
             eat_n_chargers_goals.Add(EAT_N_CHARGERS_1LIFE_MED_MAX);
             eat_n_chargers_goals.Add(EAT_N_CHARGERS_1LIFE_HARD_MIN);
             eat_n_chargers_goals.Add(EAT_N_CHARGERS_1LIFE_HARD_MAX);
-            bParameters[GoalType.EAT_N_CHARGERS] = eat_n_chargers_goals;
+            bParameters["EAT_N_CHARGERS"] = eat_n_chargers_goals;
 
             List<int> eat_n_drunks_goals = new List<int>();
             eat_n_drunks_goals.Add(EAT_N_DRUNKS_EASY_MIN);
@@ -442,7 +442,7 @@ public class GoalConstants
             eat_n_drunks_goals.Add(EAT_N_DRUNKS_1LIFE_MED_MAX);
             eat_n_drunks_goals.Add(EAT_N_DRUNKS_1LIFE_HARD_MIN);
             eat_n_drunks_goals.Add(EAT_N_DRUNKS_1LIFE_HARD_MAX);
-            bParameters[GoalType.EAT_N_DRUNKS] = eat_n_drunks_goals;
+            bParameters["EAT_N_DRUNKS"] = eat_n_drunks_goals;
 
             List<int> eat_n_simple_goals = new List<int>();
             eat_n_simple_goals.Add(EAT_N_SIMPLE_EASY_MIN);
@@ -457,7 +457,7 @@ public class GoalConstants
             eat_n_simple_goals.Add(EAT_N_SIMPLE_1LIFE_MED_MAX);
             eat_n_simple_goals.Add(EAT_N_SIMPLE_1LIFE_HARD_MIN);
             eat_n_simple_goals.Add(EAT_N_SIMPLE_1LIFE_HARD_MAX);
-            bParameters[GoalType.EAT_N_SIMPLE] = eat_n_simple_goals;
+            bParameters["EAT_N_SIMPLE"] = eat_n_simple_goals;
 
             List<int> pet_eat_n_bugs_goals = new List<int>();
             pet_eat_n_bugs_goals.Add(PET_EAT_N_BUGS_EASY_MIN);
@@ -472,7 +472,7 @@ public class GoalConstants
             pet_eat_n_bugs_goals.Add(PET_EAT_N_BUGS_1LIFE_MED_MAX);
             pet_eat_n_bugs_goals.Add(PET_EAT_N_BUGS_1LIFE_HARD_MIN);
             pet_eat_n_bugs_goals.Add(PET_EAT_N_BUGS_1LIFE_HARD_MAX);
-            bParameters[GoalType.PET_EAT_N_BUGS] = pet_eat_n_bugs_goals;
+            bParameters["PET_EAT_N_BUGS"] = pet_eat_n_bugs_goals;
 
             List<int> pet_the_pet_goals = new List<int>();
             pet_the_pet_goals.Add(PET_THE_PET_EASY_MIN);
@@ -487,7 +487,7 @@ public class GoalConstants
             pet_the_pet_goals.Add(PET_THE_PET_1LIFE_MED_MAX);
             pet_the_pet_goals.Add(PET_THE_PET_1LIFE_HARD_MIN);
             pet_the_pet_goals.Add(PET_THE_PET_1LIFE_HARD_MAX);
-            bParameters[GoalType.PET_THE_PET] = pet_the_pet_goals;
+            bParameters["PET_THE_PET"] = pet_the_pet_goals;
 
             List<int> tap_goals = new List<int>();
             tap_goals.Add(TAP_EASY_MIN);
@@ -502,7 +502,7 @@ public class GoalConstants
             tap_goals.Add(TAP_1LIFE_MED_MAX);
             tap_goals.Add(TAP_1LIFE_HARD_MIN);
             tap_goals.Add(TAP_1LIFE_HARD_MAX);
-            bParameters[GoalType.TAP] = tap_goals;
+            bParameters["TAP"] = tap_goals;
         }
         return bParameters;
     }

@@ -70,7 +70,7 @@ public class PlayerController : MonoBehaviour
             goal.periodType = PeriodType.getByName(dg.periodType);
             goal.n = dg.n;
             goal.description = dg.description;
-            level.goals[goal.type] = goal;
+            level.goals[goal.type.name] = goal;
             level.difficultyLevel = dg.difficultyLevel - 1;
             level.name = Level.allLevelsInfo[dg.difficultyLevel - 1].name;
             level.resetNewInfo();

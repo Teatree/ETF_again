@@ -141,7 +141,7 @@ public class DataController
         string jsonData = "";
         if (Application.platform == RuntimePlatform.Android)
         {
-            WWW reader = new WWW("https://github.com/Teatree/Krashe3/blob/flowers_fiddle_sticks/android/assets/BugMultipliersByDuration.json");
+            WWW reader = new WWW("https://raw.githubusercontent.com/Teatree/Krashe3/flowers_fiddle_sticks/android/assets/levels.json");
             while (!reader.isDone) { }
             jsonData = reader.text;
         }
@@ -150,12 +150,12 @@ public class DataController
 
         }
         {
-            jsonData = File.ReadAllText(multipliersFilePath);
+            jsonData = File.ReadAllText(levelsFilePath);
         }
         LevelInfo[] sid = JsonHelper.FromJson<LevelInfo>(jsonData);
         List<LevelInfo> res = new List<LevelInfo>(sid);
-        // BugSpawnManager.mulipliers = res;
-        Level.allLevelsInfo = res;
+       // BugSpawnManager.mulipliers = res;
+       Level.allLevelsInfo = res;
         return res;
 
     }

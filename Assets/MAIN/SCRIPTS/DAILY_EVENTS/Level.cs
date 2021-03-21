@@ -9,7 +9,7 @@ public class Level
     public static List<LevelInfo> allLevelsInfo;
     public int difficultyLevel;
     public string name;
-    public Dictionary<GoalType, Goal> goals = new Dictionary<GoalType, Goal>();
+    public Dictionary<string, Goal> goals = new Dictionary<string, Goal>();
     public GoalGenerator goalGenerator = new GoalGenerator();
 
     public float spawnInterval = 1;
@@ -114,7 +114,7 @@ public class Level
 
     public Goal getGoalByType(GoalType type)
     {
-        return goals[type];
+        return goals[type.name];
     }
 
     public bool checkAllGoals()

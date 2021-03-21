@@ -52,24 +52,24 @@ public class Goal
         periodType = periodTypeMap[Random.Range(0, goalType.periodTypeMax)];
         if (periodType.Equals(PeriodType.TOTAL))
         {
-            if (GoalConstants.getbParameters()[goalType][difficulty * 2 + 1] != GoalConstants.getbParameters()[goalType][difficulty * 2])
+            if (GoalConstants.getbParameters()[goalType.name][difficulty * 2 + 1] != GoalConstants.getbParameters()[goalType.name][difficulty * 2])
             {
-                n = Random.Range(0, GoalConstants.getbParameters()[goalType][difficulty * 2 + 1] - GoalConstants.getbParameters()[goalType][difficulty * 2]) + GoalConstants.getbParameters()[goalType][difficulty * 2];
+                n = Random.Range(0, GoalConstants.getbParameters()[goalType.name][difficulty * 2 + 1] - GoalConstants.getbParameters()[goalType.name][difficulty * 2]) + GoalConstants.getbParameters()[goalType.name][difficulty * 2];
             }
             else
             {
-                n = GoalConstants.getbParameters()[goalType][difficulty * 2];
+                n = GoalConstants.getbParameters()[goalType.name][difficulty * 2];
             }
         }
         else
         {
-            if (GoalConstants.getbParameters()[goalType][difficulty * 2 + 7] != GoalConstants.getbParameters()[goalType][difficulty * 2 + 6])
+            if (GoalConstants.getbParameters()[goalType.name][difficulty * 2 + 7] != GoalConstants.getbParameters()[goalType.name][difficulty * 2 + 6])
             {
-                n = Random.Range(0, GoalConstants.getbParameters()[goalType][difficulty * 2 + 7] - GoalConstants.getbParameters()[goalType][difficulty * 2 + 6]) + GoalConstants.getbParameters()[goalType][difficulty * 2 + 6];
+                n = Random.Range(0, GoalConstants.getbParameters()[goalType.name][difficulty * 2 + 7] - GoalConstants.getbParameters()[goalType.name][difficulty * 2 + 6]) + GoalConstants.getbParameters()[goalType.name][difficulty * 2 + 6];
             }
             else
             {
-                n = GoalConstants.getbParameters()[goalType][difficulty * 2 + 6];
+                n = GoalConstants.getbParameters()[goalType.name][difficulty * 2 + 6];
             }
         }
         n = (int)(n * goalMultiplier);
