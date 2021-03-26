@@ -71,8 +71,8 @@ public class PlayerController : MonoBehaviour
             goal.n = dg.n;
             goal.description = dg.description;
             level.goals[goal.type.name] = goal;
-            level.difficultyLevel = dg.difficultyLevel - 1;
-            level.name = Level.allLevelsInfo[dg.difficultyLevel - 1].name;
+            level.difficultyLevel = dg.difficultyLevel;
+            level.name = Level.allLevelsInfo[dg.difficultyLevel].name;
             level.resetNewInfo();
 
         }

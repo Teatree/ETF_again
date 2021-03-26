@@ -59,7 +59,7 @@ public class DataController
         {
             jsonData = File.ReadAllText(playerfilePath);
             PlayerData pi = JsonUtility.FromJson<PlayerData>(jsonData);
-           // Debug.Log(">>>> jsonData > " + jsonData);
+            // Debug.Log(">>>> jsonData > " + jsonData);
             return pi;
 
         }
@@ -71,7 +71,7 @@ public class DataController
     public static void SavePlayer(PlayerData pi)
     {
         string jsonData = JsonUtility.ToJson(pi);
-      //  Debug.Log(">>> player info > " + jsonData);
+        //  Debug.Log(">>> player info > " + jsonData);
         if (Application.platform == RuntimePlatform.Android)
         {
             StreamWriter writer = new StreamWriter(playerfilePath, false);
@@ -112,7 +112,6 @@ public class DataController
     }
     #endregion
 
-
     public static List<Multiplier> LoadAllMultipliers()
     {
         string jsonData = "";
@@ -147,17 +146,14 @@ public class DataController
         }
         else
         {
-
-        }
-        {
             jsonData = File.ReadAllText(levelsFilePath);
         }
+        jsonData = File.ReadAllText(levelsFilePath);
         LevelInfo[] sid = JsonHelper.FromJson<LevelInfo>(jsonData);
         List<LevelInfo> res = new List<LevelInfo>(sid);
-       // BugSpawnManager.mulipliers = res;
-       Level.allLevelsInfo = res;
+        // BugSpawnManager.mulipliers = res;
+        Level.allLevelsInfo = res;
         return res;
-
     }
 }
 
@@ -304,7 +300,6 @@ public class LevelInfo
     public int difficultyLevel;
     public String type;
 
-    //WHY???
     public float spawnInterval = 1;
     public float breakFreqMin = 1;
     public float breakFreqMax = 1;
