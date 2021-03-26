@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
 
     public ShopItemObject targetsio;
 
+    public Level level;
     public void BuyShopItem(ShopItemObject sio)
     {
         // if first time buying
@@ -52,6 +53,30 @@ public class PlayerController : MonoBehaviour
         }
 
         avaliableShopItems = DataController.LoadShopItems();
+
+        loadGoals(pd);
+    }
+
+    private void loadGoals( PlayerData pd)
+    {
+        if (level == null) level = new Level();
+        foreach (DailyGoalStats dg in pd.goals)
+        {
+            Goal goal = new Goal();
+            goal.achieved = dg.achieved;
+            goal.counter = dg.counter;
+            goal.justAchieved = dg.justAchieved;
+            goal.type = GoalType.getByName(dg.type);
+            goal.periodType = dg.periodType;
+            goal.n = dg.n;
+            goal.description = dg.description;
+            level.goals[goal.type.name] = goal;
+            level.difficultyLevel = dg.difficultyLevel;
+            level.name = Level.allLevelsInfo[dg.difficultyLevel].name;
+            level.resetNewInfo();
+
+        }
+        level.updateLevel();
     }
 
     public ShopItemObject getNextTargetItem(bool resetTarget)
@@ -75,10 +100,25 @@ public class PlayerController : MonoBehaviour
         pi.bjAmountBest = BJamountBest;
 
         pi.setItems( ownShopItemsMap);
-        
+        pi.setGoals(level);
         DataController.SavePlayer(pi);
     }
 
+    private void updateScoreGoal()
+    {
+        Goal scoreGoal = level.getGoalByType(GoalType.GET_N_POINTS);
+        if (scoreGoal != null)
+        {
+            if (scoreGoal.periodType.Equals(GoalConstants.PERIOD_IN_LIFE))
+            {
+                scoreGoal.counter = BJamountSession;
+            }
+            //            if (scoreGoal.periodType.equals(Goal.PeriodType.TOTAL)) {
+            //                scoreGoal.counter = (int) totalScore;
+            //            }
+            scoreGoal.update();
+        }
+    }
     public void checkAndUpdateBest()
     {
         if (BJamountSession > BJamountBest)

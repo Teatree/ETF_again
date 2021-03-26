@@ -216,6 +216,7 @@ public class BugSpawnManager : MonoBehaviour
 
     public void AngerBees()
     {
+        PlayerController.player.level.setNextLevel();
         isFirst = true;
 
         isAngeredBeesMode = true;

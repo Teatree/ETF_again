@@ -59,7 +59,7 @@ public class DataController
         {
             jsonData = File.ReadAllText(playerfilePath);
             PlayerData pi = JsonUtility.FromJson<PlayerData>(jsonData);
-           // Debug.Log(">>>> jsonData > " + jsonData);
+            // Debug.Log(">>>> jsonData > " + jsonData);
             return pi;
 
         }
@@ -70,8 +70,8 @@ public class DataController
 
     public static void SavePlayer(PlayerData pi)
     {
-        string jsonData = JsonUtility.ToJson(pi);
-      //  Debug.Log(">>> player info > " + jsonData);
+        string jsonData = JsonUtility.ToJson(pi, true);
+        //  Debug.Log(">>> player info > " + jsonData);
         if (Application.platform == RuntimePlatform.Android)
         {
             StreamWriter writer = new StreamWriter(playerfilePath, false);
@@ -112,7 +112,6 @@ public class DataController
     }
     #endregion
 
-
     public static List<Multiplier> LoadAllMultipliers()
     {
         string jsonData = "";
@@ -141,22 +140,20 @@ public class DataController
         string jsonData = "";
         if (Application.platform == RuntimePlatform.Android)
         {
-            WWW reader = new WWW("https://github.com/Teatree/Krashe3/blob/flowers_fiddle_sticks/android/assets/BugMultipliersByDuration.json");
+            WWW reader = new WWW("https://raw.githubusercontent.com/Teatree/Krashe3/flowers_fiddle_sticks/android/assets/levels.json");
             while (!reader.isDone) { }
             jsonData = reader.text;
         }
         else
         {
-
+            jsonData = File.ReadAllText(levelsFilePath);
         }
-        {
-            jsonData = File.ReadAllText(multipliersFilePath);
-        }
+        jsonData = File.ReadAllText(levelsFilePath);
         LevelInfo[] sid = JsonHelper.FromJson<LevelInfo>(jsonData);
         List<LevelInfo> res = new List<LevelInfo>(sid);
-       // BugSpawnManager.mulipliers = res;
+        // BugSpawnManager.mulipliers = res;
+        Level.allLevelsInfo = res;
         return res;
-
     }
 }
 
@@ -168,6 +165,7 @@ public class PlayerData
     public int bjAmountBest = 0;
     public string uniqueId = "";
     public List<ItemShopData> items = new List<ItemShopData>();
+    public List<DailyGoalStats> goals = new List<DailyGoalStats>();
 
     public void setItems(Dictionary<string, ShopItemObject> itemObj)
     {
@@ -177,6 +175,26 @@ public class PlayerData
             data.Add(new ItemShopData(o));
         }
         items = data;
+    }
+
+    public void setGoals(Level level)
+    {
+        foreach (Goal goal in level.goals.Values)
+        {
+            DailyGoalStats dgs = new DailyGoalStats();
+            dgs.achieved = goal.achieved;
+            dgs.description = goal.description;
+            dgs.n = goal.n;
+            dgs.type = goal.type.name;
+            dgs.justAchieved = goal.justAchieved;
+            dgs.periodType = goal.periodType.ToString();
+            dgs.difficultyLevel = level.difficultyLevel;
+            if (goal.periodType.Equals(GoalConstants.PERIOD_IN_LIFE))
+            {
+                dgs.counter = goal.counter;
+            }
+            goals.Add(dgs);
+        }
     }
 
     public List<ShopItemObject> getItems()
@@ -263,7 +281,6 @@ public class Multiplier
 [Serializable]
 public class LevelInfo
 {
-
     public static string MONEY_50 = "MONEY_50";
     public static string MONEY_100 = "MONEY_100";
     public static string MONEY_150 = "MONEY_150";
@@ -282,7 +299,6 @@ public class LevelInfo
     public int difficultyLevel;
     public String type;
 
-    //WHY???
     public float spawnInterval = 1;
     public float breakFreqMin = 1;
     public float breakFreqMax = 1;
@@ -360,6 +376,19 @@ public class LevelInfo
         return rewardChanceGroups;
     }
 }
+
+[Serializable]
+public class DailyGoalStats
+{
+    public int n;
+    public string type;
+    public string periodType;
+    public string description;
+    public bool achieved;
+    public bool justAchieved;
+    public int difficultyLevel;
+    public int counter;
+}
 public static class JsonHelper
 {
     public static T[] FromJson<T>(string json)
@@ -372,7 +401,7 @@ public static class JsonHelper
     {
         Wrapper<T> wrapper = new Wrapper<T>();
         wrapper.Rows = array;
-        return JsonUtility.ToJson(wrapper);
+        return JsonUtility.ToJson(wrapper, true);
     }
 
     public static string ToJson<T>(T[] array, bool prettyPrint)
