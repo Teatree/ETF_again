@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class GoalConstants
 {
+    public static string PERIOD_TOTAL = "TOTAL";
+    public static string PERIOD_IN_LIFE = "IN_ONE_LIFE";
 
     public static int EAT_N_BUGS_EASY_MIN = 20;
     public static int EAT_N_BUGS_EASY_MAX = 25;

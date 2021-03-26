@@ -27,7 +27,7 @@ using UnityEngine;
 public class Goal
 {
 
-    public static Dictionary<int, PeriodType> periodTypeMap;
+    public static Dictionary<int, string> periodTypeMap;
     //public static Dictionary<int, PetComponent> petType;
 
     public int counter;
@@ -35,7 +35,7 @@ public class Goal
     public bool justAchieved;
     public string description;
     public GoalType type;
-    public PeriodType periodType;
+    public string periodType;
     public int n;
     // public PetComponent pet;
 
@@ -50,7 +50,7 @@ public class Goal
         this.type = goalType;
         description = goalType.desc;
         periodType = periodTypeMap[Random.Range(0, goalType.periodTypeMax)];
-        if (periodType.Equals(PeriodType.TOTAL))
+        if (periodType.Equals(GoalConstants.PERIOD_TOTAL))
         {
             if (GoalConstants.getbParameters()[goalType.name][difficulty * 2 + 1] != GoalConstants.getbParameters()[goalType.name][difficulty * 2])
             {
@@ -94,7 +94,7 @@ public class Goal
 
     public string getDescription()
     {
-        if (periodType.Equals(PeriodType.TOTAL))
+        if (periodType.Equals(GoalConstants.PERIOD_TOTAL))
         {
             return description.Replace("#", " " + n + " ") + " " + "IN TOTAL";
         }
@@ -106,9 +106,9 @@ public class Goal
 
     public static void init()
     {
-        periodTypeMap = new Dictionary<int, PeriodType>();
-        periodTypeMap[0] = PeriodType.IN_ONE_LIFE;
-        periodTypeMap[1] = PeriodType.TOTAL;
+        periodTypeMap = new Dictionary<int, string>();
+        periodTypeMap[0] = GoalConstants.PERIOD_IN_LIFE;
+        periodTypeMap[1] = GoalConstants.PERIOD_TOTAL;
 
        // petType = new HashMap<>();
         //int ba = 0;
@@ -171,27 +171,5 @@ public class Goal
         if (name == "PET_EAT_N_BUGS") return PET_EAT_N_BUGS;
         if (name == "PET_DASH_N_TIMES") return PET_DASH_N_TIMES;
         return EAT_N_BUGS;
-    }
-}
-
-public struct PeriodType
-{
-    public static PeriodType IN_ONE_LIFE = new PeriodType("IN_ONE_LIFE", 5);
-    public static PeriodType TOTAL = new PeriodType("TOTAL", 1);
-
-    public int adjustByTypeDivider;
-    public string name;
-
-    PeriodType(string name, int divider)
-    {
-        this.name = name;
-        this.adjustByTypeDivider = divider;
-    }
-
-    public static PeriodType getByName(string name)
-    {
-        if (name == "IN_ONE_LIFE") return IN_ONE_LIFE;
-        if (name == "TOTAL") return TOTAL;
-        return TOTAL;
     }
 }

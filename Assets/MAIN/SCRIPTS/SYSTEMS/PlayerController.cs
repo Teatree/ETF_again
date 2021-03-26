@@ -67,7 +67,7 @@ public class PlayerController : MonoBehaviour
             goal.counter = dg.counter;
             goal.justAchieved = dg.justAchieved;
             goal.type = GoalType.getByName(dg.type);
-            goal.periodType = PeriodType.getByName(dg.periodType);
+            goal.periodType = dg.periodType;
             goal.n = dg.n;
             goal.description = dg.description;
             level.goals[goal.type.name] = goal;
@@ -109,7 +109,7 @@ public class PlayerController : MonoBehaviour
         Goal scoreGoal = level.getGoalByType(GoalType.GET_N_POINTS);
         if (scoreGoal != null)
         {
-            if (scoreGoal.periodType.Equals(PeriodType.IN_ONE_LIFE))
+            if (scoreGoal.periodType.Equals(GoalConstants.PERIOD_IN_LIFE))
             {
                 scoreGoal.counter = BJamountSession;
             }

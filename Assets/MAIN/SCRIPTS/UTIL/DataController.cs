@@ -70,7 +70,7 @@ public class DataController
 
     public static void SavePlayer(PlayerData pi)
     {
-        string jsonData = JsonUtility.ToJson(pi);
+        string jsonData = JsonUtility.ToJson(pi, true);
         //  Debug.Log(">>> player info > " + jsonData);
         if (Application.platform == RuntimePlatform.Android)
         {
@@ -185,11 +185,11 @@ public class PlayerData
             dgs.achieved = goal.achieved;
             dgs.description = goal.description;
             dgs.n = goal.n;
-            dgs.type = goal.type.ToString();
+            dgs.type = goal.type.name;
             dgs.justAchieved = goal.justAchieved;
             dgs.periodType = goal.periodType.ToString();
             dgs.difficultyLevel = level.difficultyLevel;
-            if (goal.periodType.Equals(PeriodType.TOTAL))
+            if (goal.periodType.Equals(GoalConstants.PERIOD_IN_LIFE))
             {
                 dgs.counter = goal.counter;
             }
@@ -281,7 +281,6 @@ public class Multiplier
 [Serializable]
 public class LevelInfo
 {
-
     public static string MONEY_50 = "MONEY_50";
     public static string MONEY_100 = "MONEY_100";
     public static string MONEY_150 = "MONEY_150";
@@ -402,7 +401,7 @@ public static class JsonHelper
     {
         Wrapper<T> wrapper = new Wrapper<T>();
         wrapper.Rows = array;
-        return JsonUtility.ToJson(wrapper);
+        return JsonUtility.ToJson(wrapper, true);
     }
 
     public static string ToJson<T>(T[] array, bool prettyPrint)

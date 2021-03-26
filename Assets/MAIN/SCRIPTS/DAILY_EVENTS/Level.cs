@@ -136,9 +136,16 @@ public class Level
     {
         if (checkAllGoals())
         {
-            //resetNewInfo();
+            resetNewInfo();
             goals = goalGenerator.getGoals();
         }
+    }
+
+    public void setNextLevel()
+    {
+        resetNewInfo();
+        goals = null;
+        goals = goalGenerator.getGoals();
     }
 
     public void resetNewInfo()

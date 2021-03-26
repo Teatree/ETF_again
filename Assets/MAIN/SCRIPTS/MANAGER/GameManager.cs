@@ -52,7 +52,6 @@ public class GameManager : MonoBehaviour
         // Relincuish Control from Flower
         // Sad Flower
         // Stop Bugs
-        
         IsPaused = true;
     }
 
