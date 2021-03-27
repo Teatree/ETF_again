@@ -108,7 +108,7 @@ public class BugController : MonoBehaviour {
 
     public void KillMeWithoutAni() {
         PlayerController.player.AddBJ(bug.bjAmount);
-        UIController.uIController.animateBJ();
+        
         if (bug.isQueen())
         {
             BugSpawnManager.queenBeeOnStage = false;

@@ -19,6 +19,7 @@ public class CoccoonController : MonoBehaviour {
 
     private IEnumerator butterflyCouroutine;
 
+    Vector3 hidePosition= new Vector3(5.95f, 6.95f, 0f);
     int hitCounter = 0;
 
     // Use this for initialization
@@ -78,7 +79,7 @@ public class CoccoonController : MonoBehaviour {
         StopCoroutine(butterflyCouroutine);
 
         // set position
-        butterflyGo.transform.position = new Vector3(5.95f, 6.95f, 0f);
+        butterflyGo.transform.position = hidePosition;
         
     } 
 
@@ -86,11 +87,14 @@ public class CoccoonController : MonoBehaviour {
     {
         float elapsed_time = 0; //Elapsed time
 
-        Vector3 pos = tr.position; //Start object's position
-        start = pos;
+        Vector3 pos = start; //Start object's position
+        tr.GetChild(0).gameObject.layer = 10; // No Colission Layer
 
         while (elapsed_time <= duration) //Inside the loop until the time expires
         {
+            if(elapsed_time >= duration/2) tr.GetChild(0).gameObject.layer = 9; // Butterfly Layer
+            //Time.timeScale = 0;
+
             pos = Parabola(start, target, -15f, elapsed_time / duration);
             tr.position = pos; //Changes the object's position
 
@@ -99,7 +103,7 @@ public class CoccoonController : MonoBehaviour {
             elapsed_time += Time.deltaTime; //Adds to the elapsed time the amount of time needed to skip/wait one frame
         }
 
-        tr.position = start;
+        tr.position = hidePosition;
         hitCounter = 0;
     }
 

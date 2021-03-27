@@ -130,7 +130,7 @@ public class FlowerController : MonoBehaviour {
     }
 
     private void OnCollisionEnter2D(Collision2D collision) {
-        Debug.Log("colliding! - " + collision.transform);
+        //Debug.Log("colliding! - " + collision.transform);
         BugController bc = collision.transform.gameObject.GetComponent<BugController>();
         if (bc != null)
         {
@@ -141,6 +141,14 @@ public class FlowerController : MonoBehaviour {
             Debug.Log("Eating Butterfly, Yum!");
             PlayerController.player.AddBJ(50);
             CoccoonController.coccoonController.HideButterfly();
+        }
+        else if (collision.gameObject.name == "x2")
+        {
+            Debug.Log("Eating some x2, Yum!");
+            PlayerController.player.BJamountSession *= 2;
+            UIController.uIController.animateBJ();
+
+            X2Controller.x2Controller.HideX2();
         }
         else return;
 

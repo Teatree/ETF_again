@@ -137,7 +137,7 @@ public class PlayerController : MonoBehaviour
     public void AddBJ(int bj)
     {
         BJamountSession += bj;
-        
+        UIController.uIController.animateBJ();
     }
     #region Equip/unequip items
     public void EquipShopItem(ShopItemObject sio)
