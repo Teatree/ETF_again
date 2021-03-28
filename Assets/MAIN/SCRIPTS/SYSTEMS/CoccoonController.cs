@@ -26,7 +26,13 @@ public class CoccoonController : MonoBehaviour {
     void Start()
     {
         coccoonController = this;
-        Screen.SetResolution(1200, 786, true);
+        //Screen.SetResolution(1200, 786, true);
+    }
+
+    private void OnEnable()
+    {
+        hitCounter = 0;
+        SetAnimation("spawn");
     }
 
     // Update is called once per frame
@@ -80,7 +86,9 @@ public class CoccoonController : MonoBehaviour {
 
         // set position
         butterflyGo.transform.position = hidePosition;
-        
+
+        // Disable coccoon
+        transform.parent.gameObject.SetActive(false);
     } 
 
     public IEnumerator ButterflyFlyFly(Transform tr, Vector3 start, Vector3 target, float duration)
@@ -103,8 +111,7 @@ public class CoccoonController : MonoBehaviour {
             elapsed_time += Time.deltaTime; //Adds to the elapsed time the amount of time needed to skip/wait one frame
         }
 
-        tr.position = hidePosition;
-        hitCounter = 0;
+        HideButterfly();
     }
 
     public Vector3 Parabola(Vector3 start, Vector3 end, float height, float t)

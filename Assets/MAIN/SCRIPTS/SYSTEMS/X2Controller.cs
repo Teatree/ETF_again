@@ -18,12 +18,16 @@ public class X2Controller : MonoBehaviour {
     // Start is called before the first frame update
     void Start()
     {
-        x2Go = this.gameObject;
         x2Controller = this;
 
-        x2Go.transform.position = new Vector3(14.47f, UnityEngine.Random.Range(3.5f, -5f), 0f);
+        x2Go = this.gameObject;
+    }
+
+    public void Spawn()
+    {
         isFlyingFirstTime = true;
 
+        x2Go.transform.position = new Vector3(14.47f, UnityEngine.Random.Range(3.5f, -5f), 0f);
         StartCoroutine(WaitBeforeFly(3f));
     }
 
