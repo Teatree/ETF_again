@@ -92,7 +92,7 @@ public class Goal
 
     }
 
-    public string getDescription()
+    public string getDescriptionText()
     {
         if (periodType.Equals(GoalConstants.PERIOD_TOTAL))
         {

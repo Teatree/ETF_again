@@ -21,33 +21,23 @@
     ],
     "goals": [
         {
-            "n": 2,
-            "type": "EAT_N_BUTTERFLIES",
+            "n": 23,
+            "type": "EAT_N_BUGS",
             "periodType": "TOTAL",
-            "description": "EAT # BUTTERFLIES",
+            "description": "EAT # BUGS",
             "achieved": false,
             "justAchieved": false,
-            "difficultyLevel": 37,
-            "counter": 0
-        },
-        {
-            "n": 4,
-            "type": "EAT_N_SIMPLE",
-            "periodType": "IN_ONE_LIFE",
-            "description": "EAT # MOSQUITOES",
-            "achieved": false,
-            "justAchieved": false,
-            "difficultyLevel": 37,
+            "difficultyLevel": 4,
             "counter": 0
         },
         {
             "n": 1,
-            "type": "DESTROY_N_COCOON",
+            "type": "EAT_N_BUTTERFLIES",
             "periodType": "TOTAL",
-            "description": "BREAK # COCOONS",
-            "achieved": false,
+            "description": "EAT # BUTTERFLIES",
+            "achieved": true,
             "justAchieved": false,
-            "difficultyLevel": 37,
+            "difficultyLevel": 4,
             "counter": 0
         }
     ]
