@@ -27,7 +27,7 @@
             "description": "EAT # BUGS",
             "achieved": false,
             "justAchieved": false,
-            "difficultyLevel": 4,
+            "difficultyLevel": 10,
             "counter": 0
         },
         {
@@ -37,7 +37,7 @@
             "description": "EAT # BUTTERFLIES",
             "achieved": true,
             "justAchieved": false,
-            "difficultyLevel": 4,
+            "difficultyLevel": 10,
             "counter": 0
         }
     ]

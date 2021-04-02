@@ -852,6 +852,7 @@ GameObject:
   - component: {fileID: 303008531}
   - component: {fileID: 303008533}
   - component: {fileID: 303008532}
+  - component: {fileID: 303008534}
   m_Layer: 5
   m_Name: PopUpBg
   m_TagString: Untagged
@@ -919,6 +920,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 303008530}
   m_CullTransparentMesh: 0
+--- !u!114 &303008534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 303008530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80c52d223dd93e143b2eaeb59cde0e2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goalTiles:
+  - {fileID: 1024628011}
+  - {fileID: 2127042152}
+  - {fileID: 418475182}
+  - {fileID: 4096319458614672952}
+  levelText: {fileID: 1509433555}
 --- !u!1 &355383054
 GameObject:
   m_ObjectHideFlags: 0
@@ -4856,6 +4875,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 355383055}
     m_Modifications:
+    - target: {fileID: 2465709204915562403, guid: f1ea18f6cbeb24848ba04b355dccfef2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6125462483562210599, guid: f1ea18f6cbeb24848ba04b355dccfef2,
         type: 3}
       propertyPath: m_Name

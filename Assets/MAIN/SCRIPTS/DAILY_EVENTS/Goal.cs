@@ -117,6 +117,11 @@ public class Goal
         //    petType.put(ba++, p);
         //}
     }
+
+    public string getProgress()
+    {
+        return "Progress: " + counter + "/" + n;
+    }
 }
 
 
@@ -150,6 +155,7 @@ public class Goal
         this.periodTypeMax = periodTypeMax;
     }
 
+
     public static GoalType getByName(string name)
     {
         if (name == "EAT_N_BUGS") return EAT_N_BUGS;
@@ -172,4 +178,5 @@ public class Goal
         if (name == "PET_DASH_N_TIMES") return PET_DASH_N_TIMES;
         return EAT_N_BUGS;
     }
+
 }
