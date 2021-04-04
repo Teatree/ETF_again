@@ -141,6 +141,12 @@ public class FlowerController : MonoBehaviour {
             Debug.Log("Eating Butterfly, Yum!");
             PlayerController.player.AddBJ(50);
             CoccoonController.coccoonController.HideButterfly();
+
+            // check goals
+            foreach (Goal goal in PlayerController.player.level.goals.Values)
+            {
+                goal.checkEatButterfly();
+            }
         }
         else if (collision.gameObject.name == "x2")
         {
@@ -149,6 +155,12 @@ public class FlowerController : MonoBehaviour {
             UIController.uIController.animateBJ();
 
             X2Controller.x2Controller.HideX2();
+
+            // check goals
+            foreach (Goal goal in PlayerController.player.level.goals.Values)
+            {
+                goal.checkEatX2();
+            }
         }
         else return;
 

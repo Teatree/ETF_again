@@ -99,8 +99,9 @@ public class BugController : MonoBehaviour {
             velocity = bug.CHARGING_MVMNT_SPEED;
             chargerPreparingTimer = 0;
         }
-
     } 
+
+    
 
     void IncreaseChargerPreparingTimer() {
         chargerPreparingTimer++;
@@ -116,6 +117,12 @@ public class BugController : MonoBehaviour {
             CameraShaker.cameraShaker.TriggerShake();
         }
         BugsPool.bugsPool.DeactivateBug(gameObject);
+
+        // check goals
+        foreach (Goal goal in PlayerController.player.level.goals.Values)
+        {
+            goal.checkBugGoal(bug);
+        }
     }
     
 }

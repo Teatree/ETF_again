@@ -9,11 +9,11 @@ public class X2Controller : MonoBehaviour {
     public static X2Controller x2Controller;
 
     private IEnumerator flyCouroutine;
+    private IEnumerator waitBeforeFlyCouroutine;
     private float durationCount = 5f;
 
     bool isFlyingFirstTime;
     GameObject x2Go;
-
 
     // Start is called before the first frame update
     void Start()
@@ -28,7 +28,11 @@ public class X2Controller : MonoBehaviour {
         isFlyingFirstTime = true;
 
         x2Go.transform.position = new Vector3(14.47f, UnityEngine.Random.Range(3.5f, -5f), 0f);
-        StartCoroutine(WaitBeforeFly(3f));
+
+        waitBeforeFlyCouroutine = WaitBeforeFly(3f);
+        StartCoroutine(waitBeforeFlyCouroutine);
+
+
     }
 
     // Update is called once per frame
@@ -49,6 +53,11 @@ public class X2Controller : MonoBehaviour {
 
         while (elapsed_time <= duration) //Inside the loop until the time expires
         {
+            while (GameManager.IsPaused)
+            {
+                yield return null;
+            }
+
             yield return null; //Waits/skips one frame
 
             elapsed_time += Time.deltaTime; //Adds to the elapsed time the amount of time needed to skip/wait one frame
@@ -64,10 +73,28 @@ public class X2Controller : MonoBehaviour {
         float elapsed_time = 0; //Elapsed time
 
         Vector3 pos = start; //Start object's position
-        if(isFlyingFirstTime) tr.gameObject.layer = 10; // No Colission Layer
+
+       
+        if (isFlyingFirstTime)
+        {
+            tr.gameObject.layer = 10; // No Colission Layer
+        }
+        else
+        {
+            // check goals
+            foreach (Goal goal in PlayerController.player.level.goals.Values)
+            {
+                goal.checkX2Bounce();
+            }
+        }
 
         while (elapsed_time <= duration) //Inside the loop until the time expires
         {
+            while (GameManager.IsPaused)
+            {
+                yield return null;
+            }
+
             if (elapsed_time >= duration / 2 && isFlyingFirstTime) tr.gameObject.layer = 9; // Butterfly Layer
             //Time.timeScale = 0;
 

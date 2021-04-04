@@ -138,31 +138,31 @@ public class BugSpawnManager : MonoBehaviour
             else
             {
                 int probabilityValue = Random.Range(0, curDrunkProb + curSimpleProb + curChargerProb + curQueenBeeProb + curBeeProb); // or 100, I dono
-                //if (probabilityValue <= curDrunkProb)
-                //{
-                //    createBug(BugsPool.DRUNK, currentMultiplier);  // Drunk
-                //}
-                //else if (probabilityValue > curDrunkProb && probabilityValue < curDrunkProb + curSimpleProb)
-                //{
-                //    createBug(BugsPool.SIMPLE, currentMultiplier);   // Simple
-                //}
-                //else if (probabilityValue >= curDrunkProb + curSimpleProb + 1 && probabilityValue < curDrunkProb + curSimpleProb + curChargerProb)
-                //{
-                //    createBug(BugsPool.CHARGER, currentMultiplier);  // Charger
-                //}
-                //else if (probabilityValue >= curDrunkProb + curSimpleProb + curChargerProb + 1 && probabilityValue < curDrunkProb + curSimpleProb + curChargerProb + curQueenBeeProb)
-                //{
+                if (probabilityValue <= curDrunkProb)
+                {
+                    createBug(BugsPool.DRUNK, currentMultiplier);  // Drunk
+                }
+                else if (probabilityValue > curDrunkProb && probabilityValue < curDrunkProb + curSimpleProb)
+                {
+                    createBug(BugsPool.SIMPLE, currentMultiplier);   // Simple
+                }
+                else if (probabilityValue >= curDrunkProb + curSimpleProb + 1 && probabilityValue < curDrunkProb + curSimpleProb + curChargerProb)
+                {
+                    createBug(BugsPool.CHARGER, currentMultiplier);  // Charger
+                }
+                else if (probabilityValue >= curDrunkProb + curSimpleProb + curChargerProb + 1 && probabilityValue < curDrunkProb + curSimpleProb + curChargerProb + curQueenBeeProb)
+                {
                     if (!queenBeeOnStage)
                     {
                         createBug(BugsPool.QUEENBEE, currentMultiplier);    // Queen Bee, duh
                         queenBeeOnStage = true;
                     }
-                //}
-                //else if (probabilityValue >= curDrunkProb + curSimpleProb + curChargerProb + curQueenBeeProb + 1 &&
-                //      probabilityValue < curDrunkProb + curSimpleProb + curChargerProb + curQueenBeeProb + curBeeProb)
-                //{
-                //    createBug(BugsPool.BEE, currentMultiplier);   // Bee
-                //}
+                }
+                else if (probabilityValue >= curDrunkProb + curSimpleProb + curChargerProb + curQueenBeeProb + 1 &&
+                      probabilityValue < curDrunkProb + curSimpleProb + curChargerProb + curQueenBeeProb + curBeeProb)
+                {
+                    createBug(BugsPool.BEE, currentMultiplier);   // Bee
+                }
                 bugsSpawned++;
                 //if (PowerupSystem.canCocoonSpawn(gameStage))
                 //{

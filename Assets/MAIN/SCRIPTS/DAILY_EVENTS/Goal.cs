@@ -122,8 +122,64 @@ public class Goal
     {
         return "Progress: " + counter + "/" + n;
     }
-}
 
+    public void checkBugGoal(Bug bug)
+    {
+        if (type.name == "EAT_N_BUGS")
+        {
+            counter++;
+        }
+        if (type.name == "EAT_N_DRUNKS" && bug._type == Bug._TYPE.DRUNK)
+        {
+            counter++;
+        }
+        if (type.name == "EAT_N_SIMPLE" && bug._type == Bug._TYPE.SIMPLE)
+        {
+            counter++;
+        }
+        if (type.name == "EAT_N_BEES" && bug._type == Bug._TYPE.BEE)
+        {
+            counter++;
+        }
+        if (type.name == "EAT_N_CHARGERS" && bug._type == Bug._TYPE.CHARGER)
+        {
+            counter++;
+        }
+        if (type.name == "EAT_N_QUEENS" && bug._type == Bug._TYPE.QUEENBEE)
+        {
+            counter++;
+        }
+    }
+
+    public void checkX2Bounce()
+    {
+        if (type.name == "BOUNCE_UMBRELLA_N_TIMES")
+        {
+            counter++;
+        }
+    }
+    public void checkCocoonDestroy()
+    {
+        if (type.name == "DESTROY_N_COCOON")
+        {
+            counter++;
+        }
+    }
+    public void checkEatX2()
+    {
+        if (type.name == "EAT_N_UMBRELLA")
+        {
+            counter++;
+        }
+    }
+    public void checkEatButterfly()
+    {
+        if (type.name == "EAT_N_BUTTERFLIES")
+        {
+            counter++;
+        }
+    }
+}
 
     public struct GoalType {
         public string desc;

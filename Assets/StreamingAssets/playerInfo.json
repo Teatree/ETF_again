@@ -1,5 +1,5 @@
 {
-    "bjAmount": 131,
+    "bjAmount": 135,
     "bjAmountBest": 53,
     "uniqueId": "",
     "items": [
@@ -21,23 +21,33 @@
     ],
     "goals": [
         {
-            "n": 23,
+            "n": 8,
             "type": "EAT_N_BUGS",
-            "periodType": "TOTAL",
+            "periodType": "IN_ONE_LIFE",
             "description": "EAT # BUGS",
             "achieved": false,
             "justAchieved": false,
-            "difficultyLevel": 10,
-            "counter": 0
+            "difficultyLevel": 19,
+            "counter": 31
+        },
+        {
+            "n": 4,
+            "type": "BOUNCE_UMBRELLA_N_TIMES",
+            "periodType": "IN_ONE_LIFE",
+            "description": "LET X2 BONUS BOUNCE # TIMES",
+            "achieved": false,
+            "justAchieved": false,
+            "difficultyLevel": 19,
+            "counter": 4
         },
         {
             "n": 1,
             "type": "EAT_N_BUTTERFLIES",
-            "periodType": "TOTAL",
+            "periodType": "IN_ONE_LIFE",
             "description": "EAT # BUTTERFLIES",
-            "achieved": true,
+            "achieved": false,
             "justAchieved": false,
-            "difficultyLevel": 10,
+            "difficultyLevel": 19,
             "counter": 0
         }
     ]

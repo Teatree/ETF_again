@@ -61,6 +61,12 @@ public class CoccoonController : MonoBehaviour {
 
             butterflyCouroutine = ButterflyFlyFly(butterflyGo.transform, new Vector3(5.95f, 2.95f, 0f), new Vector3(8.47f, UnityEngine.Random.Range(1f, -5f), 0f), 4f);
             StartCoroutine(butterflyCouroutine);
+
+            // check goals
+            foreach (Goal goal in PlayerController.player.level.goals.Values)
+            {
+                goal.checkCocoonDestroy();
+            }
         }
         hitCounter++;
     }
@@ -100,7 +106,12 @@ public class CoccoonController : MonoBehaviour {
 
         while (elapsed_time <= duration) //Inside the loop until the time expires
         {
-            if(elapsed_time >= duration/2) tr.GetChild(0).gameObject.layer = 9; // Butterfly Layer
+            while (GameManager.IsPaused)
+            {
+                yield return null;
+            }
+
+            if (elapsed_time >= duration/2) tr.GetChild(0).gameObject.layer = 9; // Butterfly Layer
             //Time.timeScale = 0;
 
             pos = Parabola(start, target, -15f, elapsed_time / duration);
