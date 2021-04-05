@@ -1,10 +1,13 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
 {
     public static UIController uIController;
+    public GameObject DailyGoalsPopupGo;
+    public List<GameObject> gosToDisable;
 
     public Text bjAmount;
 
@@ -15,6 +18,7 @@ public class UIController : MonoBehaviour
 
     void Update()
     {
+
     }
 
     public void animateBJ()
@@ -55,8 +59,32 @@ public class UIController : MonoBehaviour
         SceneController.sceneController.LoadShop();
     }
 
+    public void LoadResult()
+    {
+        SceneController.sceneController.LoadResult();
+    }
+
     public void PauseGame()
     {
-        GameManager.IsPaused = !GameManager.IsPaused;
+        GameManager.IsPaused = true;
+        OpenDailyGoalsPopup();
+    }
+
+    public void ResumeGame()
+    {
+        GameManager.IsPaused = false;
+    }
+
+    public void OpenDailyGoalsPopup()
+    {
+        DailyGoalsPopupGo.SetActive(true);
+    }
+
+    public void DisableGos()
+    {
+        foreach(GameObject g in gosToDisable)
+        {
+            g.SetActive(false);
+        }
     }
 }

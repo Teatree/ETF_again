@@ -8,7 +8,7 @@ public class DaylyGoalsPopupController : MonoBehaviour
     public GameObject[] goalTiles;
     public Text levelText;
 
-    void Start()
+    void OnEnable()
     {
         levelText.text = PlayerController.player.level.name;
 

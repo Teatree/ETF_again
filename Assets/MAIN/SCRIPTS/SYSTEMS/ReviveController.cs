@@ -5,6 +5,8 @@ using UnityEngine.UI;
 public class ReviveController : MonoBehaviour
 {
     public Text countdownText;
+    public GameObject GoalsRewardPopupGO;
+
 
     // Start is called before the first frame update
     void Start()
@@ -15,6 +17,7 @@ public class ReviveController : MonoBehaviour
     private void OnEnable()
     {
         StartCoroutine(MoveOverSeconds());
+        
     }
 
     public IEnumerator MoveOverSeconds()
@@ -35,9 +38,16 @@ public class ReviveController : MonoBehaviour
         else
         {
             BugsPool.bugsPool.DeactivateAllBugs();
-            GameManager.IsPaused = false;
             PlayerController.player.AddBJToTotal();
-            SceneController.sceneController.LoadResult();
+
+            if (PlayerController.player.level.checkAllGoals())
+            {
+                GoalsRewardPopupGO.SetActive(true);
+            }
+            else {
+                UIController.uIController.LoadResult();
+            }
+           
         }
     }
 }

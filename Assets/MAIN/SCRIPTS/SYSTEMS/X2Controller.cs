@@ -31,8 +31,6 @@ public class X2Controller : MonoBehaviour {
 
         waitBeforeFlyCouroutine = WaitBeforeFly(3f);
         StartCoroutine(waitBeforeFlyCouroutine);
-
-
     }
 
     // Update is called once per frame

@@ -77,7 +77,6 @@ public class Goal
 
     public void update()
     {
-        counter++;
         if (counter >= n && !achieved)
         {
             Level.goalStatusChanged = true;
@@ -89,7 +88,6 @@ public class Goal
             //    }
             //}
         }
-
     }
 
     public string getDescriptionText()
@@ -125,59 +123,67 @@ public class Goal
 
     public void checkBugGoal(Bug bug)
     {
-        if (type.name == "EAT_N_BUGS")
+        if (!achieved)
         {
-            counter++;
+            if (type.name == "EAT_N_BUGS")
+            {
+                counter++;
+            }
+            if (type.name == "EAT_N_DRUNKS" && bug._type == Bug._TYPE.DRUNK)
+            {
+                counter++;
+            }
+            if (type.name == "EAT_N_SIMPLE" && bug._type == Bug._TYPE.SIMPLE)
+            {
+                counter++;
+            }
+            if (type.name == "EAT_N_BEES" && bug._type == Bug._TYPE.BEE)
+            {
+                counter++;
+            }
+            if (type.name == "EAT_N_CHARGERS" && bug._type == Bug._TYPE.CHARGER)
+            {
+                counter++;
+            }
+            if (type.name == "EAT_N_QUEENS" && bug._type == Bug._TYPE.QUEENBEE)
+            {
+                counter++;
+            }
         }
-        if (type.name == "EAT_N_DRUNKS" && bug._type == Bug._TYPE.DRUNK)
-        {
-            counter++;
-        }
-        if (type.name == "EAT_N_SIMPLE" && bug._type == Bug._TYPE.SIMPLE)
-        {
-            counter++;
-        }
-        if (type.name == "EAT_N_BEES" && bug._type == Bug._TYPE.BEE)
-        {
-            counter++;
-        }
-        if (type.name == "EAT_N_CHARGERS" && bug._type == Bug._TYPE.CHARGER)
-        {
-            counter++;
-        }
-        if (type.name == "EAT_N_QUEENS" && bug._type == Bug._TYPE.QUEENBEE)
-        {
-            counter++;
-        }
+        update();
     }
 
     public void checkX2Bounce()
     {
-        if (type.name == "BOUNCE_UMBRELLA_N_TIMES")
+        if (type.name == "BOUNCE_UMBRELLA_N_TIMES" && !achieved)
         {
             counter++;
         }
+        update();
     }
     public void checkCocoonDestroy()
     {
-        if (type.name == "DESTROY_N_COCOON")
+        if (type.name == "DESTROY_N_COCOON" && !achieved)
         {
             counter++;
         }
+        update();
     }
     public void checkEatX2()
     {
-        if (type.name == "EAT_N_UMBRELLA")
+        if (type.name == "EAT_N_UMBRELLA" && !achieved)
         {
             counter++;
         }
+        update();
     }
     public void checkEatButterfly()
     {
-        if (type.name == "EAT_N_BUTTERFLIES")
+        if (type.name == "EAT_N_BUTTERFLIES" && !achieved)
         {
             counter++;
         }
+        update();
     }
 }
 

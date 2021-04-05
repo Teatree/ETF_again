@@ -11,6 +11,7 @@ public class Level
     public string name;
     public Dictionary<string, Goal> goals = new Dictionary<string, Goal>();
     public GoalGenerator goalGenerator = new GoalGenerator();
+    public Gift gift;
 
     public float spawnInterval = 1;
     public float breakFreqMin = 1;
@@ -183,7 +184,12 @@ public class Level
             hardGoalsAmount = info.hardGoalsAmount;
             rewardChanceGroups = info.getRewardChanceGroups();
         }
+
+        gift = Gift.getRandomGift();
+
     }
+
+
 
     public string getRemainingGoals()
     {

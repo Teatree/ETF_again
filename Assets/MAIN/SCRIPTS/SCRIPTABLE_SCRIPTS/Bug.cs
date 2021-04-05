@@ -15,7 +15,6 @@ public class Bug : MonoBehaviour {
     public const int SIMPLE_BUG_MOVE_DURATION_BASE = 16;
     public const int SIMPLE_BUG_AMPLITUDE_BASE = 0;
 
-
     public string name;
 
     public float speed;

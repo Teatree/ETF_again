@@ -64,9 +64,11 @@
   <ItemGroup>
     <Compile Include="Assets\MAIN\SCRIPTABLE\CUSTOMIZABLES\FLOWER_HAT\FlowerHatCusomizable.cs" />
     <Compile Include="Assets\MAIN\SCRIPTS\DAILY_EVENTS\DaylyGoalsPopupController.cs" />
+    <Compile Include="Assets\MAIN\SCRIPTS\DAILY_EVENTS\Gift.cs" />
     <Compile Include="Assets\MAIN\SCRIPTS\DAILY_EVENTS\Goal.cs" />
     <Compile Include="Assets\MAIN\SCRIPTS\DAILY_EVENTS\GoalConstants.cs" />
     <Compile Include="Assets\MAIN\SCRIPTS\DAILY_EVENTS\GoalGenerator.cs" />
+    <Compile Include="Assets\MAIN\SCRIPTS\DAILY_EVENTS\GoalsRewardPopupController.cs" />
     <Compile Include="Assets\MAIN\SCRIPTS\DAILY_EVENTS\Level.cs" />
     <Compile Include="Assets\MAIN\SCRIPTS\MANAGER\AllManager.cs" />
     <Compile Include="Assets\MAIN\SCRIPTS\MANAGER\BugSpawnManager.cs" />

@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
         if(temp < 500)
         {
             temp++;
-            Debug.Log(temp);
+            //Debug.Log(temp);
         }
         else
         {
