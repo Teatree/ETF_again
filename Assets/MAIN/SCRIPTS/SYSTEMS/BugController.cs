@@ -27,7 +27,7 @@ public class BugController : MonoBehaviour {
         bug = GetComponent<Bug>();
         anim = GetComponentInChildren<Animator>();
 
-        chargerChangePostionIdle = Random.Range(-10, -5);
+        chargerChangePostionIdle = Random.Range(-7, -4);
 
         velocity = bug.speed;
         curveSpeed = bug.curveSpeed;
@@ -36,6 +36,11 @@ public class BugController : MonoBehaviour {
         vLastPos = transform.position;
 
         debugColor = Random.ColorHSV();
+
+        if (bug.name == BugsPool.CHARGER)
+        {
+            bug._state = Bug._STATE.IDLE;
+        }
     }
 
     public void Update() {
@@ -100,9 +105,7 @@ public class BugController : MonoBehaviour {
             chargerPreparingTimer = 0;
         }
     } 
-
     
-
     void IncreaseChargerPreparingTimer() {
         chargerPreparingTimer++;
     }

@@ -26,7 +26,6 @@ using UnityEngine;
 
 public class Goal
 {
-
     public static Dictionary<int, string> periodTypeMap;
     //public static Dictionary<int, PetComponent> petType;
 

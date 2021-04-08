@@ -73,8 +73,8 @@ public class Bug : MonoBehaviour {
                 {
                     bjAmount = 3;
                     IDLE_MVMNT_SPEED = CHARGER_BUG_MOVE_BASE * m.chargerBugMove * GameManager.gameManager.level.chargerBugMove;
-                    PREPARING_MVMNT_SPEED = 40 * m.chargerBugMove * GameManager.gameManager.level.chargerBugMove;
-                    CHARGING_MVMNT_SPEED = 505 * m.chargerBugMove * GameManager.gameManager.level.chargerBugMove;
+                    PREPARING_MVMNT_SPEED = 0.01f * m.chargerBugMove * GameManager.gameManager.level.chargerBugMove;
+                    CHARGING_MVMNT_SPEED = 0.1f * m.chargerBugMove * GameManager.gameManager.level.chargerBugMove;
                     break;
                 }
             case _TYPE.QUEENBEE:
