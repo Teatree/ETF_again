@@ -42,6 +42,7 @@ public class FlowerController : MonoBehaviour {
             
         }
 
+        Debug.Log("State: " + _state);
         // TestSwapAssets();
     }
 
@@ -50,6 +51,8 @@ public class FlowerController : MonoBehaviour {
             // Construct a ray from the current touch coordinates
             if (_state != _State.ATTACK && _state != _State.RETREAT) {
                 _state = _State.TRANSITION;
+
+                StopAllCoroutines();
                 StartCoroutine(Transition());
             }
             else {
@@ -86,6 +89,8 @@ public class FlowerController : MonoBehaviour {
 
     void TransitionBack() {
         if (_state.Equals(_State.TRANSITION_BACK)) {
+
+            //StopAllCoroutines();
             StartCoroutine(Transition());
         }
     }
@@ -139,7 +144,7 @@ public class FlowerController : MonoBehaviour {
         else if (collision.gameObject.name == "butterfly_000")
         {
             Debug.Log("Eating Butterfly, Yum!");
-            PlayerController.player.AddBJ(50);
+
             CoccoonController.coccoonController.HideButterfly();
 
             // check goals
@@ -172,6 +177,7 @@ public class FlowerController : MonoBehaviour {
             _state = _State.IDLE_BITE;
         }
 
+        StopAllCoroutines();
         StartCoroutine(Bite());
     }
 

@@ -111,7 +111,7 @@ public class BugController : MonoBehaviour {
     }
 
     public void KillMeWithoutAni() {
-        PlayerController.player.AddBJ(bug.bjAmount);
+        GameManager.gameManager.CoinsFeedback(bug.gameObject.transform.position, bug.bjAmount);
         
         if (bug.isQueen())
         {

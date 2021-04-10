@@ -96,6 +96,7 @@ public class CoccoonController : MonoBehaviour {
         // Disable coccoon
         transform.parent.gameObject.SetActive(false);
 
+        GameManager.gameManager.CoinsFeedback(butterflyGo.transform.position, 50);
         PowerUpManager.isPowerUpOnScene = false;
     } 
 
