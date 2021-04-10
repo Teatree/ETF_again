@@ -7,7 +7,7 @@ public class Level
     public static bool goalStatusChanged;
 
     public static List<LevelInfo> allLevelsInfo;
-    public int difficultyLevel;
+    public int difficultyLevel = 1;
     public string name;
     public Dictionary<string, Goal> goals = new Dictionary<string, Goal>();
     public GoalGenerator goalGenerator = new GoalGenerator();
@@ -144,6 +144,7 @@ public class Level
 
     public void setNextLevel()
     {
+        difficultyLevel++;
         resetNewInfo();
         goals = null;
         goals = goalGenerator.getGoals();
@@ -153,7 +154,6 @@ public class Level
     {
         if (difficultyLevel < allLevelsInfo.Count)
         {
-            difficultyLevel++;
             LevelInfo info = allLevelsInfo[difficultyLevel - 1];
             name = info.name;
             spawnInterval = info.spawnInterval;

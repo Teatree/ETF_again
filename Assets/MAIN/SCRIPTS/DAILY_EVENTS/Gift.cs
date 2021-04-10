@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Gift : MonoBehaviour
 {
-    private const string MONEY = "MONEY";
+    public const string MONEY = "MONEY";
 
     private const int ONE_HOUR = 90; // it's supposed to be 60, and it's not a hour, it's a MINUTE
 
@@ -229,55 +229,5 @@ public class Gift : MonoBehaviour
     //    }
     //}
 
-    public void takeGift()
-    {
-        //PromoWindow.offerPromo = false;
-        switch (type)
-        {
-            case (MONEY):
-                {
-                    PlayerController.player.BJamountTotal += money;
-                    //System.out.println("FECK fpc.totalScore" + fpc.totalScore);
-                    break;
-                }
-            //case (PET):
-            //    {
-            //        applyPetGiftNastya(gameStage);
-            //        break;
-            //    }
-            //case (PET_2):
-            //    {
-            //        applyPetGiftNastya(gameStage);
-            //        break;
-            //    }
-            //case (PET_3):
-            //    {
-            //        applyPetGiftNastya(gameStage);
-            //        break;
-            //    }
-            //case (PHOENIX):
-            //    {
-            //        upgrade.tryPeriod = true;
-            //        //                upgrade.tryPeriodDuration = 1 * 60;
-            //        upgrade.tryPeriodStart = System.currentTimeMillis();
-            //        upgrade.bought = true;
-            //        upgrade.enabled = true;
-            //        fpc.upgrades.put(Upgrade.UpgradeType.PHOENIX, upgrade);
-            //        TrialTimer.trialTimerLogoName = upgrade.shopIcon;
-            //        break;
-            //    }
-            //case (BJ_DOUBLE):
-            //    {
-            //        upgrade.tryPeriod = true;
-            //        //                upgrade.tryPeriodDuration = 1 * 60;
-            //        upgrade.tryPeriodStart = System.currentTimeMillis();
-            //        upgrade.bought = true;
-            //        upgrade.enabled = true;
-            //        fpc.upgrades.put(Upgrade.UpgradeType.BJ_DOUBLE, upgrade);
-            //        TrialTimer.trialTimerLogoName = upgrade.shopIcon;
-            //        break;
-            //    }
-        }
-        PlayerController.player.level.setNextLevel();
-    }
+    
 }

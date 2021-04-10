@@ -76,6 +76,7 @@
     <Compile Include="Assets\MAIN\SCRIPTS\MANAGER\GameManager.cs" />
     <Compile Include="Assets\MAIN\SCRIPTS\MANAGER\InputManager.cs" />
     <Compile Include="Assets\MAIN\SCRIPTS\MANAGER\MainMenuManager.cs" />
+    <Compile Include="Assets\MAIN\SCRIPTS\MANAGER\PowerUpManager.cs" />
     <Compile Include="Assets\MAIN\SCRIPTS\MANAGER\ResultScreenManager.cs" />
     <Compile Include="Assets\MAIN\SCRIPTS\MANAGER\SceneController.cs" />
     <Compile Include="Assets\MAIN\SCRIPTS\SCRIPTABLE_SCRIPTS\Bug.cs" />

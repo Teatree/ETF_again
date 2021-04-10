@@ -15,8 +15,6 @@ public class GameManager : MonoBehaviour
     public GameObject loseAnimationsGreen;
     public GameObject RevivePopup;
 
-    public GameObject coccoonGo;
-
     public LevelInfo level; 
     void Start()
     {
@@ -28,16 +26,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(temp < 500)
-        {
-            temp++;
-            //Debug.Log(temp);
-        }
-        else
-        {
-            X2Controller.x2Controller.Spawn();
-            temp = 0;
-        }
+        
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

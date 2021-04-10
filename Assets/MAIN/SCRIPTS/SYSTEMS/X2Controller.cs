@@ -43,6 +43,8 @@ public class X2Controller : MonoBehaviour {
     {
         StopCoroutine(flyCouroutine);
         x2Go.transform.position = new Vector3(18.47f, 7f, 0f);
+
+        PowerUpManager.isPowerUpOnScene = false;
     }
 
     public IEnumerator WaitBeforeFly(float duration)

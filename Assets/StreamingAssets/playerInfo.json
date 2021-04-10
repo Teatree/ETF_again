@@ -1,5 +1,5 @@
 {
-    "bjAmount": 1414,
+    "bjAmount": 1543,
     "bjAmountBest": 1137,
     "uniqueId": "",
     "items": [
@@ -21,33 +21,23 @@
     ],
     "goals": [
         {
-            "n": 1,
-            "type": "DESTROY_N_COCOON",
-            "periodType": "IN_ONE_LIFE",
-            "description": "BREAK # COCOONS",
-            "achieved": false,
-            "justAchieved": false,
-            "difficultyLevel": 14,
-            "counter": 0
-        },
-        {
-            "n": 10,
-            "type": "EAT_N_BUGS",
-            "periodType": "IN_ONE_LIFE",
-            "description": "EAT # BUGS",
-            "achieved": true,
-            "justAchieved": true,
-            "difficultyLevel": 14,
-            "counter": 10
-        },
-        {
-            "n": 1,
+            "n": 2,
             "type": "EAT_N_BUTTERFLIES",
             "periodType": "TOTAL",
             "description": "EAT # BUTTERFLIES",
-            "achieved": false,
-            "justAchieved": false,
-            "difficultyLevel": 14,
+            "achieved": true,
+            "justAchieved": true,
+            "difficultyLevel": 1,
+            "counter": 0
+        },
+        {
+            "n": 23,
+            "type": "EAT_N_BUGS",
+            "periodType": "TOTAL",
+            "description": "EAT # BUGS",
+            "achieved": true,
+            "justAchieved": true,
+            "difficultyLevel": 1,
             "counter": 0
         }
     ]

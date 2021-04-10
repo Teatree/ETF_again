@@ -85,4 +85,9 @@ public class GoalsRewardPopupController : MonoBehaviour
             elapsed_time += Time.deltaTime; //Adds to the elapsed time the amount of time needed to skip/wait one frame
         }
     }
+
+    public void takeGift()
+    {
+        PlayerController.player.takeGift();
+    }
 }
