@@ -131,6 +131,7 @@ GameObject:
   m_Component:
   - component: {fileID: 797963746}
   - component: {fileID: 797963745}
+  - component: {fileID: 797963747}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -219,6 +220,56 @@ MonoBehaviour:
   - {fileID: 21300000, guid: b1cb509f0f524594b9edcf17df7f10da, type: 3}
   - {fileID: 21300000, guid: c441feb62069a4c43ae0c3ea76629457, type: 3}
   - {fileID: 21300000, guid: 1bdcd84cd44c842458fa96aa2f34510d, type: 3}
+  bjDoubleUpgr:
+    isBought: 0
+    isEquipped: 0
+    wasATarget: 0
+    name: 
+    description: 
+    type: 
+    priceBJ: 0
+    imageIcon: 
+    image_Head_Top: 
+    image_Head_Bottom: 
+    image_Leaf_Left: 
+    image_Leaf_Right: 
+    image_Middle_Leafs: 
+    image_Pot: 
+    idSKU: 
+    idSKUDisc: 
+    priceSKU: 
+    priceSKUDisc: 
+    currencyType: 
+    isTrial: 0
+    trialPeriodDuration: 0
+    trialPeriodTimer: 0
+    upgradeType: 
+    counter: 0
+  extraLifeUpgr:
+    isBought: 0
+    isEquipped: 0
+    wasATarget: 0
+    name: 
+    description: 
+    type: 
+    priceBJ: 0
+    imageIcon: 
+    image_Head_Top: 
+    image_Head_Bottom: 
+    image_Leaf_Left: 
+    image_Leaf_Right: 
+    image_Middle_Leafs: 
+    image_Pot: 
+    idSKU: 
+    idSKUDisc: 
+    priceSKU: 
+    priceSKUDisc: 
+    currencyType: 
+    isTrial: 0
+    trialPeriodDuration: 0
+    trialPeriodTimer: 0
+    upgradeType: 
+    counter: 0
 --- !u!4 &797963746
 Transform:
   m_ObjectHideFlags: 0
@@ -233,6 +284,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &797963747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 797963744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c62569abc115717469e36804f10f7b98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1104510033
 GameObject:
   m_ObjectHideFlags: 0
@@ -243,6 +306,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1104510035}
   - component: {fileID: 1104510034}
+  - component: {fileID: 1104510038}
   - component: {fileID: 1104510036}
   - component: {fileID: 1104510037}
   m_Layer: 0
@@ -358,3 +422,15 @@ MonoBehaviour:
   - {fileID: 1421781502244122, guid: 337ac61b4fe64904ea623d34d03109cd, type: 3}
   - {fileID: 1132990321668790, guid: 79ff6b5c50e3b6d4f81096c710f9fd48, type: 3}
   - {fileID: 1421781502244122, guid: 202aa5a43f61ed742b47931b49c42043, type: 3}
+--- !u!114 &1104510038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104510033}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c62569abc115717469e36804f10f7b98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

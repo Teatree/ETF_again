@@ -23,6 +23,23 @@ public class PlayerController : MonoBehaviour
     public ShopItemObject targetsio;
 
     public Level level;
+
+    public Upgrade bjDoubleUpgr;
+    public Upgrade extraLifeUpgr;
+
+    public void removeTrialUpgrade (Upgrade u)
+    {
+        if (u.upgradeType == UpgradeManager.BJ_DOUBLE)
+        {
+            bjDoubleUpgr = null;
+        }
+
+        if (u.upgradeType == UpgradeManager.EXTRA_LIFE)
+        {
+            extraLifeUpgr = null;
+        }
+    }
+
     public void BuyShopItem(ShopItemObject sio)
     {
         // if first time buying
@@ -43,6 +60,19 @@ public class PlayerController : MonoBehaviour
         PlayerData pd = DataController.LoadPlayer();
         BJamountTotal = pd.bjAmount;
         BJamountBest = pd.bjAmountBest;
+
+        if (pd.extraLifeUpgr != null && pd.extraLifeUpgr.upgradeType != null)
+        {
+            extraLifeUpgr = pd.extraLifeUpgr;
+            UpgradeManager.upgradeManager.updateUpgradeState(extraLifeUpgr);
+        }
+
+        if (pd.bjDoubleUpgr != null && pd.extraLifeUpgr.upgradeType != null)
+        {
+            bjDoubleUpgr = pd.bjDoubleUpgr;
+            UpgradeManager.upgradeManager.updateUpgradeState(bjDoubleUpgr);
+        }
+
         List<ShopItemObject> ownShopItems = pd.getItems();
         if (ownShopItems != null && ownShopItems.Count > 0)
         {
@@ -99,6 +129,9 @@ public class PlayerController : MonoBehaviour
         pi.bjAmount = BJamountTotal;
         pi.bjAmountBest = BJamountBest;
 
+        pi.extraLifeUpgr = extraLifeUpgr;
+        pi.bjDoubleUpgr = bjDoubleUpgr;
+        
         pi.setItems( ownShopItemsMap);
         pi.setGoals(level);
         DataController.SavePlayer(pi);
@@ -113,9 +146,6 @@ public class PlayerController : MonoBehaviour
             {
                 scoreGoal.counter = BJamountSession;
             }
-            //            if (scoreGoal.periodType.equals(Goal.PeriodType.TOTAL)) {
-            //                scoreGoal.counter = (int) totalScore;
-            //            }
             scoreGoal.update();
         }
     }

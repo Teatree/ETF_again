@@ -167,6 +167,9 @@ public class PlayerData
     public List<ItemShopData> items = new List<ItemShopData>();
     public List<DailyGoalStats> goals = new List<DailyGoalStats>();
 
+    public Upgrade bjDoubleUpgr = null;
+    public Upgrade extraLifeUpgr = null;
+
     public void setItems(Dictionary<string, ShopItemObject> itemObj)
     {
         List<ItemShopData> data = new List<ItemShopData>();
@@ -377,6 +380,7 @@ public class LevelInfo
     }
 }
 
+
 [Serializable]
 public class DailyGoalStats
 {
@@ -389,6 +393,7 @@ public class DailyGoalStats
     public int difficultyLevel;
     public int counter;
 }
+
 public static class JsonHelper
 {
     public static T[] FromJson<T>(string json)

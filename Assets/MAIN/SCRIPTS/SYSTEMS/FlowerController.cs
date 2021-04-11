@@ -42,7 +42,7 @@ public class FlowerController : MonoBehaviour {
             
         }
 
-        Debug.Log("State: " + _state);
+       // Debug.Log("State: " + _state);
         // TestSwapAssets();
     }
 

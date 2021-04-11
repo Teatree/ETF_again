@@ -3,6 +3,10 @@ using System.Collections.Generic;
 
 public class ShopItemObject
 {
+
+    public const string CURR_HARD = "HARD";
+    public const string CURR_SOFT = "SOFT";
+
     public bool isBought;
     public bool isEquipped;
     public bool wasATarget;
@@ -10,8 +14,6 @@ public class ShopItemObject
     public string description;
     public string type; // type iap or not
     public int priceBJ;
-    //public string idSKU;
-    //public string priceSKU;
     public string imageIcon;
     public string image_Head_Top;
     public string image_Head_Bottom;
@@ -20,6 +22,18 @@ public class ShopItemObject
     public string image_Middle_Leafs;
     public string image_Pot;
 
+    public string idSKU;
+    public string idSKUDisc;
+    public string priceSKU;
+    public string priceSKUDisc;
+    public string currencyType;
+
+    public bool isTrial;
+    public float trialPeriodDuration;
+    public System.DateTime trialPeriodStart;
+    public float trialPeriodTimer;
+
+    public ShopItemObject() {}
     public ShopItemObject(ItemShopData sio)
     {
         isBought = sio.isBought;

@@ -70,6 +70,8 @@ public class GameManager : MonoBehaviour
         loseAnimationsGreen.transform.position = new Vector3(loseAnimationsGreen.transform.position.x + 30, loseAnimationsGreen.transform.position.y, loseAnimationsGreen.transform.position.z);
         BugsPool.bugsPool.DeactivateAllBugs();
         IsPaused = false;
+
+        UpgradeManager.upgradeManager.allUpgrades[UpgradeManager.EXTRA_LIFE].startTrial();
     }
 
     public void CoinsFeedback(Vector3 pos, int amount)

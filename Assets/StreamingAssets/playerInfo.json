@@ -1,5 +1,5 @@
 {
-    "bjAmount": 1544,
+    "bjAmount": 1579,
     "bjAmountBest": 1137,
     "uniqueId": "",
     "items": [
@@ -21,32 +21,22 @@
     ],
     "goals": [
         {
-            "n": 3,
-            "type": "EAT_N_BUTTERFLIES",
+            "n": 24,
+            "type": "EAT_N_BUGS",
             "periodType": "TOTAL",
-            "description": "EAT # BUTTERFLIES",
+            "description": "EAT # BUGS",
             "achieved": false,
             "justAchieved": false,
             "difficultyLevel": 1,
             "counter": 0
         },
         {
-            "n": 5,
-            "type": "EAT_N_SIMPLE",
-            "periodType": "IN_ONE_LIFE",
-            "description": "EAT # MOSQUITOES",
-            "achieved": true,
-            "justAchieved": true,
-            "difficultyLevel": 1,
-            "counter": 5
-        },
-        {
-            "n": 23,
-            "type": "EAT_N_BUGS",
+            "n": 14,
+            "type": "EAT_N_DRUNKS",
             "periodType": "TOTAL",
-            "description": "EAT # BUGS",
-            "achieved": true,
-            "justAchieved": true,
+            "description": "EAT # FLIES",
+            "achieved": false,
+            "justAchieved": false,
             "difficultyLevel": 1,
             "counter": 0
         }

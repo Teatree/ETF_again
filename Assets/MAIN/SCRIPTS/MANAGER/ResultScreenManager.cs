@@ -11,7 +11,7 @@ public class ResultScreenManager : MonoBehaviour
     public Text bjUntilNextText;
     public Slider proressBar;
     public Image revealIcon;
-     
+
     public ShopItemObject targetShopItem;
 
     public void Awake()
@@ -21,23 +21,30 @@ public class ResultScreenManager : MonoBehaviour
         bjBestText.text = "BEST: " + PlayerController.player.BJamountBest;
         bjEarnedText.text = "+" + PlayerController.player.BJamountSession;
         bjTotalText.text = "" + (PlayerController.player.BJamountTotal - PlayerController.player.BJamountSession);
-
-        float needUntilNextItem = targetShopItem.priceBJ - PlayerController.player.BJamountTotal;
-
-        if (needUntilNextItem > 0)
-        {
-            bjUntilNextText.text = System.String.Format("YOU NEED {0} TO UNLOCK NEXT ITEM", needUntilNextItem);
-        } else
-        {
-            bjUntilNextText.text = System.String.Format("Congrats! YOU'VE GOT {0}", targetShopItem.name);
-        }
-
         if (targetShopItem != null)
         {
+            float needUntilNextItem = targetShopItem.priceBJ - PlayerController.player.BJamountTotal;
+
+            if (needUntilNextItem > 0)
+            {
+                bjUntilNextText.text = System.String.Format("YOU NEED {0} TO UNLOCK NEXT ITEM", needUntilNextItem);
+            }
+            else
+            {
+                bjUntilNextText.text = System.String.Format("CONGRATS! YOU'VE GOT {0}", targetShopItem.name);
+            }
+
+
             proressBar.maxValue = targetShopItem.priceBJ;
             //proressBar.value = PlayerController.player.BJamountTotal;
 
             StartCoroutine(UpdateNumbersToReveal(PlayerController.player.BJamountSession));
+        } else
+        {
+            bjUntilNextText.text = "WOW! LOOKS LIKE YOU'VE GOT IT ALL!";
+            proressBar.maxValue = PlayerController.player.BJamountTotal;
+            proressBar.value = PlayerController.player.BJamountTotal;
+            revealIcon.gameObject.SetActive(false);
         }
     }
 
