@@ -7,17 +7,9 @@ public class ReviveController : MonoBehaviour
     public Text countdownText;
     public GameObject GoalsRewardPopupGO;
 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     private void OnEnable()
     {
         StartCoroutine(MoveOverSeconds());
-        
     }
 
     public IEnumerator MoveOverSeconds()
@@ -45,6 +37,7 @@ public class ReviveController : MonoBehaviour
                 GoalsRewardPopupGO.SetActive(true);
             }
             else {
+                GameManager.gameManager.usedExtraLifeUpg = false;
                 UIController.uIController.LoadResult();
             }
            

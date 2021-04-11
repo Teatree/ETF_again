@@ -10,6 +10,7 @@ public class UIController : MonoBehaviour
     public List<GameObject> gosToDisable;
 
     public Text bjAmount;
+    public Text doubleBJUpgr;
 
     void Start()
     {
@@ -33,7 +34,10 @@ public class UIController : MonoBehaviour
         float scaleModifier = 1;
         float startValue = scaleModifier;
         Vector3 startScale = bjAmount.transform.localScale;
-
+        if (PlayerController.player.bjDoubleUpgr != null && PlayerController.player.bjDoubleUpgr.isEquipped)
+        {
+            doubleBJUpgr.gameObject.SetActive(true);
+        }
         while (time < duration || bjAmount.transform.localScale.x > 1)
         {
             if (time < duration / 2)
@@ -51,6 +55,7 @@ public class UIController : MonoBehaviour
         }
         //bjAmount.transform.localScale = startScale * targetScale;
         bjAmount.transform.localScale = startScale;
+        doubleBJUpgr.gameObject.SetActive(false);
         scaleModifier = endValue;
     }
 
@@ -82,7 +87,7 @@ public class UIController : MonoBehaviour
 
     public void DisableGos()
     {
-        foreach(GameObject g in gosToDisable)
+        foreach (GameObject g in gosToDisable)
         {
             g.SetActive(false);
         }

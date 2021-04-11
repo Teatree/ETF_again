@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -11,7 +10,7 @@ public class GameManager : MonoBehaviour
     // Manages start / end of the game condition
     // Keeps track of score
     // Pause State
- 
+
     public GameObject loseAnimationsGreen;
     public GameObject RevivePopup;
 
@@ -19,7 +18,9 @@ public class GameManager : MonoBehaviour
     private IEnumerator coinFeedbackC;
     private Vector3 scorePosition = new Vector3(0.82f, -4.46f, 0);
 
-    public LevelInfo level; 
+    public LevelInfo level;
+
+    public bool usedExtraLifeUpg;
     void Start()
     {
         gameManager = this;
@@ -31,7 +32,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -43,14 +44,21 @@ public class GameManager : MonoBehaviour
 
             loseAnimationsGreen.transform.position = collision.contacts[0].point;
 
-            // show popup
+            if (PlayerController.player.extraLifeUpgr != null
+                && PlayerController.player.extraLifeUpgr.upgradeType != null
+                && PlayerController.player.extraLifeUpgr.isEquipped
+                && !usedExtraLifeUpg)
+            {
+                Revive();
+                usedExtraLifeUpg = true;
 
-
-            // open pause popup
-            RevivePopup.SetActive(true);
-
-            // pause game
-            PauseGame();
+                Debug.LogError("You've used the extra life upgrade");
+            }
+            else
+            {
+                RevivePopup.SetActive(true);
+                PauseGame();
+            }
         }
     }
 
@@ -70,17 +78,15 @@ public class GameManager : MonoBehaviour
         loseAnimationsGreen.transform.position = new Vector3(loseAnimationsGreen.transform.position.x + 30, loseAnimationsGreen.transform.position.y, loseAnimationsGreen.transform.position.z);
         BugsPool.bugsPool.DeactivateAllBugs();
         IsPaused = false;
-
-        UpgradeManager.upgradeManager.allUpgrades[UpgradeManager.EXTRA_LIFE].startTrial();
     }
 
     public void CoinsFeedback(Vector3 pos, int amount)
     {
         GameObject chosenCoin = coins[0];
 
-        foreach(GameObject c in coins)
+        foreach (GameObject c in coins)
         {
-            if(c.activeSelf == false)
+            if (c.activeSelf == false)
             {
                 chosenCoin = c;
                 chosenCoin.SetActive(true);

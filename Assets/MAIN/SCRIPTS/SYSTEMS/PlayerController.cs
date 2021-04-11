@@ -7,9 +7,9 @@ public class PlayerController : MonoBehaviour
 {
     public List<ShopItemObject> avaliableShopItems;
     public static PlayerController player;
-    
+
     public Dictionary<string, ShopItemObject> ownShopItemsMap = new Dictionary<string, ShopItemObject>();
-   // public List<ShopItemObject> ownShopItems;
+    // public List<ShopItemObject> ownShopItems;
     public int BJamountTotal;
     public int BJamountSession;
     public int BJamountBest;
@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
     public Upgrade bjDoubleUpgr;
     public Upgrade extraLifeUpgr;
 
-    public void removeTrialUpgrade (Upgrade u)
+    public void removeTrialUpgrade(Upgrade u)
     {
         if (u.upgradeType == UpgradeManager.BJ_DOUBLE)
         {
@@ -87,7 +87,7 @@ public class PlayerController : MonoBehaviour
         loadGoals(pd);
     }
 
-    private void loadGoals( PlayerData pd)
+    private void loadGoals(PlayerData pd)
     {
         if (level == null) level = new Level();
         foreach (DailyGoalStats dg in pd.goals)
@@ -117,13 +117,13 @@ public class PlayerController : MonoBehaviour
         {
             if (!ownShopItemsMap.ContainsKey(sio.name) && sio.priceBJ > BJamountTotal)
             {
-                return targetsio = sio; 
+                return targetsio = sio;
             }
         }
         return null;
     }
 
-    public void SavePlayerData ()
+    public void SavePlayerData()
     {
         PlayerData pi = new PlayerData();
         pi.bjAmount = BJamountTotal;
@@ -131,8 +131,8 @@ public class PlayerController : MonoBehaviour
 
         pi.extraLifeUpgr = extraLifeUpgr;
         pi.bjDoubleUpgr = bjDoubleUpgr;
-        
-        pi.setItems( ownShopItemsMap);
+
+        pi.setItems(ownShopItemsMap);
         pi.setGoals(level);
         DataController.SavePlayer(pi);
     }
@@ -157,7 +157,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void AddBJToTotal ()
+    public void AddBJToTotal()
     {
         BJamountTotal += BJamountSession;
         checkAndUpdateBest();
@@ -166,7 +166,17 @@ public class PlayerController : MonoBehaviour
 
     public void AddBJ(int bj)
     {
-        BJamountSession += bj;
+        if (PlayerController.player.bjDoubleUpgr != null
+               && PlayerController.player.bjDoubleUpgr.upgradeType != null
+               && PlayerController.player.bjDoubleUpgr.isEquipped)
+        {
+            BJamountSession += 2 * bj;
+        }
+        else
+        {
+
+            BJamountSession += bj;
+        }
         UIController.uIController.animateBJ();
     }
     #region Equip/unequip items
