@@ -18,7 +18,7 @@ public class PowerUpManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(isPowerUpOnScene == false)
+        if(isPowerUpOnScene == false && GameManager.IsPaused == false)
         {
             SpawnPowerUpsWithInterval();
         }

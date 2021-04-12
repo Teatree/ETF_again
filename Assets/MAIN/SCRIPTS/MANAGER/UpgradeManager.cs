@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class UpgradeManager : MonoBehaviour
 {
-
     public const string CURR_HARD = "HARD";
     public const string BJ_DOUBLE = "BJ_DOUBLE";
     public const string EXTRA_LIFE = "EXTRA_LIFE";

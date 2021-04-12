@@ -16,15 +16,16 @@ public class FlowerController : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        uAnimator = GetComponent<SpriterDotNetBehaviour>().Animator;
         Screen.SetResolution(1200, 786, true);
     }
 
 	// Update is called once per frame
 	void Update () {
         // Weird skip assign workaround
-        if (uAnimator == null) {
-            uAnimator = GetComponent<SpriterDotNetBehaviour>().Animator;
-        }
+        //if (uAnimator == null) {
+        //    uAnimator = GetComponent<SpriterDotNetBehaviour>().Animator;
+        //}
 
         //Debug.Log("uAnimator.Time = " + uAnimator.Time);
         if (GameManager.IsPaused == false)
@@ -145,6 +146,8 @@ public class FlowerController : MonoBehaviour {
         {
             Debug.Log("Eating Butterfly, Yum!");
 
+            GameManager.gameManager.CoinsFeedback(collision.transform.position, 50);
+            PowerUpManager.isPowerUpOnScene = false;
             CoccoonController.coccoonController.HideButterfly();
 
             // check goals

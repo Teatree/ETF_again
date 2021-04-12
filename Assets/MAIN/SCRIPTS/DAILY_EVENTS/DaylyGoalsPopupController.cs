@@ -7,9 +7,22 @@ public class DaylyGoalsPopupController : MonoBehaviour
 {
     public GameObject[] goalTiles;
     public Text levelText;
+    public Text header;
+    public Text headerSh;
 
     void OnEnable()
     {
+        if(GameManager.IsGameStarted == true)
+        {
+            header.text = "Pause";
+            headerSh.text = "Pause";
+        }
+        else
+        {
+            header.text = "Challenges";
+            headerSh.text = "Challenges";
+        }
+
         levelText.text = PlayerController.player.level.name;
 
         foreach (GameObject g in goalTiles)

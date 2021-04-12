@@ -1,6 +1,6 @@
 {
-    "bjAmount": 1592,
-    "bjAmountBest": 1137,
+    "bjAmount": 2,
+    "bjAmountBest": 2,
     "uniqueId": "",
     "items": [
         {
@@ -21,7 +21,7 @@
     ],
     "goals": [
         {
-            "n": 24,
+            "n": 43,
             "type": "EAT_N_BUGS",
             "periodType": "TOTAL",
             "description": "EAT # BUGS",
@@ -31,14 +31,34 @@
             "counter": 0
         },
         {
-            "n": 14,
-            "type": "EAT_N_DRUNKS",
-            "periodType": "TOTAL",
-            "description": "EAT # FLIES",
+            "n": 4,
+            "type": "BOUNCE_UMBRELLA_N_TIMES",
+            "periodType": "IN_ONE_LIFE",
+            "description": "LET X2 BONUS BOUNCE # TIMES",
             "achieved": false,
             "justAchieved": false,
             "difficultyLevel": 1,
             "counter": 0
+        },
+        {
+            "n": 1,
+            "type": "DESTROY_N_COCOON",
+            "periodType": "IN_ONE_LIFE",
+            "description": "BREAK # COCOONS",
+            "achieved": true,
+            "justAchieved": true,
+            "difficultyLevel": 1,
+            "counter": 1
+        },
+        {
+            "n": 3,
+            "type": "EAT_N_SIMPLE",
+            "periodType": "IN_ONE_LIFE",
+            "description": "EAT # MOSQUITOES",
+            "achieved": true,
+            "justAchieved": true,
+            "difficultyLevel": 1,
+            "counter": 3
         }
     ],
     "bjDoubleUpgr": {

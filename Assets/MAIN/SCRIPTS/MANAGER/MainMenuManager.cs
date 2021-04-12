@@ -95,4 +95,8 @@ public class MainMenuManager : MonoBehaviour
         StartGame();
     }
 
+    public void OnDisable()
+    {
+        GameManager.IsGameStarted = false;
+    }
 }
