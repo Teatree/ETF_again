@@ -10,6 +10,9 @@ public class ShopUIManager : MonoBehaviour
 
     public GameObject ShopPreviewObject;
 
+    public GameObject ExtraLifeShopItem;
+    public GameObject BJ_DoubleShopItem;
+
     public GameObject ShopItemPrefab;
     public GameObject LevelListContent;
 
@@ -26,6 +29,8 @@ public class ShopUIManager : MonoBehaviour
 
         FillShopItemList();
         setBJAmiountText();
+
+        InitializeUpgradeShopItems();
     }
 
     public void setBJAmiountText()
@@ -36,7 +41,6 @@ public class ShopUIManager : MonoBehaviour
 
     public void updateShopItemsStates ()
     {
-      
         foreach (ShopItemObject o in PlayerController.player.avaliableShopItems)
         {
             if (PlayerController.player.ownShopItemsMap.ContainsKey(o.name))
@@ -80,6 +84,18 @@ public class ShopUIManager : MonoBehaviour
 
             g.GetComponent<ShopItemController>().sio = i;
         }
+    }
+
+    // initialize shop upgrade shit
+    public void InitializeUpgradeShopItems()
+    {
+        // extra life
+        ExtraLifeShopItem.GetComponent<ShopItemController>().sio = UpgradeManager.upgradeManager.allUpgrades[UpgradeManager.EXTRA_LIFE];
+
+        // doubler
+        BJ_DoubleShopItem.GetComponent<ShopItemController>().sio = UpgradeManager.upgradeManager.allUpgrades[UpgradeManager.BJ_DOUBLE];
+
+        // pets...
     }
 
     public void UpdateItemList()
@@ -146,7 +162,7 @@ public class ShopUIManager : MonoBehaviour
         sp.icon.sprite = questionMark;
         foreach (Sprite s in AllManager.allManager.iconImages)
         {
-            if (s.name == itemi.imageIcon && itemi.isBought)
+            if (s.name == itemi.imageIcon && (itemi.isBought || UpgradeManager.CURR_HARD.Equals(itemi.currencyType)))
             {
                 sp.icon.sprite = s;
                 break;
@@ -156,6 +172,9 @@ public class ShopUIManager : MonoBehaviour
         sp.name.text = itemi.name;
         sp.price.text = ""+itemi.priceBJ;
         sp.priceShadow.text = "" + itemi.priceBJ;
+
+        // change to a different button
+
     }
 
     // STUPID STUPID STUPID DIMA

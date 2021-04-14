@@ -50,6 +50,16 @@ public class PlayerController : MonoBehaviour
         BJamountTotal -= sio.priceBJ;
     }
 
+    public void BuyShopItemRealMoney(ShopItemObject sio)
+    {
+        // REAL MONEY PURCHASES
+        sio.isBought = true;
+        Upgrade u = (Upgrade) sio;
+        u.equip();
+        
+        BJamountTotal -= sio.priceBJ;
+    }
+
     public void Awake()
     {
         player = this;

@@ -6,6 +6,7 @@ public class ShopItemController : MonoBehaviour
 {
     public ShopItemObject sio;
 
+    // openns the vanity item
     public void OpenShopItemPreview()
     {
         Debug.Log(" you name is: " + gameObject.name);

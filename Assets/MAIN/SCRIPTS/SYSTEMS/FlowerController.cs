@@ -11,6 +11,7 @@ public class FlowerController : MonoBehaviour {
 
     public float FLOWER_MOVE_SPEED; // something like 4
     public UnityAnimator uAnimator;
+    public BoxCollider2D collider;
 
     string currentPlayingAnimation;
 
@@ -55,6 +56,8 @@ public class FlowerController : MonoBehaviour {
 
                 StopAllCoroutines();
                 StartCoroutine(Transition());
+                
+                collider.offset = new Vector2(0.05f, 1.61f);
             }
             else {
                 _state = _State.ATTACK;
@@ -78,12 +81,12 @@ public class FlowerController : MonoBehaviour {
                 _state = _State.TRANSITION_BACK;
             }
         }
-        
-
     }
 
     void Idle() {
         if (_state.Equals(_State.IDLE)){
+            collider.offset = new Vector2(0.05f, 0.73f);
+
             SetAnimation("idle");
         }
     }

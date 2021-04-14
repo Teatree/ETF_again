@@ -17,6 +17,7 @@ public class ShopPreview : MonoBehaviour
     public Button right;
 
     public GameObject buyButton;
+    public GameObject buyRealButton;
     public GameObject equipButton;
     public GameObject unequipButton;
     public GameObject equippedMarker;
@@ -59,6 +60,8 @@ public class ShopPreview : MonoBehaviour
 
     public void Init()
     {
+        buyRealButton.SetActive(false);
+
         buyButton.SetActive(false);
         equipButton.SetActive(false);
         unequipButton.SetActive(false);
@@ -69,6 +72,7 @@ public class ShopPreview : MonoBehaviour
         if (sio != null && (sio.isBought == true && sio.isEquipped == false))
         {
             buyButton.SetActive(false);
+            buyRealButton.SetActive(false);
             equipButton.SetActive(true);
             unequipButton.SetActive(false);
             equippedMarker.SetActive(false);
@@ -79,6 +83,7 @@ public class ShopPreview : MonoBehaviour
         if (sio != null && (sio.isBought == true && sio.isEquipped == true))
         {
             buyButton.SetActive(false);
+            buyRealButton.SetActive(false);
             equipButton.SetActive(false);
             unequipButton.SetActive(true);
             equippedMarker.SetActive(true);
@@ -89,6 +94,7 @@ public class ShopPreview : MonoBehaviour
         if (sio != null && (sio.isBought == false && sio.priceBJ <= PlayerController.player.BJamountTotal))
         {
             buyButton.SetActive(true);
+            buyRealButton.SetActive(false);
             equipButton.SetActive(false);
             unequipButton.SetActive(false);
             equippedMarker.SetActive(false);
@@ -99,16 +105,49 @@ public class ShopPreview : MonoBehaviour
         if (sio != null && (sio.isBought == false && sio.priceBJ > PlayerController.player.BJamountTotal))
         {
             buyButton.SetActive(false);
+            buyRealButton.SetActive(false);
             equipButton.SetActive(false);
             unequipButton.SetActive(false);
             equippedMarker.SetActive(false);
             notEnoughLabel.SetActive(true);
+        }
+
+        if(sio != null && (sio.isBought == false && sio.currencyType == UpgradeManager.CURR_HARD))
+        {
+            buyButton.SetActive(false);
+            buyRealButton.SetActive(true);
+            equipButton.SetActive(false);
+            unequipButton.SetActive(false);
+            equippedMarker.SetActive(false);
+            notEnoughLabel.SetActive(false);
+        }
+
+        if (sio != null && (sio.isBought == true && sio.currencyType == UpgradeManager.CURR_HARD))
+        {
+            buyButton.SetActive(false);
+            buyRealButton.SetActive(false);
+            equipButton.SetActive(false);
+            unequipButton.SetActive(false);
+            equippedMarker.SetActive(false);
+            notEnoughLabel.SetActive(false);
         }
     }
 
     public void RollOut()
     {
         StartCoroutine(MoveOverSeconds(this.gameObject, new Vector3(0.0f, 0f, 0f), 1f));
+    }
+
+    public void BuyUpgrade()
+    {
+        buyButton.SetActive(false);
+        buyRealButton.SetActive(false);
+        equipButton.SetActive(false);
+        unequipButton.SetActive(false);
+        equippedMarker.SetActive(false);
+        notEnoughLabel.SetActive(false);
+
+        PlayerController.player.BuyShopItemRealMoney(sio);
     }
 
     public void BuyShopItem()

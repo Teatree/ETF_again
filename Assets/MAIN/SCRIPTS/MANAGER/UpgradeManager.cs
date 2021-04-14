@@ -44,7 +44,7 @@ public class UpgradeManager : MonoBehaviour
 
         extraLife.idSKU = "phoenix";
         extraLife.idSKUDisc = "phoenixDisc";
-        extraLife.imageIcon = "itemphoenixUPGRADE";
+        extraLife.imageIcon = "extra_life";
 
         extraLife.priceSKU = "" + 100;
         extraLife.priceSKUDisc = "" + 50;
@@ -61,7 +61,7 @@ public class UpgradeManager : MonoBehaviour
 
         bjd.idSKU = "bj_upgrade";
         bjd.idSKUDisc = "bj_upgrade_discount";
-        bjd.imageIcon = "itemphoenixUPGRADE";
+        bjd.imageIcon = "x2_upgrade";
 
         bjd.priceSKU = "" + 100;
         bjd.priceSKUDisc = "" + 50;

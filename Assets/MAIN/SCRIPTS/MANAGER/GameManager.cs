@@ -11,6 +11,9 @@ public class GameManager : MonoBehaviour
     // Keeps track of score
     // Pause State
 
+    public GameObject extraLife;
+    public GameObject bj_double;
+
     public GameObject loseAnimationsGreen;
     public GameObject RevivePopup;
 
@@ -28,10 +31,22 @@ public class GameManager : MonoBehaviour
 
     int temp;
 
+    public void OnEnable()
+    {
+        if(PlayerController.player.extraLifeUpgr != null && PlayerController.player.extraLifeUpgr.isEquipped == true)
+        {
+            extraLife.SetActive(true);
+        }
+        if(PlayerController.player.bjDoubleUpgr != null && PlayerController.player.bjDoubleUpgr.isEquipped == true)
+        {
+            bj_double.SetActive(true);
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
