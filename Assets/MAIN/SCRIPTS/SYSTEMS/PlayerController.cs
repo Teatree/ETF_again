@@ -71,6 +71,7 @@ public class PlayerController : MonoBehaviour
         BJamountTotal = pd.bjAmount;
         BJamountBest = pd.bjAmountBest;
 
+
         if (pd.extraLifeUpgr != null && pd.extraLifeUpgr.upgradeType != null)
         {
             extraLifeUpgr = pd.extraLifeUpgr;
@@ -100,6 +101,7 @@ public class PlayerController : MonoBehaviour
     private void loadGoals(PlayerData pd)
     {
         if (level == null) level = new Level();
+
         foreach (DailyGoalStats dg in pd.goals)
         {
             Goal goal = new Goal();
@@ -117,6 +119,8 @@ public class PlayerController : MonoBehaviour
 
         }
         level.updateLevel();
+
+        level.gift = Gift.getRandomGift(level); // Muahj
     }
 
     public ShopItemObject getNextTargetItem(bool resetTarget)
@@ -294,43 +298,37 @@ public class PlayerController : MonoBehaviour
                     //System.out.println("FECK fpc.totalScore" + fpc.totalScore);
                     break;
                 }
-                //case (PET):
-                //    {
-                //        applyPetGiftNastya(gameStage);
-                //        break;
-                //    }
-                //case (PET_2):
-                //    {
-                //        applyPetGiftNastya(gameStage);
-                //        break;
-                //    }
-                //case (PET_3):
-                //    {
-                //        applyPetGiftNastya(gameStage);
-                //        break;
-                //    }
-                //case (PHOENIX):
-                //    {
-                //        upgrade.tryPeriod = true;
-                //        //                upgrade.tryPeriodDuration = 1 * 60;
-                //        upgrade.tryPeriodStart = System.currentTimeMillis();
-                //        upgrade.bought = true;
-                //        upgrade.enabled = true;
-                //        fpc.upgrades.put(Upgrade.UpgradeType.PHOENIX, upgrade);
-                //        TrialTimer.trialTimerLogoName = upgrade.shopIcon;
-                //        break;
-                //    }
-                //case (BJ_DOUBLE):
-                //    {
-                //        upgrade.tryPeriod = true;
-                //        //                upgrade.tryPeriodDuration = 1 * 60;
-                //        upgrade.tryPeriodStart = System.currentTimeMillis();
-                //        upgrade.bought = true;
-                //        upgrade.enabled = true;
-                //        fpc.upgrades.put(Upgrade.UpgradeType.BJ_DOUBLE, upgrade);
-                //        TrialTimer.trialTimerLogoName = upgrade.shopIcon;
-                //        break;
-                //    }
+            //case (PET):
+            //    {
+            //        applyPetGiftNastya(gameStage);
+            //        break;
+            //    }
+            //case (PET_2):
+            //    {
+            //        applyPetGiftNastya(gameStage);
+            //        break;
+            //    }
+            //case (PET_3):
+            //    {
+            //        applyPetGiftNastya(gameStage);
+            //        break;
+            //    }
+            case (UpgradeManager.EXTRA_LIFE):
+                {
+                    level.gift.upgrade.startTrial();
+                    
+                    // ui element
+
+                    break;
+                }
+            case (UpgradeManager.BJ_DOUBLE):
+                {
+                    level.gift.upgrade.startTrial();
+
+                    // ui element
+
+                    break;
+                }
         }
 
         level.setNextLevel();

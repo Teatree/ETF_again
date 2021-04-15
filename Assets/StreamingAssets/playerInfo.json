@@ -1,6 +1,6 @@
 {
-    "bjAmount": 325,
-    "bjAmountBest": 2,
+    "bjAmount": 352,
+    "bjAmountBest": 7,
     "uniqueId": "",
     "items": [
         {
@@ -36,48 +36,18 @@
     ],
     "goals": [
         {
-            "n": 43,
-            "type": "EAT_N_BUGS",
-            "periodType": "TOTAL",
-            "description": "EAT # BUGS",
-            "achieved": false,
-            "justAchieved": false,
-            "difficultyLevel": 1,
-            "counter": 0
-        },
-        {
-            "n": 4,
-            "type": "BOUNCE_UMBRELLA_N_TIMES",
-            "periodType": "IN_ONE_LIFE",
-            "description": "LET X2 BONUS BOUNCE # TIMES",
-            "achieved": false,
-            "justAchieved": false,
-            "difficultyLevel": 1,
-            "counter": 0
-        },
-        {
             "n": 1,
             "type": "DESTROY_N_COCOON",
             "periodType": "IN_ONE_LIFE",
             "description": "BREAK # COCOONS",
-            "achieved": true,
-            "justAchieved": true,
-            "difficultyLevel": 1,
-            "counter": 1
-        },
-        {
-            "n": 3,
-            "type": "EAT_N_SIMPLE",
-            "periodType": "IN_ONE_LIFE",
-            "description": "EAT # MOSQUITOES",
-            "achieved": true,
-            "justAchieved": true,
-            "difficultyLevel": 1,
-            "counter": 3
+            "achieved": false,
+            "justAchieved": false,
+            "difficultyLevel": 4,
+            "counter": 0
         }
     ],
     "bjDoubleUpgr": {
-        "isBought": true,
+        "isBought": false,
         "isEquipped": true,
         "wasATarget": false,
         "name": "DOUBLE COINS",
@@ -96,15 +66,15 @@
         "priceSKU": "100",
         "priceSKUDisc": "50",
         "currencyType": "HARD",
-        "isTrial": false,
-        "trialPeriodDuration": 0.0,
+        "isTrial": true,
+        "trialPeriodDuration": 359999995904.0,
         "trialPeriodTimer": 0.0,
         "upgradeType": "BJ_DOUBLE",
         "counter": 0
     },
     "extraLifeUpgr": {
-        "isBought": true,
-        "isEquipped": true,
+        "isBought": false,
+        "isEquipped": false,
         "wasATarget": false,
         "name": "EXTRA LIFE",
         "description": "Get 1 extra life every new game",

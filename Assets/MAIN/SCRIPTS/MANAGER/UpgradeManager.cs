@@ -71,13 +71,14 @@ public class UpgradeManager : MonoBehaviour
 
     public Upgrade getExtraLife()
     {
+
         return allUpgrades[EXTRA_LIFE];
     }
 
     public Upgrade getBJDouble()
-    {
-        PlayerController.player.bjDoubleUpgr = UpgradeManager.upgradeManager.getBJDouble();
-        PlayerController.player.bjDoubleUpgr.startTrial(); return allUpgrades[BJ_DOUBLE];
+    { 
+
+        return allUpgrades[BJ_DOUBLE];
     }
 }
 
@@ -107,14 +108,14 @@ public class Upgrade : ShopItemObject
         equip();
         isTrial = true;
         trialPeriodStart = System.DateTime.UtcNow;
-        trialPeriodDuration = 10000;
+        trialPeriodDuration = Gift.ONE_HOUR;
     }
 
     public void checkTrial ()
     {
         if (isTrial )
         {
-            System.TimeSpan trialTimeCurrent = System.DateTime.Now - trialPeriodStart;
+            System.TimeSpan trialTimeCurrent = System.DateTime.UtcNow - trialPeriodStart;
             Debug.Log(">>> trial check > " + trialTimeCurrent.TotalMilliseconds);
             if (trialTimeCurrent.TotalMilliseconds > trialPeriodDuration)
             {

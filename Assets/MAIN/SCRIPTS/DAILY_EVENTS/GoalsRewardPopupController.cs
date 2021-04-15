@@ -11,14 +11,26 @@ public class GoalsRewardPopupController : MonoBehaviour
     public GameObject boxParentGo;
     public GameObject boxGo;
 
+    public GameObject rewardMoney;
+    public GameObject rewardUpgrades;
+    public Image upgradeIcon;
+
     public Text moneyText;
     public Text moneyTextSh;
 
     void OnEnable()
     {
-        moneyText.text = "+"+PlayerController.player.level.gift.money;
-        moneyTextSh.text = "+"+PlayerController.player.level.gift.money;
+        // money
+        moneyText.text = "+"+ PlayerController.player.level.gift.type;
+        moneyTextSh.text = "+"+PlayerController.player.level.gift.type;
 
+
+        LoadNewGoals();
+    }
+
+    public void LoadNewGoals()
+    {
+        // load new goals
         StartCoroutine(WaitThenShow(3f));
         UIController.uIController.DisableGos();
         levelText.text = PlayerController.player.level.name;
@@ -89,5 +101,32 @@ public class GoalsRewardPopupController : MonoBehaviour
     public void takeGift()
     {
         PlayerController.player.takeGift();
+
+        if (PlayerController.player.level.gift.type == Gift.MONEY)
+        {
+            rewardMoney.SetActive(true);
+            rewardUpgrades.SetActive(false);
+        }
+        else if (PlayerController.player.level.gift.type == UpgradeManager.BJ_DOUBLE || PlayerController.player.level.gift.type == UpgradeManager.EXTRA_LIFE)
+        {
+            rewardMoney.SetActive(false);
+            rewardUpgrades.SetActive(true);
+
+            SetImage();
+        }
+    }
+
+    public void SetImage()
+    {
+        string imageIcon = PlayerController.player.level.gift.upgrade.imageIcon;
+
+        foreach (Sprite s in AllManager.allManager.iconImages)
+        {
+            if (s.name == imageIcon)
+            {
+                upgradeIcon.sprite = s;
+                break;
+            }
+        }
     }
 }

@@ -185,7 +185,7 @@ public class Level
             rewardChanceGroups = info.getRewardChanceGroups();
         }
 
-        gift = Gift.getRandomGift();
+        gift = Gift.getRandomGift(this);
 
     }
 
