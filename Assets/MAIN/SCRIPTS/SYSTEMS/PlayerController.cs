@@ -71,7 +71,6 @@ public class PlayerController : MonoBehaviour
         BJamountTotal = pd.bjAmount;
         BJamountBest = pd.bjAmountBest;
 
-
         if (pd.extraLifeUpgr != null && pd.extraLifeUpgr.upgradeType != null)
         {
             extraLifeUpgr = pd.extraLifeUpgr;
@@ -175,7 +174,6 @@ public class PlayerController : MonoBehaviour
     {
         BJamountTotal += BJamountSession;
         checkAndUpdateBest();
-        BJamountSession = 0;
     }
 
     public void AddBJ(int bj)

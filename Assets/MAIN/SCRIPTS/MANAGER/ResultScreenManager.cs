@@ -9,6 +9,8 @@ public class ResultScreenManager : MonoBehaviour
     public Text bjEarnedText;
     public Text bjTotalText;
     public Text bjUntilNextText;
+    public GameObject x2Go;
+    public Text x2Timer;
     public Slider proressBar;
     public Image revealIcon;
 
@@ -45,6 +47,33 @@ public class ResultScreenManager : MonoBehaviour
             proressBar.maxValue = PlayerController.player.BJamountTotal;
             proressBar.value = PlayerController.player.BJamountTotal;
             revealIcon.gameObject.SetActive(false);
+        }
+
+
+        if(PlayerController.player.bjDoubleUpgr != null && PlayerController.player.bjDoubleUpgr.isEquipped == true)
+        {
+            x2Go.SetActive(true);
+            x2Timer.text = "";
+        }
+    }
+
+    public void Update()
+    {
+        if (PlayerController.player.bjDoubleUpgr != null && PlayerController.player.bjDoubleUpgr.isTrial == true)
+        {
+            System.TimeSpan trialTimeCurrent = System.DateTime.UtcNow - PlayerController.player.bjDoubleUpgr.trialPeriodStart;
+
+            System.TimeSpan countDown = System.TimeSpan.FromMilliseconds(PlayerController.player.bjDoubleUpgr.trialPeriodDuration - trialTimeCurrent.TotalMilliseconds);
+
+            x2Timer.text = countDown.Minutes + ":" + countDown.Seconds;
+            if(countDown.Seconds < 1 && countDown.Minutes < 1)
+            {
+                x2Timer.text = "";
+            }
+        }
+        else
+        {
+            x2Timer.text = "";
         }
     }
 

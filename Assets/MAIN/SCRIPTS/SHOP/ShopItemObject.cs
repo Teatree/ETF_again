@@ -31,7 +31,6 @@ public class ShopItemObject
     public bool isTrial;
     public float trialPeriodDuration;
     public System.DateTime trialPeriodStart;
-    public float trialPeriodTimer;
 
     public ShopItemObject() {}
     public ShopItemObject(ItemShopData sio)

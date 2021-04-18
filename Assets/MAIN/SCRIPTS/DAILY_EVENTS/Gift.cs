@@ -2,15 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Gift : MonoBehaviour
-{
+public class Gift : MonoBehaviour {
     public const string MONEY = "MONEY";
 
-    public const long ONE_HOUR = 360000000000; // it's supposed to be 60, and it's not a hour, it's a MINUTE
+    public const long ONE_HOUR = 120000; // it's supposed to be 60, and it's not a hour, it's a MINUTE
 
     private static Random random = new Random();
 
-    private static List<int> moneySums;
+    private static List<int> moneySums = new List<int> {50,100,150,200,250,300};
 
     //public PetComponent pet;
     public int money;
@@ -20,14 +19,8 @@ public class Gift : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        moneySums = new List<int>();
-        moneySums.Add(50);
-        moneySums.Add(100);
-        moneySums.Add(150);
-        moneySums.Add(200);
-        moneySums.Add(250);
-        moneySums.Add(300);
-}
+       
+    }
 
     public static Gift getRandomGift(Level level)
     {

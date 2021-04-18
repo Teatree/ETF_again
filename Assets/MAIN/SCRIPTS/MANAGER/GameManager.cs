@@ -33,6 +33,9 @@ public class GameManager : MonoBehaviour
 
     public void OnEnable()
     {
+        IsPaused = false;
+        PlayerController.player.BJamountSession = 0;
+
         if(PlayerController.player.extraLifeUpgr != null && PlayerController.player.extraLifeUpgr.isEquipped == true)
         {
             extraLife.SetActive(true);

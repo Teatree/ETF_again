@@ -116,12 +116,12 @@ public class Upgrade : ShopItemObject
         if (isTrial )
         {
             System.TimeSpan trialTimeCurrent = System.DateTime.UtcNow - trialPeriodStart;
-            Debug.Log(">>> trial check > " + trialTimeCurrent.TotalMilliseconds);
+           // Debug.Log(">>> trial check > " + trialTimeCurrent.TotalMilliseconds);
             if (trialTimeCurrent.TotalMilliseconds > trialPeriodDuration)
             {
                 PlayerController.player.removeTrialUpgrade(this);
                 unEquip();
-                Debug.Log(">>> trial ends > ");
+                //Debug.Log(">>> trial ends > ");
             }
         }
     }
