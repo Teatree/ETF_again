@@ -91,9 +91,9 @@
     <Compile Include="Assets\MAIN\SCRIPTS\SYSTEMS\PlayerController.cs" />
     <Compile Include="Assets\MAIN\SCRIPTS\SYSTEMS\ReviveController.cs" />
     <Compile Include="Assets\MAIN\SCRIPTS\SYSTEMS\UIController.cs" />
-    <Compile Include="Assets\MAIN\SCRIPTS\SYSTEMS\X2Controller.cs" />
     <Compile Include="Assets\MAIN\SCRIPTS\UTIL\CameraShaker.cs" />
     <Compile Include="Assets\MAIN\SCRIPTS\UTIL\DataController.cs" />
+    <Compile Include="Assets\MAIN\SCRIPTS\UTIL\X2Controller.cs" />
     <Compile Include="Assets\SpriterDotNet\DefaultContentLoader.cs" />
     <Compile Include="Assets\SpriterDotNet\IContentLoader.cs" />
     <Compile Include="Assets\SpriterDotNet\Lib\Animator.cs" />

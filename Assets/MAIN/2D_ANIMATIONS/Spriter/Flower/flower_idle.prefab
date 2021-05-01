@@ -108,6 +108,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _state: 0
   FLOWER_MOVE_SPEED: 12
+  collider: {fileID: 0}
+  processInputTest: {fileID: 0}
 --- !u!1 &1055299168064006
 GameObject:
   m_ObjectHideFlags: 0

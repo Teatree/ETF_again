@@ -8341,6 +8341,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114293004788720120, guid: cd51fb4b5addc6c4c9c7562020161a08,
         type: 3}
+      propertyPath: processInputTest
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114293004788720120, guid: cd51fb4b5addc6c4c9c7562020161a08,
+        type: 3}
       propertyPath: flowerHatCustomizable
       value: 
       objectReference: {fileID: 11400000, guid: 196750949cab4b4439711273618ab80c,

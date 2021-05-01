@@ -12,6 +12,7 @@ public class FlowerController : MonoBehaviour {
     public float FLOWER_MOVE_SPEED; // something like 4
     public UnityAnimator uAnimator;
     public BoxCollider2D collider;
+   
 
     string currentPlayingAnimation;
 
@@ -23,10 +24,10 @@ public class FlowerController : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-        // Weird skip assign workaround
-        //if (uAnimator == null) {
-        //    uAnimator = GetComponent<SpriterDotNetBehaviour>().Animator;
-        //}
+        // Weird skip assign workaround. Don't remove this or Alah will punish you
+        if (uAnimator == null) {
+            uAnimator = GetComponent<SpriterDotNetBehaviour>().Animator;
+        }
 
         //Debug.Log("uAnimator.Time = " + uAnimator.Time);
         if (GameManager.IsPaused == false)
@@ -50,6 +51,7 @@ public class FlowerController : MonoBehaviour {
 
     void ProcessInput() {
         if (Input.touchCount > 0 || Input.GetMouseButton(0)) {
+            
             // Construct a ray from the current touch coordinates
             if (_state != _State.ATTACK && _state != _State.RETREAT) {
                 _state = _State.TRANSITION;

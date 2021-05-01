@@ -18,17 +18,18 @@ public class DataController
     public static string playerfilePath = Path.Combine(Application.dataPath + "/StreamingAssets", playerFileName);
     public static string multipliersFilePath = Path.Combine(Application.dataPath + "/StreamingAssets", multipliersFileName);
     public static string levelsFilePath = Path.Combine(Application.dataPath + "/StreamingAssets", levelsFileName);
+
 #elif UNITY_ANDROID
     public static string shopItemsFilePath = Path.Combine ("jar:file://" + Application.dataPath + "!/assets/", shopItemsFileName);
-    public static string playerfilePath = Path.Combine(Application.dataPath + "/StreamingAssets", playerFileName);
-    public static string multipliersFilePath = Path.Combine(Application.dataPath + "/StreamingAssets", multipliersFileName);
-    public static string levelsFilePath = Path.Combine(Application.dataPath + "/StreamingAssets", levelsFileName);
+    public static string playerfilePath = Path.Combine("jar:file://" + Application.dataPath + "!/assets/", playerFileName);
+    public static string multipliersFilePath = Path.Combine("jar:file://" + Application.dataPath + "!/assets/", multipliersFileName);
+    public static string levelsFilePath = Path.Combine("jar:file://" + Application.dataPath + "!/assets/", levelsFileName);
 
 #elif UNITY_IOS
-    private static string shopItemsFilePath = Path.Combine (Application.persistentDataPath  + "/Raw", shopItemsFileName);
-    public static string playerfilePath = Path.Combine(Application.dataPath + "/StreamingAssets", playerFileName);
-    public static string multipliersFilePath = Path.Combine(Application.dataPath + "/StreamingAssets", multipliersFileName);
-    public static string levelsFilePath = Path.Combine(Application.dataPath + "/StreamingAssets", levelsFileName);
+    private static string shopItemsFilePath = Path.Combine (Application.dataPath + "/Raw", shopItemsFileName);
+    public static string playerfilePath = Path.Combine(Application.dataPath + "/Raw", playerFileName);
+    public static string multipliersFilePath = Path.Combine(Application.dataPath + "/Raw", multipliersFileName);
+    public static string levelsFilePath = Path.Combine(Application.dataPath + "/Raw", levelsFileName);
 #endif
 
     #region PlayerData
@@ -40,18 +41,17 @@ public class DataController
 
             if (File.Exists(playerfilePath))
             {
-                TextAsset file = Resources.Load("playerInfo") as TextAsset;
-                jsonData = file.ToString();
+                WWW reader = new WWW(playerfilePath);
+                while (!reader.isDone) { }
+                jsonData = reader.text;
+
+                //TextAsset file = Resources.Load("playerInfo") as TextAsset;
+                //jsonData = file.ToString();
                 PlayerData pi = JsonUtility.FromJson<PlayerData>(jsonData);
                 return pi;
                 //StreamReader f = new StreamReader(playerfilePath);
                 //jsonData = f.ReadToEnd();
                 //f.Close();
-
-
-                //WWW reader = new WWW(playerfilePath);
-                //while (!reader.isDone) { }
-                //jsonData = reader.text;
             }
             return new PlayerData();
         }
@@ -91,17 +91,16 @@ public class DataController
         string jsonData = "";
         if (Application.platform == RuntimePlatform.Android)
         {
-            WWW reader = new WWW("https://raw.githubusercontent.com/Teatree/ETF_again/master/Assets/StreamingAssets/shopItems.json");
+            //WWW reader = new WWW("https://raw.githubusercontent.com/Teatree/ETF_again/master/Assets/StreamingAssets/shopItems.json");
+            WWW reader = new WWW(shopItemsFilePath);
             while (!reader.isDone) { }
             jsonData = reader.text;
         }
         else
         {
-
-        }
-        {
             jsonData = File.ReadAllText(shopItemsFilePath);
         }
+
         ItemShopData[] sid = JsonHelper.FromJson<ItemShopData>(jsonData);
         List<ShopItemObject> res = new List<ShopItemObject>();
         foreach (ItemShopData si in sid)
@@ -117,17 +116,16 @@ public class DataController
         string jsonData = "";
         if (Application.platform == RuntimePlatform.Android)
         {
-            WWW reader = new WWW("https://github.com/Teatree/Krashe3/blob/flowers_fiddle_sticks/android/assets/BugMultipliersByDuration.json");
+            //WWW reader = new WWW("https://raw.githubusercontent.com/Teatree/Krashe3/flowers_fiddle_sticks/android/assets/BugMultipliersByDuration.json");
+            WWW reader = new WWW(multipliersFilePath);
             while (!reader.isDone) { }
             jsonData = reader.text;
         }
         else
         {
-
-        }
-        {
             jsonData = File.ReadAllText(multipliersFilePath);
         }
+
         Multiplier[] sid = JsonHelper.FromJson<Multiplier>(jsonData);
         List<Multiplier> res = new List<Multiplier>(sid);
         BugSpawnManager.mulipliers = res;
@@ -140,7 +138,8 @@ public class DataController
         string jsonData = "";
         if (Application.platform == RuntimePlatform.Android)
         {
-            WWW reader = new WWW("https://raw.githubusercontent.com/Teatree/Krashe3/flowers_fiddle_sticks/android/assets/levels.json");
+            //WWW reader = new WWW("https://raw.githubusercontent.com/Teatree/Krashe3/flowers_fiddle_sticks/android/assets/levels.json");
+            WWW reader = new WWW(levelsFilePath);
             while (!reader.isDone) { }
             jsonData = reader.text;
         }
@@ -148,7 +147,7 @@ public class DataController
         {
             jsonData = File.ReadAllText(levelsFilePath);
         }
-        jsonData = File.ReadAllText(levelsFilePath);
+
         LevelInfo[] sid = JsonHelper.FromJson<LevelInfo>(jsonData);
         List<LevelInfo> res = new List<LevelInfo>(sid);
         // BugSpawnManager.mulipliers = res;
